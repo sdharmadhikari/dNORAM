@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'dNORAM' target in the 'dNORAM' project
+//
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+#endif

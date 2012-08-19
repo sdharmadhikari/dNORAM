@@ -1,5 +1,4 @@
 {
-    "id": "ExtBox1-ext-gen18109",
     "type": "application",
     "reference": {
         "name": "items",
@@ -7,6 +6,7 @@
     },
     "codeClass": null,
     "userConfig": {
+        "baseURL": "http://dnoram8.cloudfoundry.com/",
         "models": [
             "Task",
             "Duser",
@@ -24,20 +24,26 @@
             "TaskResultList",
             "MapPanel",
             "MyContainer1",
-            "MyContainer"
+            "MyContainer",
+            "MainApplicationView"
         ],
-        "glossOnIcon": false,
-        "icon": "images/dNORAM5.png",
+        "icon": [
+            "{\"57\":\"images/dNORAM5.png\",\"72\":\"images/dNORAM5.png\",\"114\":\"images/dNORAM5.png\",\"144\":\"images/dNORAM5.png\"}"
+        ],
+        "isIconPrecomposed": false,
         "name": "MyApp",
-        "phoneIcon": "images/dNORAM5.png",
-        "phoneStartupScreen": "images/company-susanku.png",
+        "startupImage": null,
         "controllers": [
             "MainController"
         ]
     },
-    "customConfigs": [],
+    "id": "ExtBox1-ext-gen18109",
     "designerId": "application",
-    "$viewOrder": 0,
-    "iconCls": "icon-application",
-    "expanded": true
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "baseURL",
+            "type": "string"
+        }
+    ]
 }

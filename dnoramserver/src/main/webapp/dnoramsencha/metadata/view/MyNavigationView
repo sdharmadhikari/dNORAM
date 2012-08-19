@@ -1,5 +1,4 @@
 {
-    "id": "ExtBox1-ext-gen18167",
     "type": "navigationview",
     "reference": {
         "name": "items",
@@ -7,19 +6,15 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|initialView": true,
-        "id": "viewId",
-        "style": "",
         "designer|userClassName": "MyNavigationView",
-        "designer|userAlias": "mynavigationview"
+        "designer|userAlias": "mynavigationview",
+        "id": "viewId",
+        "style": null
     },
-    "customConfigs": [],
+    "id": "ExtBox1-ext-gen18167",
     "designerId": "668170fd-0abd-4e45-8960-4b85903fdd4d",
-    "$viewOrder": 0,
-    "expanded": false,
     "cn": [
         {
-            "id": "ExtBox1-ext-gen20492",
             "type": "navigationbar",
             "reference": {
                 "name": "navigationBar",
@@ -27,16 +22,13 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "MyNavigationBar",
                 "id": "navigationBar",
-                "style": "background:#ccc",
-                "designer|userClassName": "MyNavigationBar"
+                "style": null
             },
-            "customConfigs": [],
-            "iconCls": "icon-navbar",
-            "expanded": false,
+            "designerId": "774b906f-326b-471e-a51e-dbab49aecb6d",
             "cn": [
                 {
-                    "id": "ExtBox1-ext-gen20754",
                     "type": "button",
                     "reference": {
                         "name": "items",
@@ -44,19 +36,17 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "align": "right",
+                        "designer|userClassName": "MyButton3",
                         "hidden": true,
                         "id": "saveTaskNavButton",
                         "iconCls": null,
                         "iconMask": true,
-                        "text": "Save",
-                        "designer|userClassName": "MyButton3",
-                        "align": "right"
+                        "text": "Done"
                     },
-                    "customConfigs": [],
-                    "expanded": true
+                    "designerId": "9bb7e83d-66d2-4b1e-8d9b-63c66fa48e37"
                 },
                 {
-                    "id": "ExtBox1-ext-gen12185",
                     "type": "button",
                     "reference": {
                         "name": "items",
@@ -64,18 +54,16 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "align": "right",
+                        "designer|userClassName": "MyButton5",
                         "hidden": true,
                         "iconCls": "refresh",
                         "iconMask": true,
-                        "text": null,
-                        "designer|userClassName": "MyButton5",
-                        "align": "right"
+                        "text": null
                     },
-                    "customConfigs": [],
-                    "expanded": true
+                    "designerId": "c4fdcea4-0e88-4ecd-a486-415d8fe95a54"
                 },
                 {
-                    "id": "ExtBox1-ext-gen11787",
                     "type": "button",
                     "reference": {
                         "name": "items",
@@ -83,23 +71,22 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "cls": "",
+                        "align": "right",
+                        "designer|userClassName": "MyButton3",
+                        "cls": null,
                         "hidden": true,
                         "id": "addTaskButton",
-                        "icon": "",
+                        "ui": "plain",
+                        "icon": null,
                         "iconCls": "add",
                         "iconMask": true,
-                        "text": "",
-                        "designer|userClassName": "MyButton3",
-                        "align": "right"
+                        "text": null
                     },
-                    "customConfigs": [],
-                    "expanded": true
+                    "designerId": "43ac20a2-af3d-4439-8146-b0928669a5ec"
                 }
             ]
         },
         {
-            "id": "ExtBox1-ext-gen32979",
             "type": "linkedinstance",
             "reference": {
                 "name": "items",
@@ -109,9 +96,7 @@
             "userConfig": {
                 "title": "dNORAM"
             },
-            "customConfigs": [],
-            "iconCls": "icon-linkedinstance",
-            "expanded": true,
+            "designerId": "4876ae4a-9aee-4582-942a-96b37255859b",
             "masterInstanceId": "ExtBox1-ext-gen30578"
         }
     ]

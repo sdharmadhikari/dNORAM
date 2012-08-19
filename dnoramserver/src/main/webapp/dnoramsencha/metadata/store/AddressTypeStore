@@ -1,5 +1,4 @@
 {
-    "id": "ExtBox1-ext-gen13910",
     "type": "jsonstore",
     "reference": {
         "name": "items",
@@ -7,12 +6,10 @@
     },
     "codeClass": null,
     "userConfig": {
+        "designer|userClassName": "AddressTypeStore",
         "data": "[\n                    {\n                        text: 'Current Location',\n                        value: 'Current'\n                    },\n                    {\n                        text: 'Anywhere',\n                        value: 'Anywhere'\n                    },\n                    {\n                        text: 'Enter Address',\n                        value: 'Custom'\n                    }\n                ]\n\n",
-        "storeId": "addressTypeStore",
-        "designer|userClassName": "AddressTypeStore"
+        "storeId": "addressTypeStore"
     },
-    "customConfigs": [],
-    "designerId": "8b89f9d4-7d3a-4f3e-9381-0ec94907ec6e",
-    "$viewOrder": 2,
-    "expanded": true
+    "id": "ExtBox1-ext-gen13910",
+    "designerId": "8b89f9d4-7d3a-4f3e-9381-0ec94907ec6e"
 }

@@ -1,0 +1,165 @@
+{
+    "type": "container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "container|animation": "slide",
+        "designer|userClassName": "MainApplicationView",
+        "designer|userAlias": "mainApplicationView",
+        "designer|initialView": true,
+        "layout": "card",
+        "scrollable": false
+    },
+    "id": "ExtBox1-ext-gen3118",
+    "designerId": "994dcb18-3db4-4a18-9621-fbebb6ec6eae",
+    "cn": [
+        {
+            "type": "panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "welcome",
+                "designer|userClassName": "MyPanel1",
+                "html": "dNORAM",
+                "layout": "fit"
+            },
+            "designerId": "c015c16f-5c7d-4dac-b1d7-82c00a3ea33d",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "name",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "appcontainer"
+            },
+            "designerId": "f0e59765-cc73-4c3b-9972-0293c7be71cf",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "name",
+                    "type": "string"
+                }
+            ],
+            "masterInstanceId": "ExtBox1-ext-gen18167"
+        },
+        {
+            "type": "panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "info",
+                "designer|userClassName": "MyPanel2",
+                "html": "<div><img src=\"images/susanku-info.png\" /></div><div> info goes here</div><div>&copy; 2012 Susanku Inc</div>"
+            },
+            "designerId": "ce0aba2e-b6b4-4d77-a2aa-52d0afb8d2ee",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "name",
+                    "type": "string"
+                }
+            ],
+            "cn": [
+                {
+                    "type": "toolbar",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyToolbar2",
+                        "docked": "top"
+                    },
+                    "designerId": "79fef18a-f04d-479a-ab7a-a5aface1c9ce",
+                    "cn": [
+                        {
+                            "type": "button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyButton9",
+                                "ui": "plain",
+                                "iconCls": "home",
+                                "iconMask": true,
+                                "text": null
+                            },
+                            "designerId": "f3ff8aea-395c-437f-8727-3c913523c646",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "handler",
+                                        "fn": "handler",
+                                        "designer|params": [
+                                            "button",
+                                            "event"
+                                        ],
+                                        "implHandler": [
+                                            "",
+                                            "button.up(\"mainApplicationView\").animateActiveItem(1,{type:'flip',duration:800});"
+                                        ]
+                                    },
+                                    "designerId": "e657059f-4794-4cb6-b2b7-abc154a38790"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onContainerShow",
+                "fn": "onContainerShow",
+                "implHandler": [
+                    "",
+                    "",
+                    "//create the delayed task instance with our callback",
+                    "var task = Ext.create('Ext.util.DelayedTask', function() {",
+                    "    console.log('callback!');",
+                    "    component.animateActiveItem(1,{duration:800,type: 'fade', direction: 'left'});",
+                    "    task.cancel(); ",
+                    "});",
+                    "",
+                    "task.delay(3000);"
+                ],
+                "name": "show"
+            },
+            "designerId": "b99bac54-5a26-42bd-81be-7df3a0a760b3"
+        }
+    ]
+}

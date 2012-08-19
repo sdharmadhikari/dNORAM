@@ -1,5 +1,4 @@
 {
-    "id": "ExtBox1-ext-gen14018",
     "type": "image",
     "reference": {
         "name": "items",
@@ -7,15 +6,13 @@
     },
     "codeClass": null,
     "userConfig": {
+        "designer|userClassName": "MyImage",
+        "designer|userAlias": "myimage",
         "height": 201,
         "id": "manageTasksButton",
         "width": 201,
-        "src": "images/manageTasksButton.jpg",
-        "designer|userClassName": "MyImage",
-        "designer|userAlias": "myimage"
+        "src": "images/manageTasksButton.jpg"
     },
-    "customConfigs": [],
-    "designerId": "274f4f61-7fad-4d75-8d6f-1720d4c9410f",
-    "$viewOrder": 4,
-    "expanded": true
+    "id": "ExtBox1-ext-gen14018",
+    "designerId": "274f4f61-7fad-4d75-8d6f-1720d4c9410f"
 }

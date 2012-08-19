@@ -1,5 +1,4 @@
 {
-    "id": "ExtBox1-ext-gen30102",
     "type": "controller",
     "reference": {
         "name": "items",
@@ -7,18 +6,15 @@
     },
     "codeClass": null,
     "userConfig": {
+        "designer|userClassName": "MainController",
         "stores": [
             "TasksStore"
-        ],
-        "designer|userClassName": "MainController"
+        ]
     },
-    "customConfigs": [],
+    "id": "ExtBox1-ext-gen30102",
     "designerId": "22903d55-b344-4cc8-9d7b-5fff5bb0ff87",
-    "$viewOrder": 0,
-    "expanded": true,
     "cn": [
         {
-            "id": "ExtBox1-ext-gen35195",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -26,6 +22,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "onManageTaskButtonTap",
                 "fn": "onManageTaskButtonTap",
                 "implHandler": [
                     "console.log('1');",
@@ -44,14 +41,11 @@
                 ],
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
-                "designer|controlQuery": "#manageTasksButton",
-                "designer|userClassName": "onManageTaskButtonTap"
+                "designer|controlQuery": "#manageTasksButton"
             },
-            "customConfigs": [],
-            "expanded": true
+            "designerId": "7b53c65c-0799-490b-aff8-737de57cec50"
         },
         {
-            "id": "ExtBox1-ext-gen2568",
             "type": "controllerref",
             "reference": {
                 "name": "items",
@@ -59,15 +53,13 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "mynavigationview",
                 "ref": "mynavigationview",
-                "selector": "mynavigationview",
-                "designer|userClassName": "mynavigationview"
+                "selector": "mynavigationview"
             },
-            "customConfigs": [],
-            "expanded": true
+            "designerId": "6bfc3781-18f5-4769-a955-a64fea3ea0a1"
         },
         {
-            "id": "ExtBox1-ext-gen21730",
             "type": "controllerref",
             "reference": {
                 "name": "items",
@@ -75,15 +67,13 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "addtaskbutton",
                 "ref": "addtaskbutton",
-                "selector": "#addTaskButton",
-                "designer|userClassName": "addtaskbutton"
+                "selector": "#addTaskButton"
             },
-            "customConfigs": [],
-            "expanded": true
+            "designerId": "e4da8bca-6b3a-4eb2-a978-e9148c139542"
         },
         {
-            "id": "ExtBox1-ext-gen31962",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -91,6 +81,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "onAddTaskButton",
                 "fn": "onAddTaskButton",
                 "implHandler": [
                     "console.log('2');",
@@ -119,14 +110,11 @@
                 ],
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
-                "designer|controlQuery": "#addTaskButton",
-                "designer|userClassName": "onAddTaskButton"
+                "designer|controlQuery": "#addTaskButton"
             },
-            "customConfigs": [],
-            "expanded": true
+            "designerId": "9ad653eb-183e-406f-af45-dd70bdaa8dff"
         },
         {
-            "id": "ExtBox1-ext-gen35404",
             "type": "controllerref",
             "reference": {
                 "name": "items",
@@ -134,15 +122,13 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "savetasknavbutton",
                 "ref": "savetasknavbutton",
-                "selector": "#saveTaskNavButton",
-                "designer|userClassName": "savetasknavbutton"
+                "selector": "#saveTaskNavButton"
             },
-            "customConfigs": [],
-            "expanded": true
+            "designerId": "fac34884-a3ee-4113-9a5d-6f6adb6709b6"
         },
         {
-            "id": "ExtBox1-ext-gen5375",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -150,6 +136,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "onSaveTaskNavButtonTap",
                 "fn": "onSaveTaskNavButtonTap",
                 "implHandler": [
                     "console.log('3');",
@@ -200,14 +187,11 @@
                 ],
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
-                "designer|controlQuery": "#saveTaskNavButton",
-                "designer|userClassName": "onSaveTaskNavButtonTap"
+                "designer|controlQuery": "#saveTaskNavButton"
             },
-            "customConfigs": [],
-            "expanded": true
+            "designerId": "69e8ace9-c459-491d-bd6f-5890868e9146"
         },
         {
-            "id": "ExtBox1-ext-gen18120",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -215,6 +199,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "onWhatCanIDoNowButtonTap",
                 "fn": "onWhatCanIDoNowButtonTap",
                 "implHandler": [
                     "console.log('4');",
@@ -223,14 +208,11 @@
                 ],
                 "name": "tap",
                 "designer|targetType": "Ext.Img",
-                "designer|controlQuery": "#whatCanIDoNowButton",
-                "designer|userClassName": "onWhatCanIDoNowButtonTap"
+                "designer|controlQuery": "#whatCanIDoNowButton"
             },
-            "customConfigs": [],
-            "expanded": true
+            "designerId": "6f0c66b9-fe56-4966-8bea-283b53ae8494"
         },
         {
-            "id": "ExtBox1-ext-gen5169",
             "type": "controllerref",
             "reference": {
                 "name": "items",
@@ -238,15 +220,13 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "availableTimePicker",
                 "ref": "availableTimePicker",
-                "selector": "#availableTimePicker",
-                "designer|userClassName": "availableTimePicker"
+                "selector": "#availableTimePicker"
             },
-            "customConfigs": [],
-            "expanded": true
+            "designerId": "21e45d84-2a28-48dd-9bff-e6d6210c105d"
         },
         {
-            "id": "ExtBox1-ext-gen6812",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -254,6 +234,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "onAvailableTimePickerChange",
                 "fn": "onAvailableTimePickerChange",
                 "implHandler": [
                     "console.log('5');",
@@ -282,14 +263,11 @@
                 ],
                 "name": "change",
                 "designer|targetType": "Ext.picker.Picker",
-                "designer|controlQuery": "#availableTimePicker",
-                "designer|userClassName": "onAvailableTimePickerChange"
+                "designer|controlQuery": "#availableTimePicker"
             },
-            "customConfigs": [],
-            "expanded": true
+            "designerId": "5101638d-9f13-42ac-b5d8-19ddb7bf7e1b"
         },
         {
-            "id": "ExtBox1-ext-gen3349",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -297,6 +275,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "onNavigationviewPush",
                 "fn": "onNavigationviewPush",
                 "implHandler": [
                     "/*console.log('6');",
@@ -318,14 +297,11 @@
                 ],
                 "name": "push",
                 "designer|targetType": "Ext.navigation.View",
-                "designer|controlQuery": "navigationview",
-                "designer|userClassName": "onNavigationviewPush"
+                "designer|controlQuery": "navigationview"
             },
-            "customConfigs": [],
-            "expanded": true
+            "designerId": "26b04007-f6c6-4500-b133-aa697fcc7d20"
         },
         {
-            "id": "ExtBox1-ext-gen9100",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -333,6 +309,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "onNavigationviewBack",
                 "fn": "onNavigationviewBack",
                 "implHandler": [
                     "/*console.log('7');",
@@ -350,14 +327,11 @@
                 ],
                 "name": "back",
                 "designer|targetType": "Ext.navigation.View",
-                "designer|controlQuery": "navigationview",
-                "designer|userClassName": "onNavigationviewBack"
+                "designer|controlQuery": "navigationview"
             },
-            "customConfigs": [],
-            "expanded": true
+            "designerId": "738b4194-82f9-4c86-b307-8b86f659a700"
         },
         {
-            "id": "ExtBox1-ext-gen9661",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -365,6 +339,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "onManageTasksListIItemTap",
                 "fn": "onManageTasksListIItemTap",
                 "implHandler": [
                     "console.log('8');",
@@ -388,14 +363,11 @@
                 ],
                 "name": "itemtap",
                 "designer|targetType": "Ext.dataview.List",
-                "designer|controlQuery": "manageTaskListAlias",
-                "designer|userClassName": "onManageTasksListIItemTap"
+                "designer|controlQuery": "manageTaskListAlias"
             },
-            "customConfigs": [],
-            "expanded": true
+            "designerId": "f179b57e-3965-451f-b217-766b6372264e"
         },
         {
-            "id": "ExtBox1-ext-gen5061",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -403,6 +375,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "onResultListItemTap",
                 "fn": "onResultListItemTap",
                 "implHandler": [
                     "console.log('9');",
@@ -424,14 +397,11 @@
                 ],
                 "name": "itemtap",
                 "designer|targetType": "Ext.dataview.List",
-                "designer|controlQuery": "taskResultListAlias",
-                "designer|userClassName": "onResultListItemTap"
+                "designer|controlQuery": "taskResultListAlias"
             },
-            "customConfigs": [],
-            "expanded": true
+            "designerId": "f1e31017-b29e-46de-bde8-cb51bbdbbd8d"
         },
         {
-            "id": "ExtBox1-ext-gen7034",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -439,6 +409,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "onNavigationviewActiveItemChange",
                 "fn": "onNavigationviewActiveItemChange",
                 "implHandler": [
                     "console.log('10');",
@@ -498,14 +469,11 @@
                 ],
                 "name": "activeitemchange",
                 "designer|targetType": "Ext.navigation.View",
-                "designer|controlQuery": "navigationview",
-                "designer|userClassName": "onNavigationviewActiveItemChange"
+                "designer|controlQuery": "navigationview"
             },
-            "customConfigs": [],
-            "expanded": true
+            "designerId": "db2bc487-9119-47f7-abdf-2dacae92c536"
         },
         {
-            "id": "ExtBox1-ext-gen27477",
             "type": "basicfunction",
             "reference": {
                 "name": "items",
@@ -513,6 +481,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "getGeoLocation2",
                 "fn": "getGeoLocation2",
                 "designer|params": [
                     "callback"
@@ -524,19 +493,16 @@
                     "    navigator.geolocation.getCurrentPosition(function(position) {",
                     "        callback(position);",
                     "    }, function(error) {",
-                    "        Ext.Msg.alert('ERROR', error.message, Ext.emptyFn);",
+                    "        Ext.Msg.alert('Please turn ON the location services for dNORAM under settings.', error.message, Ext.emptyFn);",
                     "    });",
                     "} else {",
                     "    Ext.Msg.alert('ERROR', 'Geo location is disabled', Ext.emptyFn);",
                     "}"
-                ],
-                "designer|userClassName": "getGeoLocation2"
+                ]
             },
-            "customConfigs": [],
-            "expanded": true
+            "designerId": "3527d1e3-e241-431e-9a98-d41445e57281"
         },
         {
-            "id": "ExtBox1-ext-gen3072",
             "type": "controllerref",
             "reference": {
                 "name": "items",
@@ -544,15 +510,13 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "homePageContainer",
                 "ref": "homePageContainer",
-                "selector": "#homePageContainer",
-                "designer|userClassName": "homePageContainer"
+                "selector": "#homePageContainer"
             },
-            "customConfigs": [],
-            "expanded": true
+            "designerId": "4b64fc2b-9bef-442a-aa73-ec43873935c2"
         },
         {
-            "id": "ExtBox1-ext-gen3438",
             "type": "controllerref",
             "reference": {
                 "name": "items",
@@ -560,15 +524,13 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "currentDuser",
                 "ref": "currentDuser",
-                "selector": "duser",
-                "designer|userClassName": "currentDuser"
+                "selector": "duser"
             },
-            "customConfigs": [],
-            "expanded": true
+            "designerId": "b469391b-6091-4e28-bae3-d95f8138c500"
         },
         {
-            "id": "ExtBox1-ext-gen8736",
             "type": "fixedfunction",
             "reference": {
                 "name": "items",
@@ -576,6 +538,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "launch",
                 "fn": "launch",
                 "implHandler": [
                     "var LOCAL_USER_ID = 1;    ",
@@ -651,15 +614,11 @@
                     "    } // end of failure function",
                     "});",
                     ""
-                ],
-                "designer|userClassName": "launch"
+                ]
             },
-            "customConfigs": [],
-            "iconCls": "icon-basic-function",
-            "expanded": true
+            "designerId": "d35cacec-91db-4c56-93b8-06421ccbff66"
         },
         {
-            "id": "ExtBox1-ext-gen18040",
             "type": "controllerref",
             "reference": {
                 "name": "items",
@@ -667,15 +626,13 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "addtaskform",
                 "ref": "addtaskform",
-                "selector": "addTaskFormAlias",
-                "designer|userClassName": "addtaskform"
+                "selector": "addTaskFormAlias"
             },
-            "customConfigs": [],
-            "expanded": true
+            "designerId": "309a166d-719f-458a-a267-67314c705325"
         },
         {
-            "id": "ExtBox1-ext-gen15797",
             "type": "basicfunction",
             "reference": {
                 "name": "items",
@@ -683,6 +640,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "setUsersProxyUrlLoadStore",
                 "fn": "setUsersProxyUrlLoadStore",
                 "designer|params": [
                     "userid"
@@ -693,14 +651,11 @@
                     "var proxyUrlPrefix = proxy.getUrl();        ",
                     "proxy.setUrl(proxyUrlPrefix + '/' + userid + '/tasks');",
                     "tasksStore.load();"
-                ],
-                "designer|userClassName": "setUsersProxyUrlLoadStore"
+                ]
             },
-            "customConfigs": [],
-            "expanded": true
+            "designerId": "6f4103c9-bb2c-4eaa-a59f-db15881045a0"
         },
         {
-            "id": "ExtBox1-ext-gen5480",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -708,6 +663,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "onSelectfieldChange",
                 "fn": "onSelectfieldChange",
                 "implHandler": [
                     "console.log('onSelectfieldChange');",
@@ -746,14 +702,11 @@
                 ],
                 "name": "change",
                 "designer|targetType": "Ext.field.Select",
-                "designer|controlQuery": "addressFieldSelect",
-                "designer|userClassName": "onSelectfieldChange"
+                "designer|controlQuery": "addressFieldSelect"
             },
-            "customConfigs": [],
-            "expanded": true
+            "designerId": "c1621274-9b13-4d3f-8ac5-984b8c9bf33f"
         },
         {
-            "id": "ExtBox1-ext-gen6545",
             "type": "controllerref",
             "reference": {
                 "name": "items",
@@ -761,16 +714,14 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "addressfieldset",
                 "ref": "addressfieldset",
                 "selector": ".fieldset[name=\"addressFieldFieldSet\"]",
-                "xtype": "fieldset",
-                "designer|userClassName": "addressfieldset"
+                "xtype": "fieldset"
             },
-            "customConfigs": [],
-            "expanded": true
+            "designerId": "bb083044-75b3-485e-acd2-76c08c4c5251"
         },
         {
-            "id": "ExtBox1-ext-gen9807",
             "type": "controllerref",
             "reference": {
                 "name": "items",
@@ -778,15 +729,13 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "addresstextareafield",
                 "ref": "addresstextareafield",
-                "selector": "textareafield[name=\"address\"]",
-                "designer|userClassName": "addresstextareafield"
+                "selector": "textareafield[name=\"address\"]"
             },
-            "customConfigs": [],
-            "expanded": true
+            "designerId": "30b44d99-3e5b-4305-974e-965fa5d07876"
         },
         {
-            "id": "ExtBox1-ext-gen2789",
             "type": "basicfunction",
             "reference": {
                 "name": "items",
@@ -794,6 +743,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "addOrUpdateTask",
                 "fn": "addOrUpdateTask",
                 "designer|params": [
                     "task",
@@ -835,14 +785,11 @@
                     "",
                     "",
                     "this.getMynavigationview().pop();"
-                ],
-                "designer|userClassName": "addOrUpdateTask"
+                ]
             },
-            "customConfigs": [],
-            "expanded": true
+            "designerId": "a1803cee-70e7-47b9-ae5c-fcd125b9b1ba"
         },
         {
-            "id": "ExtBox1-ext-gen10135",
             "type": "controllerref",
             "reference": {
                 "name": "items",
@@ -850,15 +797,13 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "addressFieldSelect",
                 "ref": "addressFieldSelect",
-                "selector": "selectfield[name=\"addressType\"]",
-                "designer|userClassName": "addressFieldSelect"
+                "selector": "selectfield[name=\"addressType\"]"
             },
-            "customConfigs": [],
-            "expanded": true
+            "designerId": "9a850bab-8647-4a1c-aaa3-ba8ea7830fda"
         },
         {
-            "id": "ExtBox1-ext-gen12819",
             "type": "controllerref",
             "reference": {
                 "name": "items",
@@ -866,15 +811,13 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "refreshbutton",
                 "ref": "refreshbutton",
-                "selector": "button[iconCls=\"refresh\"]",
-                "designer|userClassName": "refreshbutton"
+                "selector": "button[iconCls=\"refresh\"]"
             },
-            "customConfigs": [],
-            "expanded": true
+            "designerId": "34075427-3763-4014-aa76-db0af8fe81f8"
         },
         {
-            "id": "ExtBox1-ext-gen15216",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -882,6 +825,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "onRefreshButtonTap",
                 "fn": "onRefreshButtonTap",
                 "implHandler": [
                     "//alert('clicked refresh');",
@@ -910,14 +854,11 @@
                 ],
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
-                "designer|controlQuery": "button[iconCls='refresh']",
-                "designer|userClassName": "onRefreshButtonTap"
+                "designer|controlQuery": "button[iconCls='refresh']"
             },
-            "customConfigs": [],
-            "expanded": true
+            "designerId": "61474385-70b0-48ba-9894-07d37eb62f2d"
         },
         {
-            "id": "ExtBox1-ext-gen3710",
             "type": "controllerref",
             "reference": {
                 "name": "items",
@@ -925,15 +866,13 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "deletetaskbutton",
                 "ref": "deletetaskbutton",
-                "selector": "button[name=\"delete\"]",
-                "designer|userClassName": "deletetaskbutton"
+                "selector": "button[name=\"delete\"]"
             },
-            "customConfigs": [],
-            "expanded": true
+            "designerId": "2c04cffb-ba2d-440e-9f51-1416c14a4b29"
         },
         {
-            "id": "ExtBox1-ext-gen5073",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -941,6 +880,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "onDeleteButtonTap",
                 "fn": "onDeleteButtonTap",
                 "implHandler": [
                     "",
@@ -957,14 +897,11 @@
                 ],
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
-                "designer|controlQuery": "button[name='delete']",
-                "designer|userClassName": "onDeleteButtonTap"
+                "designer|controlQuery": "button[name='delete']"
             },
-            "customConfigs": [],
-            "expanded": true
+            "designerId": "9f1ef092-b301-492d-8c3f-614e3939b52c"
         },
         {
-            "id": "ExtBox1-ext-gen8822",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -972,6 +909,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "onTaskListItemSwipe",
                 "fn": "onTaskListItemSwipe",
                 "implHandler": [
                     "console.log(\"swipe on:\"+record.data.title);",
@@ -1017,14 +955,11 @@
                 ],
                 "name": "itemswipe",
                 "designer|targetType": "Ext.dataview.List",
-                "designer|controlQuery": "list",
-                "designer|userClassName": "onTaskListItemSwipe"
+                "designer|controlQuery": "list"
             },
-            "customConfigs": [],
-            "expanded": true
+            "designerId": "d0286bf5-5463-48f4-8f4e-5f33bb8902d7"
         },
         {
-            "id": "ExtBox1-ext-gen28845",
             "type": "controllerref",
             "reference": {
                 "name": "items",
@@ -1032,15 +967,13 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "mapItButton",
                 "ref": "mapItButton",
-                "selector": "button[name=\"mapIt\"]",
-                "designer|userClassName": "mapItButton"
+                "selector": "button[name=\"mapIt\"]"
             },
-            "customConfigs": [],
-            "expanded": true
+            "designerId": "eb0a0cee-594c-44e9-a4f7-0ea59d9d9966"
         },
         {
-            "id": "ExtBox1-ext-gen5080",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -1048,6 +981,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "onMapItButtonTap",
                 "fn": "onMapItButtonTap",
                 "implHandler": [
                     "",
@@ -1071,14 +1005,11 @@
                 ],
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
-                "designer|controlQuery": "button[name='mapIt']",
-                "designer|userClassName": "onMapItButtonTap"
+                "designer|controlQuery": "button[name='mapIt']"
             },
-            "customConfigs": [],
-            "expanded": true
+            "designerId": "f8944be1-a511-4e74-812a-d47e90deb925"
         },
         {
-            "id": "ExtBox1-ext-gen9482",
             "type": "controllerref",
             "reference": {
                 "name": "items",
@@ -1086,14 +1017,13 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "mapPanel",
+                "autoCreate": true,
                 "ref": "mapPanel",
                 "selector": "mapPanel",
-                "xtype": "mapPanel",
-                "autoCreate": true,
-                "designer|userClassName": "mapPanel"
+                "xtype": "mapPanel"
             },
-            "customConfigs": [],
-            "expanded": true
+            "designerId": "6183a028-4446-461b-a979-fdbfe2b74819"
         }
     ]
 }

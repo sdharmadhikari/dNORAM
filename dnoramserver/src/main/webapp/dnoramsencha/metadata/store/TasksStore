@@ -1,5 +1,4 @@
 {
-    "id": "ExtBox1-ext-gen3448",
     "type": "jsonstore",
     "reference": {
         "name": "items",
@@ -7,20 +6,17 @@
     },
     "codeClass": null,
     "userConfig": {
+        "designer|userClassName": "TasksStore",
+        "designer|userAlias": "tasksStore",
         "autoLoad": false,
         "autoSync": false,
         "model": "Task",
-        "storeId": "tasksStore",
-        "designer|userClassName": "TasksStore",
-        "designer|userAlias": "tasksStore"
+        "storeId": "tasksStore"
     },
-    "customConfigs": [],
+    "id": "ExtBox1-ext-gen3448",
     "designerId": "6c96b262-a846-4783-8e57-ceb119c22529",
-    "$viewOrder": 0,
-    "expanded": true,
     "cn": [
         {
-            "id": "ExtBox1-ext-gen3065",
             "type": "restproxy",
             "reference": {
                 "name": "proxy",
@@ -28,10 +24,13 @@
             },
             "codeClass": null,
             "userConfig": {
-                "url": "http://dnoram8.cloudfoundry.com/dusers",
+                "actionMethods": [
+                    "{create: \"POST\", read: \"GET\", update: \"POST\", destroy: \"DELETE\"}"
+                ],
                 "designer|userClassName": "MyRestProxy1",
-                "actionMethods": "{create: \"POST\", read: \"GET\", update: \"POST\", destroy: \"DELETE\"}"
+                "url": "/dusers"
             },
+            "designerId": "c2b20823-633c-4609-9100-fe8a390a51f8",
             "customConfigs": [
                 {
                     "group": "(Custom Properties)",
@@ -39,10 +38,8 @@
                     "type": "object"
                 }
             ],
-            "expanded": true,
             "cn": [
                 {
-                    "id": "ExtBox1-ext-gen3206",
                     "type": "jsonreader",
                     "reference": {
                         "name": "reader",
@@ -52,11 +49,9 @@
                     "userConfig": {
                         "designer|userClassName": "MyJsonReader2"
                     },
-                    "customConfigs": [],
-                    "expanded": true
+                    "designerId": "9c2e0eec-91de-4765-b56b-1a4e72ef5f9d"
                 },
                 {
-                    "id": "ExtBox1-ext-gen3358",
                     "type": "jsonwriter",
                     "reference": {
                         "name": "writer",
@@ -66,13 +61,11 @@
                     "userConfig": {
                         "designer|userClassName": "MyJsonWriter"
                     },
-                    "customConfigs": [],
-                    "expanded": true
+                    "designerId": "e02af943-db1a-4e15-9ff2-09f16f718f83"
                 }
             ]
         },
         {
-            "id": "ExtBox1-ext-gen6807",
             "type": "sorter",
             "reference": {
                 "name": "sorters",
@@ -80,12 +73,11 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "MySorter",
                 "direction": "DESC",
-                "property": "id",
-                "designer|userClassName": "MySorter"
+                "property": "id"
             },
-            "customConfigs": [],
-            "expanded": true
+            "designerId": "c51275ec-2e67-4e4e-a722-a4ea0a2573f8"
         }
     ]
 }

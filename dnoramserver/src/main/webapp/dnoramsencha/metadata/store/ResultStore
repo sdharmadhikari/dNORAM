@@ -1,5 +1,4 @@
 {
-    "id": "ExtBox1-ext-gen2662",
     "type": "jsonstore",
     "reference": {
         "name": "items",
@@ -7,18 +6,15 @@
     },
     "codeClass": null,
     "userConfig": {
-        "model": "Task",
-        "storeId": "resultStore",
         "designer|userClassName": "ResultStore",
-        "designer|userAlias": "resultStore"
+        "designer|userAlias": "resultStore",
+        "model": "Task",
+        "storeId": "resultStore"
     },
-    "customConfigs": [],
+    "id": "ExtBox1-ext-gen2662",
     "designerId": "e5421a3d-90e3-48c0-82d7-d5bd470085a9",
-    "$viewOrder": 1,
-    "expanded": true,
     "cn": [
         {
-            "id": "ExtBox1-ext-gen2669",
             "type": "ajaxproxy",
             "reference": {
                 "name": "proxy",
@@ -26,15 +22,13 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "MyAjaxProxy1",
                 "enablePagingParams": false,
-                "url": "http://dnoram8.cloudfoundry.com/getbesttask",
-                "designer|userClassName": "MyAjaxProxy1"
+                "url": "/getbesttask"
             },
-            "customConfigs": [],
-            "expanded": true,
+            "designerId": "4d62f475-21a4-43b4-8ec8-e93eb43788c1",
             "cn": [
                 {
-                    "id": "ExtBox1-ext-gen2676",
                     "type": "jsonreader",
                     "reference": {
                         "name": "reader",
@@ -42,16 +36,14 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "rootProperty": "tasks",
-                        "designer|userClassName": "MyJsonReader1"
+                        "designer|userClassName": "MyJsonReader1",
+                        "rootProperty": "tasks"
                     },
-                    "customConfigs": [],
-                    "expanded": true
+                    "designerId": "8a86218f-439f-4f24-94f0-30777aca4517"
                 }
             ]
         },
         {
-            "id": "ExtBox1-ext-gen22065",
             "type": "grouper",
             "reference": {
                 "name": "grouper",
@@ -61,11 +53,9 @@
             "userConfig": {
                 "designer|userClassName": "MyGrouper"
             },
-            "customConfigs": [],
-            "expanded": true,
+            "designerId": "fb2ff6cd-5bd7-44be-86c1-77256ad10c8e",
             "cn": [
                 {
-                    "id": "ExtBox1-ext-gen22181",
                     "type": "fixedfunction",
                     "reference": {
                         "name": "items",
@@ -73,6 +63,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "designer|userClassName": "groupFn",
                         "fn": "groupFn",
                         "designer|params": [
                             "record"
@@ -87,17 +78,16 @@
                             "var availableTime = hours*60+min;",
                             "",
                             "if(record.get('totalTaskTime') <= availableTime) {",
+                            "    //record.set('group',1);",
                             "    return \"Best Tasks around this location\";",
                             "} else {",
+                            "    //record.set('group',2);",
                             "    return \"Your other tasks\";",
                             "}",
-                            "            "
-                        ],
-                        "designer|userClassName": "groupFn"
+                            ""
+                        ]
                     },
-                    "customConfigs": [],
-                    "iconCls": "icon-basic-function",
-                    "expanded": true
+                    "designerId": "b32bcf31-8600-4d89-82fe-763bd4336cb1"
                 }
             ]
         }

@@ -1,5 +1,4 @@
 {
-    "id": "ExtBox1-ext-gen2699",
     "type": "panel",
     "reference": {
         "name": "items",
@@ -7,30 +6,23 @@
     },
     "codeClass": null,
     "userConfig": {
-        "layout": "fit",
+        "title": "Task Location",
         "designer|userClassName": "MapPanel",
         "designer|userAlias": "mapPanel",
-        "fullscreen": "true",
-        "title": "Task Location"
+        "fullscreen": true,
+        "layout": "fit"
     },
+    "id": "ExtBox1-ext-gen2699",
+    "designerId": "fecfc644-19b0-4285-82e6-18de1b89a6eb",
     "customConfigs": [
-        {
-            "group": "(Custom Properties)",
-            "name": "fullscreen",
-            "type": "string"
-        },
         {
             "group": "(Custom Properties)",
             "name": "title",
             "type": "string"
         }
     ],
-    "designerId": "fecfc644-19b0-4285-82e6-18de1b89a6eb",
-    "$viewOrder": 5,
-    "expanded": false,
     "cn": [
         {
-            "id": "ExtBox1-ext-gen26282",
             "type": "map",
             "reference": {
                 "name": "items",
@@ -38,18 +30,19 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "MyMap",
                 "height": null,
                 "itemId": "googlemap",
                 "ui": null,
-                "mapOptions": "{zoom : 16\n}",
-                "useCurrentLocation": true,
-                "designer|userClassName": "MyMap"
+                "mapOptions": [
+                    "{zoom : 16",
+                    "}"
+                ],
+                "useCurrentLocation": true
             },
-            "customConfigs": [],
-            "expanded": true,
+            "designerId": "3b8d9565-0de4-4da4-8e43-f7facb144ded",
             "cn": [
                 {
-                    "id": "ExtBox1-ext-gen26739",
                     "type": "basiceventbinding",
                     "reference": {
                         "name": "listeners",
@@ -57,6 +50,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "designer|userClassName": "onMymapMaprender",
                         "fn": "onMymapMaprender",
                         "implHandler": [
                             "console.log(\"called onMymaprender\");",
@@ -91,11 +85,9 @@
                             "        });    ",
                             "}"
                         ],
-                        "name": "maprender",
-                        "designer|userClassName": "onMymapMaprender"
+                        "name": "maprender"
                     },
-                    "customConfigs": [],
-                    "expanded": true
+                    "designerId": "23942c91-4380-4698-a251-9aea28277a89"
                 }
             ]
         }

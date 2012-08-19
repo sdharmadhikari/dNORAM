@@ -1,5 +1,4 @@
 {
-    "id": "ExtBox1-ext-gen2461",
     "type": "datamodel",
     "reference": {
         "name": "items",
@@ -10,13 +9,10 @@
         "designer|userClassName": "Duser",
         "designer|userAlias": "duser"
     },
-    "customConfigs": [],
+    "id": "ExtBox1-ext-gen2461",
     "designerId": "35a9c6a7-f661-4325-bd67-6329e9bf31b0",
-    "$viewOrder": 1,
-    "expanded": true,
     "cn": [
         {
-            "id": "ExtBox1-ext-gen2681",
             "type": "datafield",
             "reference": {
                 "name": "fields",
@@ -24,15 +20,13 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "MyField6",
                 "name": "userid",
-                "type": "string",
-                "designer|userClassName": "MyField6"
+                "type": "string"
             },
-            "customConfigs": [],
-            "expanded": true
+            "designerId": "888ff4db-8a8a-43b5-b90a-e3b1cab5d747"
         },
         {
-            "id": "ExtBox1-ext-gen2571",
             "type": "restproxy",
             "reference": {
                 "name": "proxy",
@@ -40,14 +34,12 @@
             },
             "codeClass": null,
             "userConfig": {
-                "url": "http://dnoram8.cloudfoundry.com/dusers",
-                "designer|userClassName": "MyRestProxy"
+                "designer|userClassName": "MyRestProxy",
+                "url": "/dusers"
             },
-            "customConfigs": [],
-            "expanded": true
+            "designerId": "07403f4e-0b66-4d04-8ed4-891979d4c2c3"
         },
         {
-            "id": "ExtBox1-ext-gen7160",
             "type": "datafield",
             "reference": {
                 "name": "fields",
@@ -55,12 +47,11 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "MyField7",
                 "name": "username",
-                "type": "string",
-                "designer|userClassName": "MyField7"
+                "type": "string"
             },
-            "customConfigs": [],
-            "expanded": true
+            "designerId": "0309dc61-7a6d-471a-b696-414b32bd2c9b"
         }
     ]
 }

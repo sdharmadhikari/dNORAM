@@ -1,5 +1,4 @@
 {
-    "id": "ExtBox1-ext-gen30578",
     "type": "container",
     "reference": {
         "name": "items",
@@ -7,20 +6,17 @@
     },
     "codeClass": null,
     "userConfig": {
-        "layout": "vbox",
-        "scrollable": true,
+        "container|align": "center",
+        "container|pack": "center",
         "designer|userClassName": "MyContainer1",
         "designer|userAlias": "welcomePage",
-        "container|align": "center",
-        "container|pack": "center"
+        "layout": "vbox",
+        "scrollable": null
     },
-    "customConfigs": [],
+    "id": "ExtBox1-ext-gen30578",
     "designerId": "b439c4ad-9f0d-4dbd-a792-4de95916851a",
-    "$viewOrder": 6,
-    "expanded": true,
     "cn": [
         {
-            "id": "ExtBox1-ext-gen17390",
             "type": "image",
             "reference": {
                 "name": "items",
@@ -28,38 +24,15 @@
             },
             "codeClass": null,
             "userConfig": {
-                "height": 367,
+                "designer|userClassName": "MyImage1",
+                "height": 114,
                 "id": "whatCanIDoNowButton",
-                "width": 320,
-                "src": "images/whatCanIDoNowButton.jpg",
-                "designer|userClassName": "MyImage1"
+                "width": 114,
+                "src": "images/whatCanIDoNow.png"
             },
-            "customConfigs": [],
-            "expanded": true
+            "designerId": "cc726ff4-beee-4b3e-8b96-b237ad92ac9c"
         },
         {
-            "id": "ExtBox1-ext-gen4484",
-            "type": "button",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "cls": "titleFont",
-                "height": 44,
-                "id": "manageTasksButton",
-                "style": "color:#fff;",
-                "width": 303,
-                "iconAlign": "center",
-                "text": "Manage Tasks",
-                "designer|userClassName": "MyButton4"
-            },
-            "customConfigs": [],
-            "expanded": true
-        },
-        {
-            "id": "ExtBox1-ext-gen18919",
             "type": "picker",
             "reference": {
                 "name": "items",
@@ -67,16 +40,15 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "MyPicker",
                 "hidden": true,
                 "id": "availableTimePicker",
-                "useTitles": true,
-                "designer|userClassName": "MyPicker"
+                "style": null,
+                "useTitles": true
             },
-            "customConfigs": [],
-            "expanded": false,
+            "designerId": "5d4bc348-aa06-4b2e-915b-eeaeba605326",
             "cn": [
                 {
-                    "id": "ExtBox1-ext-gen18931",
                     "type": "button",
                     "reference": {
                         "name": "doneButton",
@@ -84,15 +56,14 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "docked": "left",
-                        "text": "Done",
-                        "designer|userClassName": "MyButton1"
+                        "designer|userClassName": "MyButton1",
+                        "docked": null,
+                        "style": null,
+                        "text": "Done"
                     },
-                    "customConfigs": [],
-                    "expanded": true
+                    "designerId": "e64720fe-f43f-4a9b-b682-fb19916c5542"
                 },
                 {
-                    "id": "ExtBox1-ext-gen18940",
                     "type": "button",
                     "reference": {
                         "name": "cancelButton",
@@ -100,15 +71,14 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "docked": "right",
-                        "text": "Cancel",
-                        "designer|userClassName": "MyButton2"
+                        "designer|userClassName": "MyButton2",
+                        "docked": null,
+                        "style": null,
+                        "text": "Cancel"
                     },
-                    "customConfigs": [],
-                    "expanded": true
+                    "designerId": "6d26f477-e663-4aa9-9df4-b0512a3c65d3"
                 },
                 {
-                    "id": "ExtBox1-ext-gen18949",
                     "type": "pickerslot",
                     "reference": {
                         "name": "slots",
@@ -116,17 +86,32 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "itemTpl": "<div>Data View Item {string}</div>",
+                        "designer|userClassName": "MyPickerSlot",
                         "data": "[ {text : '0', value : '0'} ,{text : '1', value : '1'} , { text : '2', value : '2' }, { text : '3', value : '3' }, { text : '4', value : '4' }, { text : '5', value : '5' }, { text : '6', value : '6' }, { text : '7', value : '7' }, { text : '8', value : '8' }, { text : '9', value : '9' } , {text : '10', value : '10' }, { text : '11', value : '11' },  { text : '12', value : '12' }]",
                         "name": "HoursPickerSlot",
-                        "title": "hours",
-                        "designer|userClassName": "MyPickerSlot"
+                        "title": "hours"
                     },
-                    "customConfigs": [],
-                    "expanded": true
+                    "designerId": "16d3702a-92d5-4085-8e8a-3df77648eca0",
+                    "cn": [
+                        {
+                            "type": "template",
+                            "reference": {
+                                "name": "itemTpl",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "itemTpl",
+                                "implHandler": [
+                                    "<div>Data View Item {string}</div>"
+                                ],
+                                "designer|displayName": "itemTpl"
+                            },
+                            "designerId": "aba30f2a-510e-49c7-8e6f-05bc5eb1ea86"
+                        }
+                    ]
                 },
                 {
-                    "id": "ExtBox1-ext-gen4604",
                     "type": "pickerslot",
                     "reference": {
                         "name": "slots",
@@ -134,32 +119,141 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "itemTpl": "<div>Data View Item {string}</div>",
+                        "designer|userClassName": "MyPickerSlot",
                         "data": "[ {text : '0', value : '0'} ,{text : '5', value : '5'} , { text : '10', value : '10' }, { text : '15', value : '15' }, { text : '20', value : '20' }, { text : '25', value : '25' }, { text : '30', value : '30' }, { text : '35', value : '35' }, { text : '40', value : '40' }, { text : '45', value : '45' } , {text : '50', value : '50' }, { text : '55', value : '55' }]",
                         "name": "MinPickerSlot",
                         "title": "min.",
-                        "value": null,
-                        "designer|userClassName": "MyPickerSlot"
+                        "value": null
                     },
-                    "customConfigs": [],
-                    "expanded": true
+                    "designerId": "ae2c7ef1-0b93-4bc2-92db-339eb255b5d6",
+                    "cn": [
+                        {
+                            "type": "template",
+                            "reference": {
+                                "name": "itemTpl",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "itemTpl",
+                                "implHandler": [
+                                    "<div>Data View Item {string}</div>"
+                                ],
+                                "designer|displayName": "itemTpl"
+                            },
+                            "designerId": "9bec51a5-a8e2-4842-a059-4b03803106cd"
+                        }
+                    ]
                 },
                 {
-                    "id": "ExtBox1-ext-gen3389",
-                    "type": "toolbar",
+                    "type": "titlebar",
                     "reference": {
                         "name": "toolbar",
                         "type": "object"
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "designer|userClassName": "MyTitleBar",
                         "docked": "top",
-                        "title": "Available time ?",
-                        "designer|userClassName": "MyToolbar",
-                        "container|pack": "center"
+                        "style": null,
+                        "title": "Available Time?"
                     },
-                    "customConfigs": [],
-                    "expanded": true
+                    "designerId": "2f6e9c07-da28-44d6-a2fa-71a1c9674786"
+                }
+            ]
+        },
+        {
+            "type": "toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyToolbar1",
+                "docked": "bottom"
+            },
+            "designerId": "72d61ba9-38cc-4e37-9456-5dd960a2170a",
+            "cn": [
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyButton4",
+                        "cls": null,
+                        "height": null,
+                        "id": "manageTasksButton",
+                        "style": null,
+                        "ui": "plain",
+                        "width": null,
+                        "iconAlign": "center",
+                        "iconCls": "note3",
+                        "iconMask": true,
+                        "iconMaskCls": null,
+                        "text": null
+                    },
+                    "designerId": "b73b1206-51a0-426e-8b4d-2587c04007de"
+                },
+                {
+                    "type": "spacer",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MySpacer"
+                    },
+                    "designerId": "57d12329-9852-421d-a223-04c6b68c6a7e"
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "name": "infoButton",
+                        "designer|userClassName": "MyButton8",
+                        "itemId": "mybutton5",
+                        "ui": "plain",
+                        "iconCls": "info",
+                        "iconMask": true,
+                        "text": null
+                    },
+                    "designerId": "3e7c0cf4-9628-4629-b0eb-e91b44dd95a7",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "name",
+                            "type": "string"
+                        }
+                    ],
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "onMybutton5Tap",
+                                "fn": "onMybutton5Tap",
+                                "implHandler": [
+                                    "",
+                                    "button.up(\"mainApplicationView\").animateActiveItem(2,{type:'flip',duration:800});"
+                                ],
+                                "name": "tap"
+                            },
+                            "designerId": "c9c59737-e5f8-4777-a826-4e2e80ba1fdf"
+                        }
+                    ]
                 }
             ]
         }

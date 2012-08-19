@@ -1,0 +1,24 @@
+{
+    "id": "ExtBox1-ext-gen7761",
+    "type": "list",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "id": null,
+        "emptyText": "No tasks found.",
+        "itemTpl": "<div>{title}</div><div style=\"font-size:70%\">Duration: {duration} min., Driving Distance: {drivingDistance}  miles, Driving Time: {drivingTime} min., Total Task Time: {totalTaskTime} min.</div><span class=\"deleteplaceholder\"></span>",
+        "loadingText": "Finding the best tasks for you ..",
+        "store": "resultStore",
+        "grouped": true,
+        "onItemDisclosure": true,
+        "designer|userClassName": "TaskResultList",
+        "designer|userAlias": "taskResultListAlias"
+    },
+    "customConfigs": [],
+    "designerId": "d7834af9-6a0f-4d21-af55-6f4a6235b9bf",
+    "$viewOrder": 3,
+    "expanded": true
+}

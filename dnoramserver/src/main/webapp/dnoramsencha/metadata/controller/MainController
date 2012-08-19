@@ -1,0 +1,1099 @@
+{
+    "id": "ExtBox1-ext-gen30102",
+    "type": "controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "stores": [
+            "TasksStore"
+        ],
+        "designer|userClassName": "MainController"
+    },
+    "customConfigs": [],
+    "designerId": "22903d55-b344-4cc8-9d7b-5fff5bb0ff87",
+    "$viewOrder": 0,
+    "expanded": true,
+    "cn": [
+        {
+            "id": "ExtBox1-ext-gen35195",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onManageTaskButtonTap",
+                "implHandler": [
+                    "console.log('1');",
+                    "",
+                    "/// Above code goes back to launch method of controller",
+                    "",
+                    "details = Ext.create('MyApp.view.ManageTaskList', {",
+                    "    title: 'My Tasks'",
+                    "});",
+                    "console.log('test');",
+                    "Ext.getStore('tasksStore').load();",
+                    "this.getMynavigationview().push(details);",
+                    "",
+                    "",
+                    ""
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "#manageTasksButton",
+                "designer|userClassName": "onManageTaskButtonTap"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen2568",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "mynavigationview",
+                "selector": "mynavigationview",
+                "designer|userClassName": "mynavigationview"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen21730",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "addtaskbutton",
+                "selector": "#addTaskButton",
+                "designer|userClassName": "addtaskbutton"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen31962",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onAddTaskButton",
+                "implHandler": [
+                    "console.log('2');",
+                    "var now = new Date();",
+                    "var taskId = (now.getTime()).toString();",
+                    "",
+                    "var newTask = Ext.create('MyApp.model.Task', {",
+                    "    id : taskId,",
+                    "    duration : 15",
+                    "});",
+                    "",
+                    "",
+                    "var addTaskForm = Ext.create('MyApp.view.AddTaskForm', { ",
+                    "    title : 'New Task'",
+                    "});",
+                    "",
+                    "console.log('addTaskForm xtype when new object ' ,addTaskForm.xtype);",
+                    "",
+                    "",
+                    "",
+                    "addTaskForm.setRecord(newTask);",
+                    "",
+                    "this.getMynavigationview().push(addTaskForm);",
+                    "",
+                    ""
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "#addTaskButton",
+                "designer|userClassName": "onAddTaskButton"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen35404",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "savetasknavbutton",
+                "selector": "#saveTaskNavButton",
+                "designer|userClassName": "savetasknavbutton"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen5375",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onSaveTaskNavButtonTap",
+                "implHandler": [
+                    "console.log('3');",
+                    "",
+                    "console.log('got addTaskForm xtype using controller ref:', this.getAddtaskform().xtype);",
+                    "var newValues =  this.getAddtaskform().getValues();",
+                    "",
+                    "//alert(newValues.address);",
+                    "//alert(newValues.streetaddress);",
+                    "",
+                    "var task = this.getAddtaskform().getRecord();",
+                    "task.set('title', newValues.title);",
+                    "task.set('duration', newValues.duration);",
+                    "task.set('category', 'SmartPick');",
+                    "task.set('addressType', newValues.addressType);",
+                    "task.set('address', newValues.address);",
+                    "if(newValues.isCompleted === 0){",
+                    "    task.set('isCompleted', false);",
+                    "}else{",
+                    "    task.set('isCompleted', true);",
+                    "}",
+                    "",
+                    "var mainController = MyApp.app.getController('MainController');",
+                    "console.log('main controller : ' + mainController);",
+                    "if(newValues.addressType == 'Current') {",
+                    "    console.log('going in current location');",
+                    "    this.getGeoLocation2( function(position) {             ",
+                    "        task.set('address', position.coords.latitude + ',' + position.coords.longitude);",
+                    "        task.set('addressType','Task Location');",
+                    "        mainController.addOrUpdateTask(task);",
+                    "    });",
+                    "",
+                    "}else if(newValues.addressType == 'Custom'){",
+                    "    if(newValues.address === ''){",
+                    "        Ext.Msg.alert('Need address with this address option', '', Ext.emptyFn);",
+                    "        task.reject();",
+                    "        return;",
+                    "    }",
+                    "    //task.set('address', newValues.streetaddress);",
+                    "    mainController.addOrUpdateTask(task);",
+                    "",
+                    "}else if(newValues.addressType == 'Anywhere') {",
+                    "    //task.set('address', newValues.address);",
+                    "    mainController.addOrUpdateTask(task);",
+                    "} else if(newValues.addressType == 'Task Location') {",
+                    "    mainController.addOrUpdateTask(task);",
+                    "}"
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "#saveTaskNavButton",
+                "designer|userClassName": "onSaveTaskNavButtonTap"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen18120",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onWhatCanIDoNowButtonTap",
+                "implHandler": [
+                    "console.log('4');",
+                    "console.log('clicked whatcanidonow');",
+                    "this.getAvailableTimePicker().setHidden(false);"
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Img",
+                "designer|controlQuery": "#whatCanIDoNowButton",
+                "designer|userClassName": "onWhatCanIDoNowButtonTap"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen5169",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "availableTimePicker",
+                "selector": "#availableTimePicker",
+                "designer|userClassName": "availableTimePicker"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen6812",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onAvailableTimePickerChange",
+                "implHandler": [
+                    "console.log('5');",
+                    "var min = parseInt(value.MinPickerSlot);",
+                    "var hours = parseInt(value.HoursPickerSlot);",
+                    "console.log('picked hour value : ',hours);",
+                    "console.log('picked Min value : ',min);",
+                    "resultList = Ext.create('MyApp.view.TaskResultList');",
+                    "var resultStore = Ext.getStore('resultStore');",
+                    "var proxy = resultStore.getProxy();",
+                    "var proxyUrlPrefix = proxy.getUrl();",
+                    "//var location = this.getGeoLocation2();",
+                    "var location = this.getGeoLocation2(function (location) {",
+                    "    proxyUrlPrefix = proxyUrlPrefix.split('&minutes=')[0];",
+                    "    proxy.setUrl(proxyUrlPrefix + '&minutes=' + (hours*60+min) +'&address=' + location.coords.latitude + ',' + location.coords.longitude);",
+                    "    resultStore.load();",
+                    "    //proxy.setUrl(proxyUrlPrefix);",
+                    "    var mainController = MyApp.app.getController('MainController');",
+                    "    mainController.getMynavigationview().push(resultList);",
+                    "});",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "name": "change",
+                "designer|targetType": "Ext.picker.Picker",
+                "designer|controlQuery": "#availableTimePicker",
+                "designer|userClassName": "onAvailableTimePickerChange"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen3349",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onNavigationviewPush",
+                "implHandler": [
+                    "/*console.log('6');",
+                    "console.log('navigation push ' + view.xtype);",
+                    "var viewXtype = view.xtype;",
+                    "",
+                    "if(viewXtype == 'manageTaskListAlias' || viewXtype == 'taskResultListAlias') {",
+                    "",
+                    "    this.getAddtaskbutton().show();",
+                    "    this.getSavetasknavbutton().hide();",
+                    "",
+                    "}",
+                    "if(viewXtype == 'addTaskFormAlias') {",
+                    "",
+                    "    this.getSavetasknavbutton().show();",
+                    "    this.getAddtaskbutton().hide();",
+                    "",
+                    "}*/"
+                ],
+                "name": "push",
+                "designer|targetType": "Ext.navigation.View",
+                "designer|controlQuery": "navigationview",
+                "designer|userClassName": "onNavigationviewPush"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen9100",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onNavigationviewBack",
+                "implHandler": [
+                    "/*console.log('7');",
+                    "console.log('back event ' + navigationView.getActiveItem().xtype);",
+                    "var activeViewXtype  = navigationView.getActiveItem().xtype;",
+                    "",
+                    "if(activeViewXtype == 'manageTaskListAlias' || activeViewXtype == 'taskResultListAlias') {",
+                    "    this.getSavetasknavbutton().hide();",
+                    "    this.getAddtaskbutton().show();",
+                    "}",
+                    "",
+                    "if(navigationView.getActiveItem().id == 'homePageContainer') {",
+                    "    this.getAddtaskbutton().hide();",
+                    "}*/"
+                ],
+                "name": "back",
+                "designer|targetType": "Ext.navigation.View",
+                "designer|controlQuery": "navigationview",
+                "designer|userClassName": "onNavigationviewBack"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen9661",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onManageTasksListIItemTap",
+                "implHandler": [
+                    "console.log('8');",
+                    "",
+                    "var addTaskForm = Ext.create('MyApp.view.AddTaskForm', { ",
+                    "    title : 'Edit Task'",
+                    "});",
+                    "",
+                    "",
+                    "",
+                    "if ( record.get('addressType') == 'Task Location') {",
+                    "    //this.getGoogleMap().show();",
+                    "    addressTypeStore = Ext.getStore('addressTypeStore');",
+                    "    addressTypeStore.add({text: 'Task Location',  value: 'Task Location'});",
+                    "    this.getAddresstextareafield().show();",
+                    "}",
+                    "",
+                    "addTaskForm.setRecord(record);",
+                    "",
+                    "this.getMynavigationview().push(addTaskForm);"
+                ],
+                "name": "itemtap",
+                "designer|targetType": "Ext.dataview.List",
+                "designer|controlQuery": "manageTaskListAlias",
+                "designer|userClassName": "onManageTasksListIItemTap"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen5061",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onResultListItemTap",
+                "implHandler": [
+                    "console.log('9');",
+                    "var addTaskForm = Ext.create('MyApp.view.AddTaskForm', { ",
+                    "    title : 'Edit Task'",
+                    "});",
+                    "",
+                    "if (record.get('addressType') == 'Current'){",
+                    "    this.getAddresstextareafield().show();",
+                    "} else if ( record.get('addressType') == 'Task Location') {",
+                    "    addressTypeStore = Ext.getStore('addressTypeStore');",
+                    "    addressTypeStore.add({text: 'Task Location',  value: 'Task Location'});",
+                    "    this.getAddresstextareafield().show();",
+                    "}",
+                    "",
+                    "addTaskForm.setRecord(record);",
+                    "",
+                    "this.getMynavigationview().push(addTaskForm);"
+                ],
+                "name": "itemtap",
+                "designer|targetType": "Ext.dataview.List",
+                "designer|controlQuery": "taskResultListAlias",
+                "designer|userClassName": "onResultListItemTap"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen7034",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onNavigationviewActiveItemChange",
+                "implHandler": [
+                    "console.log('10');",
+                    "console.log('old view xtype ' + oldValue.xtype);",
+                    "console.log('new view xtype ' + value.xtype);",
+                    "",
+                    "if(value.xtype=='taskResultListAlias' && oldValue.xtype == 'addTaskFormAlias') {",
+                    "    var resultStore = Ext.getStore('resultStore');",
+                    "    resultStore.load();",
+                    "}",
+                    "",
+                    "// Nav showHide logic",
+                    "if(value.xtype=='welcomePage') {",
+                    "    this.getAddtaskbutton().hide();",
+                    "    this.getRefreshbutton().hide();",
+                    "    this.getSavetasknavbutton().hide();",
+                    "}",
+                    "",
+                    "if(value.xtype=='taskResultListAlias' ) {",
+                    "    this.getAddtaskbutton().show();",
+                    "    this.getRefreshbutton().show();",
+                    "    this.getSavetasknavbutton().hide();",
+                    "}",
+                    "",
+                    "if(value.xtype=='manageTaskListAlias') {",
+                    "    this.getAddtaskbutton().show();",
+                    "    this.getRefreshbutton().hide();",
+                    "    this.getSavetasknavbutton().hide();    ",
+                    "}",
+                    "",
+                    "",
+                    "if(value.xtype=='addTaskFormAlias' ) {",
+                    "    this.getAddtaskbutton().hide();",
+                    "    this.getSavetasknavbutton().show();",
+                    "    this.getRefreshbutton().hide();",
+                    "    if(value.config.title == 'Edit Task') {",
+                    "        this.getDeletetaskbutton().show();",
+                    "    } else {",
+                    "        this.getDeletetaskbutton().hide();",
+                    "    }",
+                    "}",
+                    "",
+                    "if(value.xtype=='mapPanel') {",
+                    "    this.getAddtaskbutton().hide();",
+                    "    this.getRefreshbutton().hide();",
+                    "    this.getSavetasknavbutton().hide();",
+                    "}",
+                    "",
+                    "// remove 'Task location\" entry from store which was added during edit mode when address type is 'Current Address'",
+                    "if (oldValue.xtype=='addTaskFormAlias' && value.xtype !== 'mapPanel'){",
+                    "    addressTypeStore = Ext.getStore(\"addressTypeStore\");",
+                    "    selectOptionTaskLocationRecord = addressTypeStore.findRecord('text','Task Location');",
+                    "    if(selectOptionTaskLocationRecord !== null) {",
+                    "        addressTypeStore.remove(selectOptionTaskLocationRecord);",
+                    "    }",
+                    "}"
+                ],
+                "name": "activeitemchange",
+                "designer|targetType": "Ext.navigation.View",
+                "designer|controlQuery": "navigationview",
+                "designer|userClassName": "onNavigationviewActiveItemChange"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen27477",
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "getGeoLocation2",
+                "designer|params": [
+                    "callback"
+                ],
+                "implHandler": [
+                    "",
+                    "console.log('getLoc');",
+                    "if (navigator.geolocation) {",
+                    "    navigator.geolocation.getCurrentPosition(function(position) {",
+                    "        callback(position);",
+                    "    }, function(error) {",
+                    "        Ext.Msg.alert('ERROR', error.message, Ext.emptyFn);",
+                    "    });",
+                    "} else {",
+                    "    Ext.Msg.alert('ERROR', 'Geo location is disabled', Ext.emptyFn);",
+                    "}"
+                ],
+                "designer|userClassName": "getGeoLocation2"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen3072",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "homePageContainer",
+                "selector": "#homePageContainer",
+                "designer|userClassName": "homePageContainer"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen3438",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "currentDuser",
+                "selector": "duser",
+                "designer|userClassName": "currentDuser"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen8736",
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "launch",
+                "implHandler": [
+                    "var LOCAL_USER_ID = 1;    ",
+                    "",
+                    "MyApp.model.LocalUser.load(LOCAL_USER_ID, {",
+                    "    success: function(localUser) {",
+                    "        userid = localUser.get('userid');",
+                    "        console.log('local user userid : ' + userid);",
+                    "",
+                    "        // I have to duplicate this code in failure config also",
+                    "        // because if I make this as method like below commented",
+                    "        // does not work !",
+                    "        //setUsersProxyUrlLoadStore(userid);            ",
+                    "        var tasksStore = Ext.getStore('tasksStore');",
+                    "        var proxy = tasksStore.getProxy();",
+                    "        var proxyUrlPrefix = proxy.getUrl();",
+                    "        //comment #1: following line added for debug purpose if launch method is invoked more than once",
+                    "        proxyUrlPrefix = proxyUrlPrefix.split('/'+userid)[0];",
+                    "        // end of comment #1",
+                    "        proxy.setUrl(proxyUrlPrefix + '/' + userid + '/tasks');",
+                    "        //console.log(\"loading taskStore..\");",
+                    "        //tasksStore.load({ callback:function(records, operation, success) {",
+                    "        //    console.log(\"taskStore load done:\"+success);",
+                    "        //}, scope:this}); ",
+                    "        var resultStore = Ext.getStore('resultStore');",
+                    "        var proxyResult = resultStore.getProxy();",
+                    "        var proxyResultUrlPrefix = proxyResult.getUrl();",
+                    "        proxyResultUrlPrefix = proxyResultUrlPrefix.split('?userid=')[0];",
+                    "        proxyResult.setUrl(proxyResultUrlPrefix + '?userid=' + userid);       ",
+                    "",
+                    "    },",
+                    "",
+                    "    failure: function(localUser, operation) {  ",
+                    "        //alert('locally saved user not found');",
+                    "        var now = new Date();",
+                    "        var userid = (now.getTime()).toString()+ '-xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {",
+                    "            var r = Math.random()*16|0, v = c == 'x' ? r : (r&0x3|0x8);",
+                    "            return v.toString(16);",
+                    "        });",
+                    "        //alert(userid);",
+                    "        //Ext.Msg.prompt('Login', 'Surely you have unique name:', function(buttonName,userid) {});// end of prompt",
+                    "",
+                    "        localUser = Ext.create('MyApp.model.LocalUser');",
+                    "        localUser.set('id', LOCAL_USER_ID);",
+                    "        localUser.set('userid',userid);",
+                    "        localUser.save(); ",
+                    "",
+                    "        //alert('remote user NOT found in database');",
+                    "        var duser = Ext.create('MyApp.model.Duser',{});",
+                    "        duser.set('userid',userid);",
+                    "        duser.set('id',null);",
+                    "",
+                    "        duser.save({",
+                    "            success: function() {",
+                    "                console.log('The user was created:'+localUser.get('userid'));",
+                    "                var tasksStore = Ext.getStore('tasksStore');",
+                    "                var proxy = tasksStore.getProxy();",
+                    "                var proxyUrlPrefix = proxy.getUrl();",
+                    "                //comment #2: following line added for debug purpose if launch method is invoked more than once",
+                    "                proxyUrlPrefix = proxyUrlPrefix.split('/'+userid)[0];",
+                    "                // end of comment #2",
+                    "                proxy.setUrl(proxyUrlPrefix + '/' + userid + '/tasks');",
+                    "                //tasksStore.load(); // don't need this as user is just created so task store is going to be empty",
+                    "                var resultStore = Ext.getStore('resultStore');",
+                    "                var proxyResult = resultStore.getProxy();",
+                    "                var proxyResultUrlPrefix = proxyResult.getUrl(); ",
+                    "                proxyResultUrlPrefix = proxyResultUrlPrefix.split('?userid=')[0];",
+                    "                proxyResult.setUrl(proxyResultUrlPrefix + '?userid=' + userid); ",
+                    "",
+                    "            }",
+                    "        });",
+                    "",
+                    "    } // end of failure function",
+                    "});",
+                    ""
+                ],
+                "designer|userClassName": "launch"
+            },
+            "customConfigs": [],
+            "iconCls": "icon-basic-function",
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen18040",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "addtaskform",
+                "selector": "addTaskFormAlias",
+                "designer|userClassName": "addtaskform"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen15797",
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "setUsersProxyUrlLoadStore",
+                "designer|params": [
+                    "userid"
+                ],
+                "implHandler": [
+                    "var tasksStore = Ext.getStore('tasksStore');",
+                    "var proxy = tasksStore.getProxy();",
+                    "var proxyUrlPrefix = proxy.getUrl();        ",
+                    "proxy.setUrl(proxyUrlPrefix + '/' + userid + '/tasks');",
+                    "tasksStore.load();"
+                ],
+                "designer|userClassName": "setUsersProxyUrlLoadStore"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen5480",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onSelectfieldChange",
+                "implHandler": [
+                    "console.log('onSelectfieldChange');",
+                    "var addressTextAreaField = this.getAddresstextareafield();",
+                    "/*if(newValue.data.value == 'Custom') {",
+                    "var theTextAreaField =  {",
+                    "xtype: 'textareafield',",
+                    "label: 'Street Address',",
+                    "maxRows: 3,",
+                    "name: 'streetaddress',",
+                    "showAnimation : 'fadeIn',",
+                    "id : 'addressTextAreaField',",
+                    "labelWidth : '50%'",
+                    "};",
+                    "",
+                    "addressFieldSet.add(theTextAreaField);",
+                    "}else{",
+                    "var customAddress = this.getAddresstextareafield();",
+                    "if(customAddress != undefined){ ",
+                    "console.log('custom address is not undefined');",
+                    "addressFieldSet.remove(customAddress);",
+                    "}",
+                    "}*/",
+                    "",
+                    "if(newValue.data.value == 'Custom' ) {",
+                    "    addressTextAreaField.show();",
+                    "} else {",
+                    "    addressTextAreaField.hide();",
+                    "}",
+                    "",
+                    "if(newValue.data.value === 'Anywhere') {",
+                    "    this.getMapItButton().hide();",
+                    "} else {",
+                    "    this.getMapItButton().show();",
+                    "}"
+                ],
+                "name": "change",
+                "designer|targetType": "Ext.field.Select",
+                "designer|controlQuery": "addressFieldSelect",
+                "designer|userClassName": "onSelectfieldChange"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen6545",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "addressfieldset",
+                "selector": ".fieldset[name=\"addressFieldFieldSet\"]",
+                "xtype": "fieldset",
+                "designer|userClassName": "addressfieldset"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen9807",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "addresstextareafield",
+                "selector": "textareafield[name=\"address\"]",
+                "designer|userClassName": "addresstextareafield"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen2789",
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "addOrUpdateTask",
+                "designer|params": [
+                    "task",
+                    "newValues"
+                ],
+                "implHandler": [
+                    "console.log('later alert : ' + task.get('address'));",
+                    "",
+                    "var errors = task.validate();",
+                    "if (!errors.isValid()) {",
+                    "    Ext.Msg.alert('Enter all mandatory fields', '', Ext.emptyFn);",
+                    "    task.reject();",
+                    "    return;",
+                    "}",
+                    "if (task.duration < 1) {",
+                    "    Ext.Msg.alert('Duration should be positive value', '', Ext.emptyFn);",
+                    "    task.reject();",
+                    "    return;",
+                    "}",
+                    "",
+                    "var tasksStore = Ext.getStore(\"tasksStore\");",
+                    "//var tasksStore = this.getTasksstore();",
+                    "console.log('auto sync', tasksStore.getAutoSync());",
+                    "console.log('record id ' + task.data.id);",
+                    "",
+                    "var taskFromTaskStore = tasksStore.findRecord('id', task.data.id);",
+                    "if(null === taskFromTaskStore) {",
+                    "    tasksStore.add(task);",
+                    "    tasksStore.sync();",
+                    "}else {",
+                    "    taskFromTaskStore.set('title',task.get('title'));",
+                    "    taskFromTaskStore.set('duration',task.get('duration'));",
+                    "    taskFromTaskStore.set('category',task.get('category'));",
+                    "    taskFromTaskStore.set('address',task.get('address'));",
+                    "    taskFromTaskStore.set('isCompleted',task.get('isCompleted'));",
+                    "    taskFromTaskStore.dirty = true;",
+                    "    tasksStore.sync();",
+                    "}",
+                    "",
+                    "",
+                    "this.getMynavigationview().pop();"
+                ],
+                "designer|userClassName": "addOrUpdateTask"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen10135",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "addressFieldSelect",
+                "selector": "selectfield[name=\"addressType\"]",
+                "designer|userClassName": "addressFieldSelect"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen12819",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "refreshbutton",
+                "selector": "button[iconCls=\"refresh\"]",
+                "designer|userClassName": "refreshbutton"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen15216",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onRefreshButtonTap",
+                "implHandler": [
+                    "//alert('clicked refresh');",
+                    "",
+                    "var picker = this.getAvailableTimePicker();",
+                    "//alert(picker.getValue().MyPickerSlot);",
+                    "",
+                    "var min = parseInt(picker.getValue()['MinPickerSlot']);",
+                    "var hours = parseInt(picker.getValue()['HoursPickerSlot']);",
+                    "console.log('picked hour value : ',hours);",
+                    "console.log('picked Min value : ',min);",
+                    "",
+                    "var value = picker.getValue();",
+                    "",
+                    "resultList = Ext.create('MyApp.view.TaskResultList');",
+                    "var resultStore = Ext.getStore('resultStore');",
+                    "var proxy = resultStore.getProxy();",
+                    "var proxyUrlPrefix = proxy.getUrl();",
+                    "proxyUrlPrefix = proxyUrlPrefix.split('&minutes=')[0];",
+                    "//var location = this.getGeoLocation2();",
+                    "var location = this.getGeoLocation2(function (location) {",
+                    "    proxy.setUrl(proxyUrlPrefix + '&minutes=' + (hours*60+min) +'&address=' + location.coords.latitude + ',' + location.coords.longitude);",
+                    "    resultStore.load();",
+                    "    //proxy.setUrl(proxyUrlPrefix);",
+                    "});"
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "button[iconCls='refresh']",
+                "designer|userClassName": "onRefreshButtonTap"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen3710",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "deletetaskbutton",
+                "selector": "button[name=\"delete\"]",
+                "designer|userClassName": "deletetaskbutton"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen5073",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onDeleteButtonTap",
+                "implHandler": [
+                    "",
+                    "var task = this.getAddtaskform().getRecord();",
+                    "",
+                    "console.log(\"deleting task:\"+task.get('title'));",
+                    "",
+                    "//var store = task.stores[0];",
+                    "var store = Ext.getStore(\"tasksStore\");",
+                    "store.remove(task);",
+                    "store.sync();",
+                    "",
+                    "this.getMynavigationview().pop();"
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "button[name='delete']",
+                "designer|userClassName": "onDeleteButtonTap"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen8822",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onTaskListItemSwipe",
+                "implHandler": [
+                    "console.log(\"swipe on:\"+record.data.title);",
+                    "",
+                    "var del = Ext.create(\"Ext.Button\", {",
+                    "    ui: \"decline\",",
+                    "    text: \"Delete\",",
+                    "    style: \"position:absolute;right:2.58em;bottom: 0.44em;\",",
+                    "    handler: function() {",
+                    "        var recordId = record.data.id;",
+                    "        var store = record.stores[0];",
+                    "        store.remove(record);",
+                    "        if(store.getStoreId() !== 'tasksStore') {",
+                    "            var tasksStore = Ext.getStore(\"tasksStore\");",
+                    "            var taskFromTaskStore = tasksStore.findRecord('id', recordId);",
+                    "            tasksStore.remove(taskFromTaskStore);",
+                    "            tasksStore.sync();",
+                    "        } else {",
+                    "            store.sync();",
+                    "        }",
+                    "    }",
+                    "});",
+                    "var removeDeleteButton = function() {",
+                    "    Ext.Anim.run(del, 'fade', {",
+                    "        after: function() {",
+                    "            del.destroy();",
+                    "        },",
+                    "        out: true",
+                    "    });",
+                    "};",
+                    "del.renderTo(Ext.DomQuery.selectNode(\".deleteplaceholder\", target.dom));",
+                    "dataview.on({",
+                    "    single: true,",
+                    "    buffer: 250,",
+                    "    itemtouchstart: removeDeleteButton",
+                    "});",
+                    "dataview.element.on({",
+                    "    single: true,",
+                    "    buffer: 250,",
+                    "    touchstart: removeDeleteButton",
+                    "});",
+                    ""
+                ],
+                "name": "itemswipe",
+                "designer|targetType": "Ext.dataview.List",
+                "designer|controlQuery": "list",
+                "designer|userClassName": "onTaskListItemSwipe"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen28845",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "mapItButton",
+                "selector": "button[name=\"mapIt\"]",
+                "designer|userClassName": "mapItButton"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen5080",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onMapItButtonTap",
+                "implHandler": [
+                    "",
+                    "mapPanel = this.getMapPanel();//Ext.create(\"MyApp.view.MapPanel\");",
+                    "var addressType = this.getAddressFieldSelect().getValue();",
+                    "if(addressType == 'Current') {",
+                    "    this.getMynavigationview().push(mapPanel);",
+                    "}else if(addressType == 'Custom' || addressType == 'Task Location'){",
+                    "    var address = this.getAddresstextareafield().getValue();",
+                    "    if(address !== ''){",
+                    "        mapPanel.address = address;",
+                    "        this.getMynavigationview().push(mapPanel);",
+                    "    }",
+                    "}",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "button[name='mapIt']",
+                "designer|userClassName": "onMapItButtonTap"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen9482",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "mapPanel",
+                "selector": "mapPanel",
+                "xtype": "mapPanel",
+                "autoCreate": true,
+                "designer|userClassName": "mapPanel"
+            },
+            "customConfigs": [],
+            "expanded": true
+        }
+    ]
+}

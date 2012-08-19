@@ -1,0 +1,270 @@
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-06-16 23:25:20
+project --topLevelPackage com.susanku.dnoram8 --projectName dnoram8 --java 6 --packaging JAR
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-06-16 23:25:23
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-06-16 23:25:37
+jpa setup --database HYPERSONIC_IN_MEMORY --provider HIBERNATE 
+entity jpa --class com.susanku.dnoram8.domain.task
+
+field string --fieldName id
+field string --fieldName title
+field number --fieldName duration --type int
+field string --fieldName category
+field string --fieldName address
+field boolean --fieldName isCompleted
+web mvc setup
+web mvc all --package com.susanku.dnoram8.web
+perform package
+perform package
+entity jpa --class ~.domain.DnoramUser
+field string --fieldName userid
+field string --fieldName password
+field string --fieldName deviceId 
+web mvc all --package com.susanku.dnoram8.web
+perform package
+focus --class ~.domain.DnoramUser
+field set --fieldName tasks --type ~.domain.Task
+web mvc json all 
+web mvc json all 
+json all 
+web mvc json all
+json all --deepSerialize true
+web mvc json all
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-06-18 14:03:22
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-06-21 19:15:21
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-06-26 21:44:58
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-07-02 18:50:49
+focus --class ~.domain.Task
+finder list 
+finder list --depth 2
+finder list
+finder add findTasksByIdEquals
+perform package
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-07-05 20:18:52
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-07-06 23:27:01
+hint
+web mvc controller --class ~.web.GetBestTaskController --preferredMapping /getbesttask
+web mvc json all 
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-07-08 09:00:39
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-07-08 12:01:39
+focus --class ~.domain.Task
+field boolean --fieldName testBoolean
+logging setup --level DEBUG 
+logging setup --level INFO 
+perform package
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-07-08 12:59:36
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-07-11 18:48:24
+entity jpa --class ~.domain.duser
+field string --fieldName userid
+field set --fieldName tasks --type ~.domain.Task --cardinality ONE_TO_MANY 
+perform package
+perform clean 
+exit
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-07-11 19:02:22
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-07-11 19:02:47
+web mvc all --package com.susanku.dnoram8.web
+web mvc json all 
+json all
+web mvc json all
+perform package
+perform clean
+perform package
+focus --class ~.domain.Duser
+field set --fieldName tasks --type ~.domain.Task --cardinality ONE_TO_MANY --mappedBy duser
+perform package
+json all
+web mvc all --package com.susanku.dnoram8.web
+perform clean
+perform package
+focus --class ~.domain.Duser 
+field set --fieldName tasks --type ~.domain.Task --cardinality ONE_TO_MANY --mappedBy dnoramuser
+perform clean
+perform package
+exit
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-07-11 19:41:33
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-07-11 19:42:00
+perform clean
+perform package
+perform package
+focus --class ~.domain.Task
+field reference --fieldName dnoramuser --type ~.domain.Duser --cardinality MANY_TO_ONE 
+field reference --fieldName dnoramuser --type ~.domain.Duser --cardinality MANY_TO_ONE --joinColumnName 
+// [failed] field reference --fieldName dnoramuser --type ~.domain.Duser --cardinality MANY_TO_ONE --joinColumnName duser_id
+field reference --fieldName dnoramuser --type ~.domain.Duser --cardinality MANY_TO_ONE --joinColumnName duser_id
+json all
+web mvc all --package com.susanku.dnoram8.web
+perform package
+web mvc all --package com.susanku.dnoram8.web
+json all
+perform package
+focus --class ~.domain.Task
+field reference --fieldName dusermapped --type ~.domain.Duser --cardinality MANY_TO_ONE --joinColumnName duser_id
+perform clean
+perform package
+focus --class ~.domain.Duser
+perform clean
+perform package
+perform package
+perform package
+perform package
+perform package
+perform clean
+perform package
+perform clean
+perform package
+perform clean
+perform package
+perform clean
+perform package
+focus --class ~.domain.Duser
+field set --fieldName tasks --type ~.domain.Task
+focus --class ~.domain.Task 
+field reference --fieldName duser --type ~.domain.Duser --cardinality MANY_TO_ONE
+focus --class ~.domain.Duser 
+field set --fieldName tasks --type ~.domain.Task 
+field set --fieldName tasks --type ~.domain.Task --cardinality ONE_TO_MANY 
+perform clean
+perform package
+perform clean
+perform package
+perform package
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-07-11 23:32:33
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-07-14 10:25:39
+perform clean
+perform package
+perform package
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-07-14 10:51:09
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-07-14 11:01:19
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-07-14 11:04:24
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-07-14 18:10:55
+perform clean
+perform package
+perform package
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-07-14 20:56:48
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-07-17 19:33:00
+perform package
+perform package
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-07-17 19:56:20
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-07-21 14:54:55
+perform clean
+perform package
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-07-21 17:02:40
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-07-22 11:58:47
+addon search cloud
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-07-22 12:20:44
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-07-22 12:39:48
+perform package
+perform clean
+perform package
+perform clean
+perform clean
+perform package
+perform clean
+perform package
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-07-22 16:39:32
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-07-22 18:04:16
+perform clean
+perform package
+perform package
+perform package
+perform clean
+perform package
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-07-22 19:25:38
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-07-22 19:52:02
+perform clean
+perform clean
+perform package
+perform clean
+perform package
+perform package
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-07-22 20:07:22
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-08-01 11:13:59
+focus --class ~.domain.Task
+field number --type int --fieldName drivingDistance --transient 
+field number --type int --fieldName drivingTime --transient 
+field number --type int --fieldName test1
+field number --type int --fieldName drivingDistance
+field number --type int --fieldName drivingTime
+json all
+web mvc json all 
+perform clean
+perform package
+perform clean
+perform package
+perform clean
+perform package
+perform clean
+perform package
+perform clean
+perform package
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-08-01 16:25:37
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-08-01 17:44:54
+perform clean
+perform package
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-08-01 17:52:23
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-08-01 18:05:17
+focus --class com.susanku.dnoram8.domain.Task
+field number --type int --fieldName totalTaskTime
+json all 
+web mvc json all 
+field number --type double --fieldName drivingDistance
+perform clean
+perform clean
+perform package
+perform clean
+perform package
+perform package
+perform package
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-08-02 16:04:25
+perform clean
+perform clean
+perform package
+perform clean
+perform package
+perform package
+perform clean
+perform package
+perform clean
+perform package
+perform clean
+perform package
+perform clean
+perform package
+perform package
+perform clean
+perform package
+perform clean
+perform package
+perform clean
+perform package
+perform clean
+perform package
+perform clean
+perform package
+perform clean
+perform package
+perform package
+perform package
+perform package
+perform clean
+perform package
+perform clean
+perform package
+perform clean
+perform package
+perform clean
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-08-03 15:43:58
+focus --class ~.domain.Task 
+focus --class ~.domain.Task 
+field string --fieldName addressType --notNull 
+json all
+web mvc json all --package com.susanku.dnoram8.web
+focus --class ~.domain.Task 
+finder list
+// [failed] finder list --depth 5 --filter isCompleted,duser_id
+finder list --depth 2 --filter isCompleted,duser_id
+finder list --depth 1 --filter isCompleted,duser_id
+finder list --depth 2 --filter isCompleted,duser_id
+finder list --depth 2 --filter findTasksByIsCompletedAndDuser_id
+finder list --depth 2 --filter findTasksByIsCompletedNotAndDuser_id
+finder list --depth 2 --filter findTasksByIsCompletedAndDuser_id
+finder add findTasksByDuser_idAndIsCompletedNot

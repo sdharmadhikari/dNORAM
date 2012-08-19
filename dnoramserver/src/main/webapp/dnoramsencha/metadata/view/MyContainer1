@@ -1,0 +1,167 @@
+{
+    "id": "ExtBox1-ext-gen30578",
+    "type": "container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "layout": "vbox",
+        "scrollable": true,
+        "designer|userClassName": "MyContainer1",
+        "designer|userAlias": "welcomePage",
+        "container|align": "center",
+        "container|pack": "center"
+    },
+    "customConfigs": [],
+    "designerId": "b439c4ad-9f0d-4dbd-a792-4de95916851a",
+    "$viewOrder": 6,
+    "expanded": true,
+    "cn": [
+        {
+            "id": "ExtBox1-ext-gen17390",
+            "type": "image",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 367,
+                "id": "whatCanIDoNowButton",
+                "width": 320,
+                "src": "images/whatCanIDoNowButton.jpg",
+                "designer|userClassName": "MyImage1"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen4484",
+            "type": "button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": "titleFont",
+                "height": 44,
+                "id": "manageTasksButton",
+                "style": "color:#fff;",
+                "width": 303,
+                "iconAlign": "center",
+                "text": "Manage Tasks",
+                "designer|userClassName": "MyButton4"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen18919",
+            "type": "picker",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "hidden": true,
+                "id": "availableTimePicker",
+                "useTitles": true,
+                "designer|userClassName": "MyPicker"
+            },
+            "customConfigs": [],
+            "expanded": false,
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen18931",
+                    "type": "button",
+                    "reference": {
+                        "name": "doneButton",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "docked": "left",
+                        "text": "Done",
+                        "designer|userClassName": "MyButton1"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                },
+                {
+                    "id": "ExtBox1-ext-gen18940",
+                    "type": "button",
+                    "reference": {
+                        "name": "cancelButton",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "docked": "right",
+                        "text": "Cancel",
+                        "designer|userClassName": "MyButton2"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                },
+                {
+                    "id": "ExtBox1-ext-gen18949",
+                    "type": "pickerslot",
+                    "reference": {
+                        "name": "slots",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemTpl": "<div>Data View Item {string}</div>",
+                        "data": "[ {text : '0', value : '0'} ,{text : '1', value : '1'} , { text : '2', value : '2' }, { text : '3', value : '3' }, { text : '4', value : '4' }, { text : '5', value : '5' }, { text : '6', value : '6' }, { text : '7', value : '7' }, { text : '8', value : '8' }, { text : '9', value : '9' } , {text : '10', value : '10' }, { text : '11', value : '11' },  { text : '12', value : '12' }]",
+                        "name": "HoursPickerSlot",
+                        "title": "hours",
+                        "designer|userClassName": "MyPickerSlot"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                },
+                {
+                    "id": "ExtBox1-ext-gen4604",
+                    "type": "pickerslot",
+                    "reference": {
+                        "name": "slots",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemTpl": "<div>Data View Item {string}</div>",
+                        "data": "[ {text : '0', value : '0'} ,{text : '5', value : '5'} , { text : '10', value : '10' }, { text : '15', value : '15' }, { text : '20', value : '20' }, { text : '25', value : '25' }, { text : '30', value : '30' }, { text : '35', value : '35' }, { text : '40', value : '40' }, { text : '45', value : '45' } , {text : '50', value : '50' }, { text : '55', value : '55' }]",
+                        "name": "MinPickerSlot",
+                        "title": "min.",
+                        "value": null,
+                        "designer|userClassName": "MyPickerSlot"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                },
+                {
+                    "id": "ExtBox1-ext-gen3389",
+                    "type": "toolbar",
+                    "reference": {
+                        "name": "toolbar",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "docked": "top",
+                        "title": "Available time ?",
+                        "designer|userClassName": "MyToolbar",
+                        "container|pack": "center"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                }
+            ]
+        }
+    ]
+}

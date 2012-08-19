@@ -1,0 +1,61 @@
+// Let's start with the basics
+$base-color: #eee;
+$base-gradient: 'glossy';
+$active-color: #bbb; 
+$font-family: 'verdana';
+$page-bg-color: #fff;
+
+// Lists
+$list-active-gradient: 'bevel';
+$list-header-bg-color: transparentize(saturate($base-color, 10%), .25);
+$list-header-gradient: 'matte';
+
+// Tabs
+$tabs-dark: #111;
+
+@import 'sencha-touch/default/all';
+
+@include sencha-panel;
+@include sencha-buttons;
+@include sencha-sheet;
+@include sencha-picker;
+@include sencha-tabs;
+@include sencha-toolbar;
+@include sencha-toolbar-forms;
+@include sencha-carousel;
+@include sencha-indexbar;
+@include sencha-list;
+@include sencha-list-paging;
+@include sencha-list-pullrefresh;
+@include sencha-layout;
+@include sencha-form;
+@include sencha-msgbox;
+@include sencha-loading-spinner;
+//@include bevel-box('shadow');
+@include pictos-iconmask('note3');
+//@include pictos-iconmask('speedometer2');
+//@include pictos-iconmask('time');
+.x-toolbar-light .x-title {
+    color: #fff;
+    text-shadow: rgba(0, 0, 0, 0.5) 0 -0.08em 0;
+}
+
+.x-button-back .x-button-label {
+    color: #fff;
+}
+#availableTimePicker .x-toolbar-inner .x-title {
+	font-size:16px;
+}
+.x-list .x-list-disclosure {
+    overflow: visible;
+    -webkit-mask: 0 0 url('../themes/images/default/pictos/code3.png') no-repeat;
+	right:0;
+}
+
+.x-list .x-list-item .x-list-item-label {
+	padding:4px;
+}
+
+.x-form .x-scroll-container > .x-inner {
+	padding: 0.25em;
+}

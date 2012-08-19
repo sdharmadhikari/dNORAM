@@ -1,0 +1,43 @@
+{
+    "id": "ExtBox1-ext-gen18109",
+    "type": "application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "models": [
+            "Task",
+            "Duser",
+            "LocalUser"
+        ],
+        "stores": [
+            "TasksStore",
+            "ResultStore",
+            "AddressTypeStore"
+        ],
+        "views": [
+            "MyNavigationView",
+            "ManageTaskList",
+            "AddTaskForm",
+            "TaskResultList",
+            "MapPanel",
+            "MyContainer1",
+            "MyContainer"
+        ],
+        "glossOnIcon": false,
+        "icon": "images/dNORAM5.png",
+        "name": "MyApp",
+        "phoneIcon": "images/dNORAM5.png",
+        "phoneStartupScreen": "images/company-susanku.png",
+        "controllers": [
+            "MainController"
+        ]
+    },
+    "customConfigs": [],
+    "designerId": "application",
+    "$viewOrder": 0,
+    "iconCls": "icon-application",
+    "expanded": true
+}

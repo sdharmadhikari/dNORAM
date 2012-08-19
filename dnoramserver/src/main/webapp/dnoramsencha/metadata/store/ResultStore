@@ -1,0 +1,105 @@
+{
+    "id": "ExtBox1-ext-gen2662",
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "model": "Task",
+        "storeId": "resultStore",
+        "designer|userClassName": "ResultStore",
+        "designer|userAlias": "resultStore"
+    },
+    "customConfigs": [],
+    "designerId": "e5421a3d-90e3-48c0-82d7-d5bd470085a9",
+    "$viewOrder": 1,
+    "expanded": true,
+    "cn": [
+        {
+            "id": "ExtBox1-ext-gen2669",
+            "type": "ajaxproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "enablePagingParams": false,
+                "url": "http://dnoram8.cloudfoundry.com/getbesttask",
+                "designer|userClassName": "MyAjaxProxy1"
+            },
+            "customConfigs": [],
+            "expanded": true,
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen2676",
+                    "type": "jsonreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "tasks",
+                        "designer|userClassName": "MyJsonReader1"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                }
+            ]
+        },
+        {
+            "id": "ExtBox1-ext-gen22065",
+            "type": "grouper",
+            "reference": {
+                "name": "grouper",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyGrouper"
+            },
+            "customConfigs": [],
+            "expanded": true,
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen22181",
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "groupFn",
+                        "designer|params": [
+                            "record"
+                        ],
+                        "implHandler": [
+                            "var mainController = MyApp.app.getController('MainController');",
+                            "console.log('main controller : ' + mainController);",
+                            "var picker = mainController.getAvailableTimePicker();",
+                            "",
+                            "var min = parseInt(picker.getValue()['MinPickerSlot']);",
+                            "var hours = parseInt(picker.getValue()['HoursPickerSlot']);",
+                            "var availableTime = hours*60+min;",
+                            "",
+                            "if(record.get('totalTaskTime') <= availableTime) {",
+                            "    return \"Best Tasks around this location\";",
+                            "} else {",
+                            "    return \"Your other tasks\";",
+                            "}",
+                            "            "
+                        ],
+                        "designer|userClassName": "groupFn"
+                    },
+                    "customConfigs": [],
+                    "iconCls": "icon-basic-function",
+                    "expanded": true
+                }
+            ]
+        }
+    ]
+}

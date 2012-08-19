@@ -37,7 +37,9 @@ public class DistanceMatrixService {
 		urlBuffer.append(URLEncoder.encode(startLocation));
 		urlBuffer.append("&destinations=");
 		for(Task dest:tasks) {
-			urlBuffer.append(URLEncoder.encode(dest.getAddress()));
+			System.out.println(dest.getAddress());
+			String address = (dest.getAddress() != null &&  dest.getAddress().trim().length()>0)? dest.getAddress(): "."; 
+			urlBuffer.append(URLEncoder.encode(address));
 			urlBuffer.append("|");
 		}
 		urlBuffer.append("&mode=driving&sensor=false");

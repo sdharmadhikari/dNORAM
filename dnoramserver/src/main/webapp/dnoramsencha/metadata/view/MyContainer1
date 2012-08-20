@@ -25,12 +25,25 @@
             "codeClass": null,
             "userConfig": {
                 "designer|userClassName": "MyImage1",
-                "height": 114,
+                "height": 228,
                 "id": "whatCanIDoNowButton",
-                "width": 114,
-                "src": "images/whatCanIDoNow.png"
+                "width": 228,
+                "src": "images/dNORAM-LOGO@4x.png"
             },
             "designerId": "cc726ff4-beee-4b3e-8b96-b237ad92ac9c"
+        },
+        {
+            "type": "label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyLabel",
+                "html": "WHAT CAN I DO NOW?"
+            },
+            "designerId": "1486a908-8f75-4707-98cb-d1247c3ee514"
         },
         {
             "type": "picker",

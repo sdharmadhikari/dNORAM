@@ -7,9 +7,10 @@ $page-bg-color: #fff;
 
 // Lists
 $list-active-gradient: 'bevel';
-$list-header-bg-color: transparentize(saturate($base-color, 10%), .25);
+//$list-header-bg-color: transparentize(saturate($base-color, 12%), .25);
+$list-header-bg-color: #aaa;
 $list-header-gradient: 'matte';
-
+//$list-bg-color: #ddd;
 // Tabs
 $tabs-dark: #111;
 
@@ -59,3 +60,43 @@ $tabs-dark: #111;
 .x-form .x-scroll-container > .x-inner {
 	padding: 0.25em;
 }
+
+#infoDiv p {
+	padding:5px;
+	text-align: justify;
+}
+
+.x-list .x-list-item {
+	margin: 0 0.4em;
+	border: 1px solid #aaa;
+	border-top: none;
+}
+
+.x-list .x-list-footer-item {
+        border-bottom-left-radius: 0.8em;
+        border-bottom-right-radius: 0.8em;
+	margin-bottom: 1em;
+}
+
+.x-list-header {
+        border-top-left-radius: 0.8em;
+        border-top-right-radius: 0.8em;
+	border-left: none;
+	border-right: none;
+	margin-top: 1em;
+	background-color: #ddd;
+}
+
+.x-title {
+	font-size: 0.9em;
+}
+
+  .x-picker-bar {
+    border-top: $picker-active-border;
+    border-bottom: $picker-active-border;
+    height: $picker-row-height;
+    @include background-gradient(hsla(2, 2,25, .3), $picker-bar-gradient);
+    @if $include-highlights {
+      -webkit-box-shadow: rgba(#000,0.2) 0 .2em .2em;
+    }
+  }

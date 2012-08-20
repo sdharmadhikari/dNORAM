@@ -26,10 +26,14 @@ Ext.define('MyApp.view.MyContainer1', {
         items: [
             {
                 xtype: 'image',
-                height: 114,
+                height: 228,
                 id: 'whatCanIDoNowButton',
-                width: 114,
-                src: 'images/whatCanIDoNow.png'
+                width: 228,
+                src: 'images/dNORAM-LOGO@4x.png'
+            },
+            {
+                xtype: 'label',
+                html: 'WHAT CAN I DO NOW?'
             },
             {
                 xtype: 'picker',

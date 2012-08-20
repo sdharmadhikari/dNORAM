@@ -18,6 +18,7 @@ Ext.Loader.setConfig({
 });
 
 Ext.application({
+    baseURL: 'http://dnoram8.cloudfoundry.com/',
     models: [
         'Task',
         'Duser',

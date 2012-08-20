@@ -28,7 +28,7 @@
                     "{create: \"POST\", read: \"GET\", update: \"POST\", destroy: \"DELETE\"}"
                 ],
                 "designer|userClassName": "MyRestProxy1",
-                "url": "/dusers"
+                "url": "http://dnoram8.cloudfoundry.com/dusers"
             },
             "designerId": "c2b20823-633c-4609-9100-fe8a390a51f8",
             "customConfigs": [

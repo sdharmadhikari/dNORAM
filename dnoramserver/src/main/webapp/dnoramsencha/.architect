@@ -2,7 +2,7 @@
     "expandedState": {
         "data": true,
         "model": true,
-        "component": false,
+        "component": true,
         "controller": true,
         "resource": true,
         "0ae7e19d-5ce6-4b97-bea4-529ad63a2754": {
@@ -54,13 +54,16 @@
         },
         "b439c4ad-9f0d-4dbd-a792-4de95916851a": {
             "id": "b439c4ad-9f0d-4dbd-a792-4de95916851a",
-            "expanded": false,
             "cn": [
                 {
                     "id": "cc726ff4-beee-4b3e-8b96-b237ad92ac9c"
                 },
                 {
+                    "id": "1486a908-8f75-4707-98cb-d1247c3ee514"
+                },
+                {
                     "id": "5d4bc348-aa06-4b2e-915b-eeaeba605326",
+                    "expanded": false,
                     "cn": [
                         {
                             "id": "e64720fe-f43f-4a9b-b682-fb19916c5542"
@@ -91,6 +94,7 @@
                 },
                 {
                     "id": "72d61ba9-38cc-4e37-9456-5dd960a2170a",
+                    "expanded": false,
                     "cn": [
                         {
                             "id": "b73b1206-51a0-426e-8b4d-2587c04007de"
@@ -112,7 +116,6 @@
         },
         "668170fd-0abd-4e45-8960-4b85903fdd4d": {
             "id": "668170fd-0abd-4e45-8960-4b85903fdd4d",
-            "expanded": false,
             "cn": [
                 {
                     "id": "774b906f-326b-471e-a51e-dbab49aecb6d",
@@ -135,10 +138,14 @@
         },
         "994dcb18-3db4-4a18-9621-fbebb6ec6eae": {
             "id": "994dcb18-3db4-4a18-9621-fbebb6ec6eae",
-            "expanded": false,
             "cn": [
                 {
-                    "id": "c015c16f-5c7d-4dac-b1d7-82c00a3ea33d"
+                    "id": "c015c16f-5c7d-4dac-b1d7-82c00a3ea33d",
+                    "cn": [
+                        {
+                            "id": "59e5baba-da82-499e-9186-68977c5a6d20"
+                        }
+                    ]
                 },
                 {
                     "id": "f0e59765-cc73-4c3b-9972-0293c7be71cf"
@@ -158,6 +165,15 @@
                                     ]
                                 }
                             ]
+                        },
+                        {
+                            "id": "b34c7357-d93f-4af3-98b4-9b03fde64db3"
+                        },
+                        {
+                            "id": "018aac43-2207-4919-b5f6-99b435f770a3"
+                        },
+                        {
+                            "id": "cab9c71e-502d-41ac-891c-5616c0382ba7"
                         }
                     ]
                 },

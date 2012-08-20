@@ -31,10 +31,22 @@ Ext.define('MyApp.view.MainApplicationView', {
             {
                 xtype: 'panel',
                 name: 'welcome',
-                html: 'dNORAM',
+                ui: '',
                 layout: {
-                    type: 'fit'
-                }
+                    align: 'center',
+                    pack: 'center',
+                    type: 'vbox'
+                },
+                scrollable: false,
+                items: [
+                    {
+                        xtype: 'image',
+                        height: 480,
+                        ui: '',
+                        width: 320,
+                        src: 'images/dNORAM.png'
+                    }
+                ]
             },
             {
                 xtype: 'mynavigationview',
@@ -43,7 +55,11 @@ Ext.define('MyApp.view.MainApplicationView', {
             {
                 xtype: 'panel',
                 name: 'info',
-                html: '<div><img src="images/susanku-info.png" /></div><div> info goes here</div><div>&copy; 2012 Susanku Inc</div>',
+                layout: {
+                    align: 'center',
+                    pack: 'center',
+                    type: 'vbox'
+                },
                 items: [
                     {
                         xtype: 'toolbar',
@@ -60,6 +76,23 @@ Ext.define('MyApp.view.MainApplicationView', {
                                 iconMask: true
                             }
                         ]
+                    },
+                    {
+                        xtype: 'image',
+                        height: 60,
+                        width: 180,
+                        src: 'images/susanku-logo.png'
+                    },
+                    {
+                        xtype: 'label',
+                        html: '<div id="infoDiv"><p><span style="font-weight:bold;font-style:italic">SUSANKU</span> was born in 2012 with an intent to revolutionize the mobile app world by bringing in most apt and easy to use applications to our customers. </p> <p>Our focus is to improve user productivity in the most intutive way possible.</p></div>',
+                        style: 'font-size:14px;'
+                    },
+                    {
+                        xtype: 'label',
+                        docked: 'bottom',
+                        html: '&copy; 2012 SUSANKU Inc.',
+                        style: 'font-size:12px;text-align:center;'
                     }
                 ]
             }

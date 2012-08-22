@@ -54,7 +54,7 @@
                         "height": 480,
                         "ui": "",
                         "width": 320,
-                        "src": "images/dNORAM.png"
+                        "src": "resources/images/dNORAM.png"
                     },
                     "designerId": "59e5baba-da82-499e-9186-68977c5a6d20"
                 }
@@ -171,7 +171,7 @@
                         "height": 60,
                         "style": null,
                         "width": 180,
-                        "src": "images/susanku-logo.png"
+                        "src": "resources/images/susanku-logo.png"
                     },
                     "designerId": "b34c7357-d93f-4af3-98b4-9b03fde64db3"
                 },

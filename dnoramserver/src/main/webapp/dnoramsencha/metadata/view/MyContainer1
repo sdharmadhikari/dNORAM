@@ -28,7 +28,7 @@
                 "height": 228,
                 "id": "whatCanIDoNowButton",
                 "width": 228,
-                "src": "images/dNORAM-LOGO@4x.png"
+                "src": "resources/images/dNORAM-LOGO@4x.png"
             },
             "designerId": "cc726ff4-beee-4b3e-8b96-b237ad92ac9c"
         },

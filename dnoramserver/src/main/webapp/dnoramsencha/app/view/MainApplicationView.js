@@ -44,7 +44,7 @@ Ext.define('MyApp.view.MainApplicationView', {
                         height: 480,
                         ui: '',
                         width: 320,
-                        src: 'images/dNORAM.png'
+                        src: 'resources/images/dNORAM.png'
                     }
                 ]
             },
@@ -81,7 +81,7 @@ Ext.define('MyApp.view.MainApplicationView', {
                         xtype: 'image',
                         height: 60,
                         width: 180,
-                        src: 'images/susanku-logo.png'
+                        src: 'resources/images/susanku-logo.png'
                     },
                     {
                         xtype: 'label',

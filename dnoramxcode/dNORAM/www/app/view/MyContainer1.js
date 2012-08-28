@@ -29,7 +29,7 @@ Ext.define('MyApp.view.MyContainer1', {
                 height: 228,
                 id: 'whatCanIDoNowButton',
                 width: 228,
-                src: 'images/dNORAM-LOGO@4x.png'
+                src: 'resources/images/dNORAM-LOGO@4x.png'
             },
             {
                 xtype: 'label',

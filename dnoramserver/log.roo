@@ -268,3 +268,12 @@ finder list --depth 2 --filter findTasksByIsCompletedAndDuser_id
 finder list --depth 2 --filter findTasksByIsCompletedNotAndDuser_id
 finder list --depth 2 --filter findTasksByIsCompletedAndDuser_id
 finder add findTasksByDuser_idAndIsCompletedNot
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-08-27 18:37:55
+hint
+hint
+focus --class ~.domain.Task 
+hint
+hint
+focus --class ~.domain.Task
+field string drivingTimeText
+field string drivingDistanceText

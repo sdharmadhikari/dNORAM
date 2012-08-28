@@ -170,6 +170,32 @@
                 "type": null
             },
             "designerId": "ec45f0b1-59d1-4f8e-84e8-d5cd31bfcf5a"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyField13",
+                "name": "drivingTimeText"
+            },
+            "designerId": "8f646fa2-05aa-4d80-a471-fddf86f80104"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyField14",
+                "name": "drivingDistanceText"
+            },
+            "designerId": "be2dd7d2-f4b5-47cb-8017-4b0f8cdf42be"
         }
     ]
 }

@@ -42,7 +42,7 @@ public class DistanceMatrixService {
 			urlBuffer.append(URLEncoder.encode(address));
 			urlBuffer.append("|");
 		}
-		urlBuffer.append("&mode=driving&sensor=false");
+		urlBuffer.append("&mode=driving&sensor=false&units=imperial");
 		System.out.println(urlBuffer.toString());
 		String response = getResponse(urlBuffer.toString());
 		
@@ -64,22 +64,24 @@ public class DistanceMatrixService {
 				
 				Task task = tasks.get(i);
 							
-				if("OK".equals(status)) {
-					if(!"Anywhere".equalsIgnoreCase(task.getAddress())){
-					String dist = getNodeValue("distance", element);
-					
-			        DecimalFormat twoDForm = new DecimalFormat ("#.#");
-			        double formattedValue = Double.valueOf(twoDForm.format(Integer.parseInt(dist)/1609.34)); // Converting to Miles from meters
-					task.setDrivingDistance(formattedValue); 
-					String dur = getNodeValue("duration", element);
-					task.setDrivingTime(Math.round(Integer.parseInt(dur)/60)); // Convert from seconds from minutes
-					task.setTotalTaskTime(task.getDuration() + task.getDrivingTime());
-					}else{
-						task.setTotalTaskTime(task.getDuration());
-					}
-										
-
+				if("OK".equals(status) && (!"Anywhere".equalsIgnoreCase(task.getAddress()))) {
+						String dist = getNodeValue("distance", element);
+						String distText = getNodeText("distance", element);
+						
+				        DecimalFormat twoDForm = new DecimalFormat ("#.#");
+				        double formattedValue = Double.valueOf(twoDForm.format(Integer.parseInt(dist)/1609.34)); // Converting to Miles from meters
+						task.setDrivingDistance(formattedValue); 
+						String dur = getNodeValue("duration", element);
+						String durText = getNodeText("duration", element);
+						
+						task.setDrivingTime(Math.round(Integer.parseInt(dur)/60)); // Convert from seconds from minutes
+						task.setDrivingDistanceText(distText);
+						task.setDrivingTimeText(durText);
+						task.setTotalTaskTime(task.getDuration() + task.getDrivingTime());
+				}else{
+					task.setTotalTaskTime(task.getDuration());
 				}
+
 			}
 		}
 		
@@ -119,6 +121,17 @@ public class DistanceMatrixService {
 		
 		Element innerElement = (Element) element.getElementsByTagName(tag).item(0);
 		NodeList nodes = innerElement.getElementsByTagName("value").item(0).getChildNodes();
+		 
+		Node node = (Node) nodes.item(0);
+		 
+		return node.getNodeValue();
+		 
+	}
+
+	private String getNodeText(String tag, Element element) {
+		
+		Element innerElement = (Element) element.getElementsByTagName(tag).item(0);
+		NodeList nodes = innerElement.getElementsByTagName("text").item(0).getChildNodes();
 		 
 		Node node = (Node) nodes.item(0);
 		 

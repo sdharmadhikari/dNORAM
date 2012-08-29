@@ -21,7 +21,7 @@ Ext.define('MyApp.view.MyImage', {
         height: 201,
         id: 'manageTasksButton',
         width: 201,
-        src: 'resources/images/manageTasksButton.jpg'
+        src: 'images/manageTasksButton.jpg'
     }
 
 });

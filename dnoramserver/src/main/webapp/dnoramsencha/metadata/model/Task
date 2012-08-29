@@ -172,30 +172,31 @@
             "designerId": "ec45f0b1-59d1-4f8e-84e8-d5cd31bfcf5a"
         },
         {
-            "type": "datafield",
+            "type": "lengthvalidation",
             "reference": {
-                "name": "fields",
+                "name": "validations",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyField13",
-                "name": "drivingTimeText"
+                "designer|userClassName": "MyLengthValidation1",
+                "field": "addressType",
+                "min": 1
             },
-            "designerId": "8f646fa2-05aa-4d80-a471-fddf86f80104"
+            "designerId": "1b3698cc-3893-45ed-ab89-6846fb718791"
         },
         {
-            "type": "datafield",
+            "type": "presencevalidation",
             "reference": {
-                "name": "fields",
+                "name": "validations",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyField14",
-                "name": "drivingDistanceText"
+                "designer|userClassName": "MyPresenceValidation",
+                "field": "addressType"
             },
-            "designerId": "be2dd7d2-f4b5-47cb-8017-4b0f8cdf42be"
+            "designerId": "a19f93b2-868d-4917-9319-da01c5f6b2b3"
         }
     ]
 }

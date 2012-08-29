@@ -18,7 +18,8 @@ Ext.define('MyApp.view.MainApplicationView', {
     alias: 'widget.mainApplicationView',
 
     requires: [
-        'MyApp.view.MyNavigationView'
+        'MyApp.view.MyNavigationView',
+        'Ext.util.DelayedTask'
     ],
 
     config: {

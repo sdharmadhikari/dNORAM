@@ -57,12 +57,6 @@ Ext.define('MyApp.model.Task', {
             },
             {
                 name: 'totalTaskTime'
-            },
-            {
-                name: 'drivingTimeText'
-            },
-            {
-                name: 'drivingDistanceText'
             }
         ],
         validations: [
@@ -70,6 +64,15 @@ Ext.define('MyApp.model.Task', {
                 type: 'length',
                 field: 'title',
                 min: 1
+            },
+            {
+                type: 'length',
+                field: 'addressType',
+                min: 1
+            },
+            {
+                type: 'presence',
+                field: 'addressType'
             }
         ]
     }

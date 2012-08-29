@@ -7,7 +7,7 @@
     /**
      * The file path to this application's front HTML document, relative to this app.json file
      */
-    "indexHtmlPath": "app.html",
+    "indexHtmlPath": "index.html",
 
     /**
      * The absolute URL to this application in development environment, i.e: the URL to run this application
@@ -123,7 +123,7 @@
         "product": "touch",
         "minVersion": 3,
         "debug": false,
-        "logger": "no"
+        "logger": "yes"
     },
 
     /**

@@ -9,6 +9,9 @@
         "container|animation": "slide",
         "designer|userClassName": "MainApplicationView",
         "designer|userAlias": "mainApplicationView",
+        "requires": [
+            "Ext.util.DelayedTask"
+        ],
         "designer|initialView": true,
         "layout": "card",
         "scrollable": false

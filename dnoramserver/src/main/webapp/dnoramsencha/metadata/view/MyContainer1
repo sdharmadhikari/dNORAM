@@ -10,6 +10,10 @@
         "container|pack": "center",
         "designer|userClassName": "MyContainer1",
         "designer|userAlias": "welcomePage",
+        "requires": [
+            "Ext.Label",
+            "Ext.picker.Picker"
+        ],
         "layout": "vbox",
         "scrollable": null
     },

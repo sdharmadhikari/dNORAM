@@ -17,6 +17,11 @@ Ext.define('MyApp.view.MyContainer1', {
     extend: 'Ext.Container',
     alias: 'widget.welcomePage',
 
+    requires: [
+        'Ext.Label',
+        'Ext.picker.Picker'
+    ],
+
     config: {
         layout: {
             align: 'center',

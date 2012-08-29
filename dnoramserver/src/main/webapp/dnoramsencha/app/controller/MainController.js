@@ -16,9 +16,14 @@
 Ext.define('MyApp.controller.MainController', {
     extend: 'Ext.app.Controller',
 
+    requires: [
+        'Ext.MessageBox'
+    ],
+
     config: {
         stores: [
-            'TasksStore'
+            'TasksStore',
+            'AddressTypeStore'
         ],
 
         refs: {
@@ -121,6 +126,11 @@ Ext.define('MyApp.controller.MainController', {
             title : 'New Task'
         });
 
+
+        //addressTypeStore = Ext.getStore('addressTypeStore');
+        //item1 = addressTypeStore.getAt(0);
+
+        //addTaskForm.down("selectfield").setValue('Current');
         console.log('addTaskForm xtype when new object ' ,addTaskForm.xtype);
 
 
@@ -147,6 +157,7 @@ Ext.define('MyApp.controller.MainController', {
         task.set('category', 'SmartPick');
         task.set('addressType', newValues.addressType);
         task.set('address', newValues.address);
+
         if(newValues.isCompleted === 0){
             task.set('isCompleted', false);
         }else{
@@ -173,9 +184,11 @@ Ext.define('MyApp.controller.MainController', {
             mainController.addOrUpdateTask(task);
 
         }else if(newValues.addressType == 'Anywhere') {
-            task.set('address', "");
+            //task.set('address', newValues.address);
             mainController.addOrUpdateTask(task);
         } else if(newValues.addressType == 'Task Location') {
+            mainController.addOrUpdateTask(task);
+        }else {
             mainController.addOrUpdateTask(task);
         }
     },
@@ -344,7 +357,13 @@ Ext.define('MyApp.controller.MainController', {
     },
 
     onSelectfieldChange: function(selectfield, newValue, oldValue, options) {
-        console.log('onSelectfieldChange');
+
+
+        if (!selectfield.initialized) {
+            return;
+        }
+
+        console.log('onSelectfieldChange newValue:'+selectfield.getValue());
         var addressTextAreaField = this.getAddresstextareafield();
         /*if(newValue.data.value == 'Custom') {
         var theTextAreaField =  {
@@ -366,13 +385,13 @@ Ext.define('MyApp.controller.MainController', {
         }
         }*/
 
-        if(newValue.data.value == 'Custom' ) {
+        if(selectfield.getValue() == 'Custom' ) {
             addressTextAreaField.show();
         } else {
             addressTextAreaField.hide();
         }
 
-        if(newValue.data.value === 'Anywhere') {
+        if(selectfield.getValue() === 'Anywhere') {
             this.getMapItButton().hide();
         } else {
             this.getMapItButton().show();

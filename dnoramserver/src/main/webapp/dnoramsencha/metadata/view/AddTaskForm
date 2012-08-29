@@ -8,6 +8,15 @@
     "userConfig": {
         "designer|userClassName": "AddTaskForm",
         "designer|userAlias": "addTaskFormAlias",
+        "requires": [
+            "Ext.form.FieldSet",
+            "Ext.field.Text",
+            "Ext.field.Spinner",
+            "Ext.field.Select",
+            "Ext.field.TextArea",
+            "Ext.field.Toggle",
+            "Ext.MessageBox"
+        ],
         "id": null,
         "itemId": null,
         "url": null
@@ -103,6 +112,9 @@
                         "labelWidth": "37%",
                         "name": "addressType",
                         "required": true,
+                        "value": [
+                            "'Current'"
+                        ],
                         "store": "addressTypeStore",
                         "usePicker": null
                     },

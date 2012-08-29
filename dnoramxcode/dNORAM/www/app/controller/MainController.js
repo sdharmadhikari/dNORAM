@@ -173,7 +173,7 @@ Ext.define('MyApp.controller.MainController', {
             mainController.addOrUpdateTask(task);
 
         }else if(newValues.addressType == 'Anywhere') {
-            task.set('address', "");
+            //task.set('address', newValues.address);
             mainController.addOrUpdateTask(task);
         } else if(newValues.addressType == 'Task Location') {
             mainController.addOrUpdateTask(task);

@@ -96,20 +96,4 @@ privileged aspect Task_Roo_JavaBean {
         this.addressType = addressType;
     }
     
-    public String Task.getDrivingTimeText() {
-        return this.drivingTimeText;
-    }
-    
-    public void Task.setDrivingTimeText(String drivingTimeText) {
-        this.drivingTimeText = drivingTimeText;
-    }
-    
-    public String Task.getDrivingDistanceText() {
-        return this.drivingDistanceText;
-    }
-    
-    public void Task.setDrivingDistanceText(String drivingDistanceText) {
-        this.drivingDistanceText = drivingDistanceText;
-    }
-    
 }

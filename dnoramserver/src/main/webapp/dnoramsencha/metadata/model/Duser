@@ -35,7 +35,7 @@
             "codeClass": null,
             "userConfig": {
                 "designer|userClassName": "MyRestProxy",
-                "url": "http://dnoram8.cloudfoundry.com/dusers"
+                "url": "/dusers"
             },
             "designerId": "07403f4e-0b66-4d04-8ed4-891979d4c2c3"
         },

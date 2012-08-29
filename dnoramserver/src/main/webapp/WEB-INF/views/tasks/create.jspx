@@ -14,8 +14,6 @@
         <field:input field="totalTaskTime" id="c_com_susanku_dnoram8_domain_Task_totalTaskTime" z="RY2uU7HSngwPF4PVmv9ODQ0aRvo="/>
         <field:input field="drivingDistance" id="c_com_susanku_dnoram8_domain_Task_drivingDistance" z="bcpCbMT0bKTJHshSktFlnxuU4IY="/>
         <field:input field="addressType" id="c_com_susanku_dnoram8_domain_Task_addressType" required="true" z="tFBLrtw7hq59A/MLaQwU01/03K4="/>
-        <field:input field="drivingTimeText" id="c_com_susanku_dnoram8_domain_Task_drivingTimeText" z="vLKE7O5Coh0a52/J1jH6cCZ771o="/>
-        <field:input field="drivingDistanceText" id="c_com_susanku_dnoram8_domain_Task_drivingDistanceText" z="THMt0DPRb5fnajz/Gr2SYAcJx1k="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_com_susanku_dnoram8_domain_Task" render="${not empty dependencies}" z="DBIU1SvB4R6RhaRSfWRmRRJMI6A="/>
 </div>

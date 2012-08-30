@@ -40,4 +40,10 @@ public class Task {
 
     @NotNull
     private String addressType;
+
+    @Transient
+    private String drivingDistanceText;
+
+    @Transient
+    private String drivingTimeText;
 }

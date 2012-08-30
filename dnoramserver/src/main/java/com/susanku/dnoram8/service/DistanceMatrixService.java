@@ -84,12 +84,14 @@ public class DistanceMatrixService {
 				if("OK".equals(status)) {
 						String dist = getNodeValue("distance", element);
 						String distText = getNodeText("distance", element);
+						task.setDrivingDistanceText(distText);
 						
 				        DecimalFormat twoDForm = new DecimalFormat ("#.#");
 				        double formattedValue = Double.valueOf(twoDForm.format(Integer.parseInt(dist)/1609.34)); // Converting to Miles from meters
 						task.setDrivingDistance(formattedValue); 
 						String dur = getNodeValue("duration", element);
 						String durText = getNodeText("duration", element);
+						task.setDrivingTimeText(durText);
 						
 						task.setDrivingTime(Math.round(Integer.parseInt(dur)/60)); // Convert from seconds from minutes
 						task.setDrivingDistanceText(distText);

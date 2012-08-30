@@ -50,7 +50,7 @@ public class GetBestTaskController {
         	
         	duser = Duser.findDusersByUseridEquals(userid).getSingleResult();    
             result = Task.findTasksByDuser_idAndIsCompletedNot(duser, true).getResultList();
-    		result = dmService.getDistanceMatrix(address, result);
+    		result = dmService.getDistanceMatrix(address, minutes, result);
     		
         }catch (EmptyResultDataAccessException e) {
         	

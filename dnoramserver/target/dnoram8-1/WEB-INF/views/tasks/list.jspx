@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_susanku_dnoram8_domain_Task" items="${tasks}" z="5vNxOU2C06cCUM5st9isYx1THrg=">
+        <table:table data="${tasks}" id="l_com_susanku_dnoram8_domain_Task" path="/tasks" typeIdFieldName="id_" z="+IfZJdHzZJjGMDXN+p7fjg4vj5o=">
+            <table:column id="c_com_susanku_dnoram8_domain_Task_id" property="id" z="Atb1rNalsuK2d46IUApEChIEKow="/>
+            <table:column id="c_com_susanku_dnoram8_domain_Task_title" property="title" z="N3ud2FwcoK89EBeLoYA7yeVyo2s="/>
+            <table:column id="c_com_susanku_dnoram8_domain_Task_duration" property="duration" z="/0wU77NWOTwHqURwXt5gZj8/DGA="/>
+            <table:column id="c_com_susanku_dnoram8_domain_Task_category" property="category" z="4E/7fhwGtMRia9hsROZkZ3N5tLc="/>
+            <table:column id="c_com_susanku_dnoram8_domain_Task_address" property="address" z="ZwlHhyzKGVQoXdrV/i5hBcCWz+U="/>
+            <table:column id="c_com_susanku_dnoram8_domain_Task_isCompleted" property="isCompleted" z="UhMFkyFuPHTSY+EaFQ0Kq/vOTG0="/>
+        </table:table>
+    </page:list>
+</div>

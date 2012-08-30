@@ -1,0 +1,202 @@
+{
+    "type": "datamodel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Task",
+        "designer|userAlias": "task"
+    },
+    "id": "ExtBox1-ext-gen3253",
+    "designerId": "89a48766-34db-4f49-ba2a-1cab73985e18",
+    "cn": [
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyField5",
+                "name": "id",
+                "type": "int"
+            },
+            "designerId": "26ecd7b7-b763-4833-8929-0925c6ca3a6f"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyField",
+                "name": "title"
+            },
+            "designerId": "94c0d2cf-f96e-42a9-8465-a0009303e2a9"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyField1",
+                "allowNull": false,
+                "name": "duration",
+                "type": "int"
+            },
+            "designerId": "d57dfabc-9452-4d4b-bf7a-ab2a87076a8a"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyField2",
+                "defaultValue": [
+                    "SmartPick"
+                ],
+                "name": "category"
+            },
+            "designerId": "0ed24d17-32e4-45da-8d50-2a8dbe638aed"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyField12",
+                "allowNull": false,
+                "name": "addressType",
+                "type": "string"
+            },
+            "designerId": "c571ee36-05b3-41a9-950f-71118b002495"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyField3",
+                "name": "address"
+            },
+            "designerId": "18b67a35-efa1-4618-a5d6-b4f2e41fda5b"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyField4",
+                "defaultValue": [
+                    "0"
+                ],
+                "name": "isCompleted",
+                "type": "boolean"
+            },
+            "designerId": "28a57f64-71c6-4611-8321-f6d36c553138"
+        },
+        {
+            "type": "lengthvalidation",
+            "reference": {
+                "name": "validations",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyLengthValidation1",
+                "field": "title",
+                "min": 1
+            },
+            "designerId": "948b542e-032e-4991-9abd-e4988bda3fa0"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyField9",
+                "name": "drivingTime",
+                "type": "int"
+            },
+            "designerId": "896b0bca-b1c0-436a-b456-06ff3745cefe"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyField10",
+                "name": "drivingDistance",
+                "type": null
+            },
+            "designerId": "af1dda85-5f93-46d3-940e-b800af1092c7"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyField11",
+                "name": "totalTaskTime",
+                "type": null
+            },
+            "designerId": "ec45f0b1-59d1-4f8e-84e8-d5cd31bfcf5a"
+        },
+        {
+            "type": "lengthvalidation",
+            "reference": {
+                "name": "validations",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyLengthValidation1",
+                "field": "addressType",
+                "min": 1
+            },
+            "designerId": "1b3698cc-3893-45ed-ab89-6846fb718791"
+        },
+        {
+            "type": "presencevalidation",
+            "reference": {
+                "name": "validations",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyPresenceValidation",
+                "field": "addressType"
+            },
+            "designerId": "a19f93b2-868d-4917-9319-da01c5f6b2b3"
+        }
+    ]
+}

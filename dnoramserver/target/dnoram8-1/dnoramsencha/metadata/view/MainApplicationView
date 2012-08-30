@@ -1,0 +1,239 @@
+{
+    "type": "container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "container|animation": "slide",
+        "designer|userClassName": "MainApplicationView",
+        "designer|userAlias": "mainApplicationView",
+        "requires": [
+            "Ext.util.DelayedTask"
+        ],
+        "designer|initialView": true,
+        "layout": "card",
+        "scrollable": false
+    },
+    "id": "ExtBox1-ext-gen3118",
+    "designerId": "994dcb18-3db4-4a18-9621-fbebb6ec6eae",
+    "cn": [
+        {
+            "type": "panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "welcome",
+                "container|align": "center",
+                "container|pack": "center",
+                "designer|userClassName": "MyPanel1",
+                "html": null,
+                "ui": "",
+                "layout": "vbox",
+                "scrollable": false
+            },
+            "designerId": "c015c16f-5c7d-4dac-b1d7-82c00a3ea33d",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "name",
+                    "type": "string"
+                }
+            ],
+            "cn": [
+                {
+                    "type": "image",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyImage2",
+                        "height": 480,
+                        "ui": "",
+                        "width": 320,
+                        "src": "resources/images/dNORAM.png"
+                    },
+                    "designerId": "59e5baba-da82-499e-9186-68977c5a6d20"
+                }
+            ]
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "appcontainer"
+            },
+            "designerId": "f0e59765-cc73-4c3b-9972-0293c7be71cf",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "name",
+                    "type": "string"
+                }
+            ],
+            "masterInstanceId": "ExtBox1-ext-gen18167"
+        },
+        {
+            "type": "panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "info",
+                "container|align": "center",
+                "container|pack": "center",
+                "designer|userClassName": "MyPanel2",
+                "html": null,
+                "layout": "vbox"
+            },
+            "designerId": "ce0aba2e-b6b4-4d77-a2aa-52d0afb8d2ee",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "name",
+                    "type": "string"
+                }
+            ],
+            "cn": [
+                {
+                    "type": "toolbar",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyToolbar2",
+                        "docked": "top"
+                    },
+                    "designerId": "79fef18a-f04d-479a-ab7a-a5aface1c9ce",
+                    "cn": [
+                        {
+                            "type": "button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyButton9",
+                                "ui": "plain",
+                                "iconCls": "home",
+                                "iconMask": true,
+                                "text": null
+                            },
+                            "designerId": "f3ff8aea-395c-437f-8727-3c913523c646",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "handler",
+                                        "fn": "handler",
+                                        "designer|params": [
+                                            "button",
+                                            "event"
+                                        ],
+                                        "implHandler": [
+                                            "",
+                                            "button.up(\"mainApplicationView\").animateActiveItem(1,{type:'flip',duration:800});"
+                                        ]
+                                    },
+                                    "designerId": "e657059f-4794-4cb6-b2b7-abc154a38790"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "image",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyImage3",
+                        "docked": null,
+                        "height": 60,
+                        "style": null,
+                        "width": 180,
+                        "src": "resources/images/susanku-logo.png"
+                    },
+                    "designerId": "b34c7357-d93f-4af3-98b4-9b03fde64db3"
+                },
+                {
+                    "type": "label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyLabel2",
+                        "html": "<div id=\"infoDiv\"><p><span style=\"font-weight:bold;font-style:italic\">SUSANKU</span> was born in 2012 with an intent to revolutionize the mobile app world by bringing in most apt and easy to use applications to our customers. </p> <p>Our focus is to improve user productivity in the most intutive way possible.</p></div>",
+                        "style": "font-size:14px;"
+                    },
+                    "designerId": "018aac43-2207-4919-b5f6-99b435f770a3"
+                },
+                {
+                    "type": "label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyLabel1",
+                        "docked": "bottom",
+                        "html": "&copy; 2012 SUSANKU Inc.",
+                        "style": "font-size:12px;text-align:center;"
+                    },
+                    "designerId": "cab9c71e-502d-41ac-891c-5616c0382ba7"
+                }
+            ]
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onContainerShow",
+                "fn": "onContainerShow",
+                "implHandler": [
+                    "",
+                    "",
+                    "//create the delayed task instance with our callback",
+                    "var task = Ext.create('Ext.util.DelayedTask', function() {",
+                    "    console.log('callback!');",
+                    "    component.animateActiveItem(1,{duration:800,type: 'fade', direction: 'left'});",
+                    "    task.cancel(); ",
+                    "});",
+                    "",
+                    "task.delay(3000);"
+                ],
+                "name": "show"
+            },
+            "designerId": "b99bac54-5a26-42bd-81be-7df3a0a760b3"
+        }
+    ]
+}

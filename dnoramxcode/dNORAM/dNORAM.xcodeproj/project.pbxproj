@@ -291,7 +291,7 @@
 		BDE5C78415D07FD000D1FD22 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0430;
+				LastUpgradeCheck = 0440;
 			};
 			buildConfigurationList = BDE5C78715D07FD000D1FD22 /* Build configuration list for PBXProject "dNORAM" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -436,6 +436,7 @@
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
@@ -456,6 +457,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
@@ -479,6 +481,7 @@
 					"DEBUG=1,",
 					"CORDOVA_FRAMEWORK=1",
 				);
+				GCC_THUMB_SUPPORT = NO;
 				INFOPLIST_FILE = "dNORAM/dNORAM-Info.plist";
 				OTHER_LDFLAGS = (
 					"-weak_framework",
@@ -509,6 +512,7 @@
 					"NDEBUG=1,",
 					"CORDOVA_FRAMEWORK=1",
 				);
+				GCC_THUMB_SUPPORT = NO;
 				INFOPLIST_FILE = "dNORAM/dNORAM-Info.plist";
 				OTHER_LDFLAGS = (
 					"-weak_framework",
@@ -546,6 +550,7 @@
 				BDE5C7EB15D07FD100D1FD22 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

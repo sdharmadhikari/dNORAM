@@ -1,0 +1,247 @@
+{
+    "type": "formpanel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "AddTaskForm",
+        "designer|userAlias": "addTaskFormAlias",
+        "requires": [
+            "Ext.form.FieldSet",
+            "Ext.field.Text",
+            "Ext.field.Spinner",
+            "Ext.field.Select",
+            "Ext.field.TextArea",
+            "Ext.field.Toggle",
+            "Ext.MessageBox"
+        ],
+        "id": null,
+        "itemId": null,
+        "url": null
+    },
+    "id": "ExtBox1-ext-gen28205",
+    "designerId": "0ae7e19d-5ce6-4b97-bea4-529ad63a2754",
+    "cn": [
+        {
+            "type": "fieldset",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyFieldSet",
+                "border": null,
+                "title": null
+            },
+            "designerId": "2a08d9c1-a8ab-4850-936c-0284347b305a",
+            "cn": [
+                {
+                    "type": "textfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyTextField",
+                        "label": null,
+                        "name": "title",
+                        "placeHolder": "Task Title "
+                    },
+                    "designerId": "ec8a63ee-a715-4b6b-a423-87fa37c02342"
+                },
+                {
+                    "type": "spinnerfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MySpinnerField",
+                        "label": "Duration",
+                        "labelWidth": "37%",
+                        "name": "duration",
+                        "required": true,
+                        "minValue": 0,
+                        "increment": 5
+                    },
+                    "designerId": "6f88f37d-8c37-43b9-80c0-064f3bb36574"
+                }
+            ]
+        },
+        {
+            "type": "fieldset",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "addressFieldFieldSet",
+                "designer|userClassName": "MyFieldSet",
+                "border": null,
+                "id": null,
+                "itemId": null,
+                "title": null
+            },
+            "designerId": "7377a753-81d2-494d-b6df-e9747b6ce42c",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "name",
+                    "type": "string"
+                }
+            ],
+            "cn": [
+                {
+                    "type": "selectfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MySelectField",
+                        "id": null,
+                        "width": null,
+                        "label": "Address",
+                        "labelWidth": "37%",
+                        "name": "addressType",
+                        "required": true,
+                        "value": [
+                            "'Current'"
+                        ],
+                        "store": "addressTypeStore",
+                        "usePicker": null
+                    },
+                    "designerId": "0a3a872c-3bd5-4bfd-849d-4c4101777854"
+                },
+                {
+                    "type": "textareafield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyTextArea",
+                        "height": 80,
+                        "hidden": true,
+                        "label": null,
+                        "labelWidth": 0,
+                        "name": "address",
+                        "placeHolder": "Type address... ",
+                        "maxRows": 1
+                    },
+                    "designerId": "93de3c97-9838-4e1e-82da-09bb95cb631c"
+                }
+            ]
+        },
+        {
+            "type": "fieldset",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyFieldSet",
+                "border": null,
+                "title": null
+            },
+            "designerId": "a3794aeb-4b8f-44e2-bc68-b583376284b2",
+            "cn": [
+                {
+                    "type": "togglefield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyToggleField",
+                        "label": "Completed",
+                        "labelWidth": "37%",
+                        "name": "isCompleted"
+                    },
+                    "designerId": "6fe3b454-5246-4c59-8582-d0cb2fa44ee9"
+                }
+            ]
+        },
+        {
+            "type": "toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyToolbar2",
+                "docked": "bottom"
+            },
+            "designerId": "f8e2ad2f-4a2f-4613-8b36-6bdde1d2c173",
+            "cn": [
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "name": "delete",
+                        "designer|userClassName": "MyButton6",
+                        "docked": "right",
+                        "hidden": true,
+                        "ui": "plain",
+                        "iconCls": "trash",
+                        "iconMask": true,
+                        "text": null
+                    },
+                    "designerId": "58db9218-1a5c-41ca-a4c1-5f741a400455",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "name",
+                            "type": "string"
+                        }
+                    ]
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "name": "mapIt",
+                        "designer|userClassName": "MyButton7",
+                        "baseCls": null,
+                        "docked": "left",
+                        "height": null,
+                        "html": null,
+                        "ui": "plain",
+                        "width": null,
+                        "iconAlign": null,
+                        "iconCls": "locate",
+                        "iconMask": true,
+                        "text": null
+                    },
+                    "designerId": "b62b54b2-476c-46f7-aae5-4efe2f8e1afb",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "name",
+                            "type": "string"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

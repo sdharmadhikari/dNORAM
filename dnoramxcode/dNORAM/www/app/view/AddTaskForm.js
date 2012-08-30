@@ -17,6 +17,19 @@ Ext.define('MyApp.view.AddTaskForm', {
     extend: 'Ext.form.Panel',
     alias: 'widget.addTaskFormAlias',
 
+    requires: [
+        'Ext.form.FieldSet',
+        'Ext.field.Text',
+        'Ext.field.Spinner',
+        'Ext.field.Select',
+        'Ext.field.TextArea',
+        'Ext.field.Toggle',
+        'Ext.MessageBox',
+        'Ext.data.Store',
+        'Ext.Toolbar',
+        'Ext.Button'
+    ],
+
     config: {
         items: [
             {
@@ -48,6 +61,7 @@ Ext.define('MyApp.view.AddTaskForm', {
                         labelWidth: '37%',
                         name: 'addressType',
                         required: true,
+                        value: 'Current',
                         store: 'addressTypeStore'
                     },
                     {

@@ -24,7 +24,10 @@ Ext.define('MyApp.view.AddTaskForm', {
         'Ext.field.Select',
         'Ext.field.TextArea',
         'Ext.field.Toggle',
-        'Ext.MessageBox'
+        'Ext.MessageBox',
+        'Ext.data.Store',
+        'Ext.Toolbar',
+        'Ext.Button'
     ],
 
     config: {

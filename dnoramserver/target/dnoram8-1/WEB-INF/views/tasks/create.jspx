@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_com_susanku_dnoram8_domain_Task" modelAttribute="task" path="/tasks" render="${empty dependencies}" z="LCIU99X/2sVovnFp9t0Tfzw3l8I=">
+        <field:input field="id" id="c_com_susanku_dnoram8_domain_Task_id" z="j0rdpJVMnW1V8/LadL8aZQwUnas="/>
+        <field:input field="title" id="c_com_susanku_dnoram8_domain_Task_title" z="V3dcGLw26szbXiBIAGTdYROHN8M="/>
+        <field:input field="duration" id="c_com_susanku_dnoram8_domain_Task_duration" z="/MoK5AoUkeHEQekCucHbSdQjsJE="/>
+        <field:input field="category" id="c_com_susanku_dnoram8_domain_Task_category" z="DKKevbC+O7uNMO3udEOSKD40w9Y="/>
+        <field:input field="address" id="c_com_susanku_dnoram8_domain_Task_address" z="5tUQNbX8MQNgtO9aFdzE7j2rtr8="/>
+        <field:checkbox field="isCompleted" id="c_com_susanku_dnoram8_domain_Task_isCompleted" z="kfzXxpw1xMspsikwbe8NAOG7yzM="/>
+        <field:select field="duser_id" id="c_com_susanku_dnoram8_domain_Task_duser_id" itemValue="id" items="${dusers}" path="/dusers" z="1+aF29hKw6eKTMtmf7t1kGXq1bU="/>
+        <field:input field="drivingTime" id="c_com_susanku_dnoram8_domain_Task_drivingTime" z="JXrjiRZtmBRDgID63yQ/usDZWtA="/>
+        <field:input field="totalTaskTime" id="c_com_susanku_dnoram8_domain_Task_totalTaskTime" z="RY2uU7HSngwPF4PVmv9ODQ0aRvo="/>
+        <field:input field="drivingDistance" id="c_com_susanku_dnoram8_domain_Task_drivingDistance" z="bcpCbMT0bKTJHshSktFlnxuU4IY="/>
+        <field:input field="addressType" id="c_com_susanku_dnoram8_domain_Task_addressType" required="true" z="tFBLrtw7hq59A/MLaQwU01/03K4="/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_com_susanku_dnoram8_domain_Task" render="${not empty dependencies}" z="DBIU1SvB4R6RhaRSfWRmRRJMI6A="/>
+</div>

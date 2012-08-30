@@ -1,0 +1,83 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "TasksStore",
+        "designer|userAlias": "tasksStore",
+        "autoLoad": false,
+        "autoSync": false,
+        "model": "Task",
+        "storeId": "tasksStore"
+    },
+    "id": "ExtBox1-ext-gen3448",
+    "designerId": "6c96b262-a846-4783-8e57-ceb119c22529",
+    "cn": [
+        {
+            "type": "restproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "actionMethods": [
+                    "{create: \"POST\", read: \"GET\", update: \"POST\", destroy: \"DELETE\"}"
+                ],
+                "designer|userClassName": "MyRestProxy1",
+                "url": "http://dnoram8.cloudfoundry.com/dusers"
+            },
+            "designerId": "c2b20823-633c-4609-9100-fe8a390a51f8",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "actionMethods",
+                    "type": "object"
+                }
+            ],
+            "cn": [
+                {
+                    "type": "jsonreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyJsonReader2"
+                    },
+                    "designerId": "9c2e0eec-91de-4765-b56b-1a4e72ef5f9d"
+                },
+                {
+                    "type": "jsonwriter",
+                    "reference": {
+                        "name": "writer",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyJsonWriter"
+                    },
+                    "designerId": "e02af943-db1a-4e15-9ff2-09f16f718f83"
+                }
+            ]
+        },
+        {
+            "type": "sorter",
+            "reference": {
+                "name": "sorters",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MySorter",
+                "direction": "DESC",
+                "property": "id"
+            },
+            "designerId": "c51275ec-2e67-4e4e-a722-a4ea0a2573f8"
+        }
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "type": "container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "container|align": "center",
+        "container|pack": "center",
+        "designer|userClassName": "MyContainer",
+        "id": "homePageContainer",
+        "style": "",
+        "layout": "vbox",
+        "scrollable": false
+    },
+    "id": "ExtBox1-ext-gen18344",
+    "designerId": "40908c39-78d3-4d93-8224-01f9731917a8"
+}

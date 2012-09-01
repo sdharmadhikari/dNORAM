@@ -1,0 +1,16 @@
+{
+    "applicationName": "dNORAM",
+    "applicationId": "5GPZWUFUB9.*",
+    "bundleSeedId": "5GPZWUFUB9.*",
+    "versionString": "1.0",
+    "iconName": "dNORAM5.png",
+    "inputPath": "/Users/sudhir/dnoramsencha",
+    "outputPath": "/Users/sudhir/dnoram-senchabuilds",
+    "configuration": "Debug",
+    "platform": "iOS",
+    "deviceType": "iPhone",
+    "certificatePath": "/Users/sudhir/dnoram-senchabuilds",
+    "certificateAlias": "iPhone Developer: Sudhir Dharmadhikari (3Q79QSCHHE)",
+    "sdkPath": "/Applications/SenchaSDKTools-2.0.0-Beta",
+    "androidAPILevel": ""
+}

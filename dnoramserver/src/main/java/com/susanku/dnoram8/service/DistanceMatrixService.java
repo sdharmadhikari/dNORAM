@@ -84,18 +84,22 @@ public class DistanceMatrixService {
 				if("OK".equals(status)) {
 						String dist = getNodeValue("distance", element);
 						String distText = getNodeText("distance", element);
-						task.setDrivingDistanceText(distText);
 						
 				        DecimalFormat twoDForm = new DecimalFormat ("#.#");
 				        double formattedValue = Double.valueOf(twoDForm.format(Integer.parseInt(dist)/1609.34)); // Converting to Miles from meters
 						task.setDrivingDistance(formattedValue); 
 						String dur = getNodeValue("duration", element);
 						String durText = getNodeText("duration", element);
-						task.setDrivingTimeText(durText);
 						
-						task.setDrivingTime(Math.round(Integer.parseInt(dur)/60)); // Convert from seconds from minutes
+						task.setDrivingTime(Math.round(Integer.parseInt(dur)/60)); // Convert from seconds to minutes
 						task.setDrivingDistanceText(distText);
-						task.setDrivingTimeText(durText);
+						String formattedDurText = durText.replaceAll("min[s]*", "h");
+						if(formattedDurText.contains(" hours")) {
+							formattedDurText = formattedDurText.replaceAll(" hour[s]* ", ":");
+						} else {
+							formattedDurText = "0:"+formattedDurText;
+						}
+						task.setDrivingTimeText(formattedDurText);
 						task.setTotalTaskTime(task.getDuration() + task.getDrivingTime());
 						if(task.getTotalTaskTime()<=availableTime) {
 							resultList.add(task);

@@ -34,7 +34,7 @@ Ext.define('MyApp.store.TasksStore', {
                 update: 'POST',
                 destroy: 'DELETE'
             },
-            url: '/dusers',
+            url: 'http://dnoram8.cloudfoundry.com/dusers',
             reader: {
                 type: 'json'
             },

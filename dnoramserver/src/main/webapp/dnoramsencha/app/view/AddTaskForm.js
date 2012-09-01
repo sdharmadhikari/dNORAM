@@ -38,6 +38,7 @@ Ext.define('MyApp.view.AddTaskForm', {
                     {
                         xtype: 'textfield',
                         name: 'title',
+                        maxLength: 13,
                         placeHolder: 'Task Title '
                     },
                     {

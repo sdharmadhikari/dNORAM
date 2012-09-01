@@ -509,11 +509,23 @@ Ext.define('MyApp.controller.MainController', {
             navigator.geolocation.getCurrentPosition(function(position) {
                 callback(position);
             }, function(error) {
-                Ext.Msg.alert('Please turn ON the location services for dNORAM under settings.', error.message, Ext.emptyFn);
-            });
-        } else {
-            Ext.Msg.alert('ERROR', 'Geo location is disabled', Ext.emptyFn);
-        }
+
+                switch(error.code)
+                {
+                    case error.PERMISSION_DENIED: Ext.Msg.alert('ERROR',"Turn On Location Services to Allow \"dNORAM\" to Determine Your Location", Ext.emptyFn);
+                    break;
+                    case error.POSITION_UNAVAILABLE: Ext.Msg.alert('ERROR',"Your Current Location Could not be Determined", Ext.emptyFn);
+                    break;
+                    case error.TIMEOUT: Ext.Msg.alert('ERROR',"Request Timed Out", Ext.emptyFn);
+                    break;
+                    default: Ext.Msg.alert('ERROR',"Unknown error", Ext.emptyFn);
+                    break;
+                }       
+                //Ext.Msg.alert('Please turn ON the location services for dNORAM under settings.', error.message, Ext.emptyFn);
+            },{enableHighAccuracy:true});
+            } else {
+                Ext.Msg.alert('ERROR', 'Geo location is disabled', Ext.emptyFn);
+            }
     },
 
     launch: function() {

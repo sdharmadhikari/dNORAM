@@ -30,7 +30,7 @@ Ext.define('MyApp.model.Duser', {
         ],
         proxy: {
             type: 'rest',
-            url: '/dusers'
+            url: 'http://dnoram8.cloudfoundry.com/dusers'
         }
     }
 });

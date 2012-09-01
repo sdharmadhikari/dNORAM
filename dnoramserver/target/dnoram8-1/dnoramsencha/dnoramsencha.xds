@@ -1,0 +1,204 @@
+{
+    "name": "dnoramsencha",
+    "settings": {
+        "urlPrefix": "http://localhost:8080/dnoram7",
+        "spacesToIndent": 4,
+        "exportPath": "",
+        "lineEnding": "LF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "codeGenFormat": "Class",
+        "senchaIoKey": "",
+        "senchaIoPath": "http://extjs.cachefly.net/designer/IO/",
+        "instantiateStore": true,
+        "saveOnDeploy": false,
+        "appName": "MyApp"
+    },
+    "xdsVersion": "2.1.0",
+    "xdsBuild": 588,
+    "schemaVersion": 1,
+    "upgradeVersion": 210000000495,
+    "framework": "touch20",
+    "topInstanceFileMap": {
+        "668170fd-0abd-4e45-8960-4b85903fdd4d": {
+            "paths": [
+                "metadata/view/MyNavigationView",
+                "app/view/override/MyNavigationView.js",
+                "app/view/MyNavigationView.js"
+            ],
+            "className": "MyNavigationView"
+        },
+        "22903d55-b344-4cc8-9d7b-5fff5bb0ff87": {
+            "paths": [
+                "metadata/controller/MainController",
+                "app/controller/override/MainController.js",
+                "app/controller/MainController.js"
+            ],
+            "className": "MainController"
+        },
+        "cfa55fd0-0527-4a47-b7a3-34e7aeae8051": {
+            "paths": [
+                "metadata/view/ManageTaskList",
+                "app/view/override/ManageTaskList.js",
+                "app/view/ManageTaskList.js"
+            ],
+            "className": "ManageTaskList"
+        },
+        "0ae7e19d-5ce6-4b97-bea4-529ad63a2754": {
+            "paths": [
+                "metadata/view/AddTaskForm",
+                "app/view/override/AddTaskForm.js",
+                "app/view/AddTaskForm.js"
+            ],
+            "className": "AddTaskForm"
+        },
+        "d7834af9-6a0f-4d21-af55-6f4a6235b9bf": {
+            "paths": [
+                "metadata/view/TaskResultList",
+                "app/view/override/TaskResultList.js",
+                "app/view/TaskResultList.js"
+            ],
+            "className": "TaskResultList"
+        },
+        "89a48766-34db-4f49-ba2a-1cab73985e18": {
+            "paths": [
+                "metadata/model/Task",
+                "app/model/override/Task.js",
+                "app/model/Task.js"
+            ],
+            "className": "Task"
+        },
+        "6c96b262-a846-4783-8e57-ceb119c22529": {
+            "paths": [
+                "metadata/store/TasksStore",
+                "app/store/override/TasksStore.js",
+                "app/store/TasksStore.js"
+            ],
+            "className": "TasksStore"
+        },
+        "e5421a3d-90e3-48c0-82d7-d5bd470085a9": {
+            "paths": [
+                "metadata/store/ResultStore",
+                "app/store/override/ResultStore.js",
+                "app/store/ResultStore.js"
+            ],
+            "className": "ResultStore"
+        },
+        "274f4f61-7fad-4d75-8d6f-1720d4c9410f": {
+            "paths": [
+                "metadata/view/MyImage",
+                "app/view/override/MyImage.js",
+                "app/view/MyImage.js"
+            ],
+            "className": "MyImage"
+        },
+        "35a9c6a7-f661-4325-bd67-6329e9bf31b0": {
+            "paths": [
+                "metadata/model/Duser",
+                "app/model/override/Duser.js",
+                "app/model/Duser.js"
+            ],
+            "className": "Duser"
+        },
+        "10a037c7-db38-4d38-a8cb-b7285ffb80e2": {
+            "paths": [
+                "metadata/model/LocalUser",
+                "app/model/override/LocalUser.js",
+                "app/model/LocalUser.js"
+            ],
+            "className": "LocalUser"
+        },
+        "8b89f9d4-7d3a-4f3e-9381-0ec94907ec6e": {
+            "paths": [
+                "metadata/store/AddressTypeStore",
+                "app/store/override/AddressTypeStore.js",
+                "app/store/AddressTypeStore.js"
+            ],
+            "className": "AddressTypeStore"
+        },
+        "fecfc644-19b0-4285-82e6-18de1b89a6eb": {
+            "paths": [
+                "metadata/view/MapPanel",
+                "app/view/override/MapPanel.js",
+                "app/view/MapPanel.js"
+            ],
+            "className": "MapPanel"
+        },
+        "b439c4ad-9f0d-4dbd-a792-4de95916851a": {
+            "paths": [
+                "metadata/view/MyContainer1",
+                "app/view/override/MyContainer1.js",
+                "app/view/MyContainer1.js"
+            ],
+            "className": "MyContainer1"
+        },
+        "40908c39-78d3-4d93-8224-01f9731917a8": {
+            "paths": [
+                "metadata/view/MyContainer",
+                "app/view/override/MyContainer.js",
+                "app/view/MyContainer.js"
+            ],
+            "className": "MyContainer"
+        },
+        "994dcb18-3db4-4a18-9621-fbebb6ec6eae": {
+            "paths": [
+                "metadata/view/MainApplicationView",
+                "app/view/override/MainApplicationView.js",
+                "app/view/MainApplicationView.js"
+            ],
+            "className": "MainApplicationView"
+        },
+        "9fa8ab96-e148-4fdb-ab66-0c938363906b": {
+            "paths": [
+                "metadata/resource/Library"
+            ],
+            "className": "Library"
+        },
+        "1e09592a-8579-4df9-841a-29b7a68f465a": {
+            "paths": [
+                "metadata/resource/GoogleMapsAPI"
+            ],
+            "className": "GoogleMapsAPI"
+        },
+        "03673d10-624d-4c06-b59d-df2dff57e50f": {
+            "paths": [
+                "metadata/resource/js"
+            ],
+            "className": "js"
+        }
+    },
+    "viewOrderMap": {
+        "view": [
+            "0ae7e19d-5ce6-4b97-bea4-529ad63a2754",
+            "b439c4ad-9f0d-4dbd-a792-4de95916851a",
+            "668170fd-0abd-4e45-8960-4b85903fdd4d",
+            "994dcb18-3db4-4a18-9621-fbebb6ec6eae",
+            "cfa55fd0-0527-4a47-b7a3-34e7aeae8051",
+            "fecfc644-19b0-4285-82e6-18de1b89a6eb",
+            "40908c39-78d3-4d93-8224-01f9731917a8",
+            "274f4f61-7fad-4d75-8d6f-1720d4c9410f",
+            "d7834af9-6a0f-4d21-af55-6f4a6235b9bf"
+        ],
+        "store": [
+            "6c96b262-a846-4783-8e57-ceb119c22529",
+            "e5421a3d-90e3-48c0-82d7-d5bd470085a9",
+            "8b89f9d4-7d3a-4f3e-9381-0ec94907ec6e"
+        ],
+        "controller": [
+            "22903d55-b344-4cc8-9d7b-5fff5bb0ff87"
+        ],
+        "model": [
+            "89a48766-34db-4f49-ba2a-1cab73985e18",
+            "35a9c6a7-f661-4325-bd67-6329e9bf31b0",
+            "10a037c7-db38-4d38-a8cb-b7285ffb80e2"
+        ],
+        "resource": [
+            "9fa8ab96-e148-4fdb-ab66-0c938363906b",
+            "1e09592a-8579-4df9-841a-29b7a68f465a",
+            "03673d10-624d-4c06-b59d-df2dff57e50f"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

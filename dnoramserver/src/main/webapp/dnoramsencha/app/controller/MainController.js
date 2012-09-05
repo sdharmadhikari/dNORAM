@@ -518,7 +518,7 @@ Ext.define('MyApp.controller.MainController', {
                     break;
                     case error.TIMEOUT: Ext.Msg.alert('ERROR',"Request Timed Out", Ext.emptyFn);
                     break;
-                    default: Ext.Msg.alert('ERROR',"Unknown error", Ext.emptyFn);
+                    default: Ext.Msg.alert('ERROR',"Turn On Location Services to Allow \"dNORAM\" to Determine Your Location", Ext.emptyFn);
                     break;
                 }       
                 //Ext.Msg.alert('Please turn ON the location services for dNORAM under settings.', error.message, Ext.emptyFn);

@@ -223,6 +223,19 @@
                 "name": "drivingTimeText"
             },
             "designerId": "9cdf5a6e-8150-4728-9096-65f66aa55be3"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field17",
+                "name": "formattedAddress"
+            },
+            "designerId": "b93519a1-2981-4adf-a9a9-5f56fdfe069e"
         }
     ]
 }

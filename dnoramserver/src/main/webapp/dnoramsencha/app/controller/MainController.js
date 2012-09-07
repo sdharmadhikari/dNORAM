@@ -38,7 +38,7 @@ Ext.define('MyApp.controller.MainController', {
                 selector: '.fieldset[name="addressFieldFieldSet"]',
                 xtype: 'fieldset'
             },
-            addresstextareafield: 'textareafield[name="address"]',
+            addresstextareafield: 'textareafield[name="formattedAddress"]',
             addressFieldSelect: 'selectfield[name="addressType"]',
             refreshbutton: 'button[iconCls="refresh"]',
             deletetaskbutton: 'button[name="delete"]',

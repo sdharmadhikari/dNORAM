@@ -761,7 +761,7 @@
             "userConfig": {
                 "designer|userClassName": "addresstextareafield",
                 "ref": "addresstextareafield",
-                "selector": "textareafield[name=\"address\"]"
+                "selector": "textareafield[name=\"formattedAddress\"]"
             },
             "designerId": "30b44d99-3e5b-4305-974e-965fa5d07876"
         },

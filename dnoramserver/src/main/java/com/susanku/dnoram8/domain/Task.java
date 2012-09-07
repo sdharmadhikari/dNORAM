@@ -25,6 +25,11 @@ public class Task {
     private String address;
 
     private Boolean isCompleted;
+    
+    @NotNull
+    private String addressType;
+    
+    private String formattedAddress;
 
     @ManyToOne
     private Duser duser_id;
@@ -38,8 +43,7 @@ public class Task {
     @Transient
     private double drivingDistance;
 
-    @NotNull
-    private String addressType;
+
 
     @Transient
     private String drivingDistanceText;

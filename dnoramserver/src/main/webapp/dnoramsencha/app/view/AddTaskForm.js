@@ -70,7 +70,7 @@ Ext.define('MyApp.view.AddTaskForm', {
                         height: 80,
                         hidden: true,
                         labelWidth: 0,
-                        name: 'address',
+                        name: 'formattedAddress',
                         placeHolder: 'Type address... ',
                         maxRows: 1
                     }

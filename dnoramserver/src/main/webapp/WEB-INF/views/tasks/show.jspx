@@ -16,5 +16,6 @@
         <field:display field="addressType" id="s_com_susanku_dnoram8_domain_Task_addressType" object="${task}" z="CXsovboEHV5/ZJCcXFrJxyCmTn4="/>
         <field:display field="drivingDistanceText" id="s_com_susanku_dnoram8_domain_Task_drivingDistanceText" object="${task}" z="H9U2GpIfrB4CBP6Azorh0xdlMfw="/>
         <field:display field="drivingTimeText" id="s_com_susanku_dnoram8_domain_Task_drivingTimeText" object="${task}" z="EKl68BoiJcXT32+luy5JEIbCWXw="/>
+        <field:display field="formattedAddress" id="s_com_susanku_dnoram8_domain_Task_formattedAddress" object="${task}" z="q67//i25Fwzvrg1GZ8i3QSoVwqY="/>
     </page:show>
 </div>

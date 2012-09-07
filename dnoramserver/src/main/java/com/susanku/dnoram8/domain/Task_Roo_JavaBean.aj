@@ -56,6 +56,22 @@ privileged aspect Task_Roo_JavaBean {
         this.isCompleted = isCompleted;
     }
     
+    public String Task.getAddressType() {
+        return this.addressType;
+    }
+    
+    public void Task.setAddressType(String addressType) {
+        this.addressType = addressType;
+    }
+    
+    public String Task.getFormattedAddress() {
+        return this.formattedAddress;
+    }
+    
+    public void Task.setFormattedAddress(String formattedAddress) {
+        this.formattedAddress = formattedAddress;
+    }
+    
     public Duser Task.getDuser_id() {
         return this.duser_id;
     }
@@ -86,14 +102,6 @@ privileged aspect Task_Roo_JavaBean {
     
     public void Task.setDrivingDistance(double drivingDistance) {
         this.drivingDistance = drivingDistance;
-    }
-    
-    public String Task.getAddressType() {
-        return this.addressType;
-    }
-    
-    public void Task.setAddressType(String addressType) {
-        this.addressType = addressType;
     }
     
     public String Task.getDrivingDistanceText() {

@@ -137,7 +137,7 @@
                         "hidden": true,
                         "label": null,
                         "labelWidth": 0,
-                        "name": "address",
+                        "name": "formattedAddress",
                         "placeHolder": "Type address... ",
                         "maxRows": 1
                     },

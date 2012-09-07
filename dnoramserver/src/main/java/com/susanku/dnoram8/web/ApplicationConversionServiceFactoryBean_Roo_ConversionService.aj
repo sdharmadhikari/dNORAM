@@ -41,7 +41,7 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
     public Converter<Task, String> ApplicationConversionServiceFactoryBean.getTaskToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<com.susanku.dnoram8.domain.Task, java.lang.String>() {
             public String convert(Task task) {
-                return new StringBuilder().append(task.getId()).append(' ').append(task.getTitle()).append(' ').append(task.getDuration()).append(' ').append(task.getCategory()).toString();
+                return new StringBuilder().append(task.getId()).append(" ").append(task.getTitle()).append(" ").append(task.getDuration()).append(" ").append(task.getCategory()).toString();
             }
         };
     }

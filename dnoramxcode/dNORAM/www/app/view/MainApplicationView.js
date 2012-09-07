@@ -27,7 +27,7 @@ Ext.define('MyApp.view.MainApplicationView', {
             animation: 'slide',
             type: 'card'
         },
-        scrollable: false,
+        scrollable: 'false',
         items: [
             {
                 xtype: 'panel',
@@ -38,7 +38,7 @@ Ext.define('MyApp.view.MainApplicationView', {
                     pack: 'center',
                     type: 'vbox'
                 },
-                scrollable: false,
+                scrollable: 'false',
                 items: [
                     {
                         xtype: 'image',

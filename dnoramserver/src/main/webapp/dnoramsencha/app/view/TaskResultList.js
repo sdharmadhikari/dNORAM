@@ -48,6 +48,12 @@ Ext.define('MyApp.view.TaskResultList', {
             '    </div> ',
             '        <div style="clear:both;" > </div>',
             '</div>'
+        ],
+        plugins: [
+            {
+                xtype: 'component',
+                type: 'pullrefresh'
+            }
         ]
     }
 

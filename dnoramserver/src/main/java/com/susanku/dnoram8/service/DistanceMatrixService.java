@@ -11,11 +11,13 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.Date;
 import java.util.List;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
+import org.apache.log4j.Logger;
 import org.springframework.stereotype.Service;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -27,6 +29,8 @@ import com.susanku.dnoram8.domain.Task;
 
 @Service
 public class DistanceMatrixService {
+	
+	static Logger logger = Logger.getLogger(DistanceMatrixService.class);
 
 	private static String BASE_URL = "http://maps.googleapis.com/maps/api/distancematrix/xml";
 	
@@ -34,8 +38,9 @@ public class DistanceMatrixService {
 		
 		List<Task> tasksForLocationQuery = new ArrayList<Task>();
 		List<Task> resultList = new ArrayList<Task>();
+		System.out.println("startLocation:"+startLocation+" availableTime:"+availableTime);
 		for(Task task:tasks) {
-			System.out.println("Task Address:"+task.getAddressType());
+			System.out.println("Task Title:"+task.getTitle()+"Task Address:"+task.getAddressType()+" task duration:"+task.getDuration());
 			if(task.getDuration() <= availableTime) {
 				if("Anywhere".equalsIgnoreCase(task.getAddressType())) {
 						task.setTotalTaskTime(task.getDuration());
@@ -60,6 +65,7 @@ public class DistanceMatrixService {
 				urlBuffer.append("|");
 		}
 		urlBuffer.append("&mode=driving&sensor=false&units=imperial");
+		System.out.println(new Date());
 		System.out.println(urlBuffer.toString());
 		String response = getResponse(urlBuffer.toString());
 		
@@ -72,6 +78,9 @@ public class DistanceMatrixService {
 		Document doc = builder.parse(is);
 		
 		NodeList nodes = doc.getElementsByTagName("element");
+		
+		System.out.println("No of address sent in request:"+tasksForLocationQuery.size());
+		System.out.println("Nodes found in response:"+nodes.getLength());
  
 		for (int i = 0; i < nodes.getLength(); i++) {
 			Node node = nodes.item(i);
@@ -79,7 +88,7 @@ public class DistanceMatrixService {
 				Element element = (Element) node;
 				String status = getValue("status", element);
 				
-				Task task = tasks.get(i);
+				Task task = tasksForLocationQuery.get(i);
 							
 				if("OK".equals(status)) {
 						String dist = getNodeValue("distance", element);
@@ -110,7 +119,7 @@ public class DistanceMatrixService {
 		}
 		
 		    
-		Collections.sort(tasks, new Comparator<Task>() {
+		Collections.sort(resultList, new Comparator<Task>() {
 		    public int compare(Task o1, Task o2) {
 		    	long d1 = o1.getDuration() + o1.getDrivingTime();
 		    	long d2 = o2.getDuration() + o2.getDrivingTime();

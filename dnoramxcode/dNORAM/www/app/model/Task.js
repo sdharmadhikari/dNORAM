@@ -27,25 +27,25 @@ Ext.define('MyApp.model.Task', {
                 name: 'title'
             },
             {
-                allowNull: false,
                 name: 'duration',
+                allowNull: false,
                 type: 'int'
             },
             {
-                defaultValue: 'SmartPick',
-                name: 'category'
+                name: 'category',
+                defaultValue: 'SmartPick'
             },
             {
-                allowNull: false,
                 name: 'addressType',
+                allowNull: false,
                 type: 'string'
             },
             {
                 name: 'address'
             },
             {
-                defaultValue: 0,
                 name: 'isCompleted',
+                defaultValue: 0,
                 type: 'boolean'
             },
             {

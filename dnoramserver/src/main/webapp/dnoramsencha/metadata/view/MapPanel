@@ -38,8 +38,7 @@
                 "mapOptions": [
                     "{zoom : 16",
                     "}"
-                ],
-                "useCurrentLocation": true
+                ]
             },
             "designerId": "3b8d9565-0de4-4da4-8e43-f7facb144ded",
             "cn": [
@@ -54,7 +53,7 @@
                         "designer|userClassName": "onMymapMaprender",
                         "fn": "onMymapMaprender",
                         "implHandler": [
-                            "console.log(\"called onMymaprender\");",
+                            "/*console.log(\"called onMymaprender\");",
                             "geocoder = new google.maps.Geocoder();",
                             "console.log(\"address:\"+this.address);",
                             "if(this.address === undefined) {",
@@ -84,7 +83,7 @@
                             "    }",
                             "",
                             "});    ",
-                            "}"
+                            "}*/"
                         ],
                         "name": "maprender"
                     },

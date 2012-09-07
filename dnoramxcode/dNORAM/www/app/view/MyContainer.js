@@ -24,7 +24,7 @@ Ext.define('MyApp.view.MyContainer', {
             pack: 'center',
             type: 'vbox'
         },
-        scrollable: false
+        scrollable: 'false'
     }
 
 });

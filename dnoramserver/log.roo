@@ -282,3 +282,6 @@ focus --class ~.domain.Task
 field string --fieldName drivingDistanceText
 field string --fieldName drivingTimeText
 // Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-08-30 13:11:50
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-09-06 13:00:04
+logging setup --level DEBUG 
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-09-06 18:28:56

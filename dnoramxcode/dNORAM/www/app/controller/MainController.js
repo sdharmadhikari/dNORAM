@@ -485,15 +485,40 @@ Ext.define('MyApp.controller.MainController', {
 
         mapPanel = this.getMapPanel();//Ext.create("MyApp.view.MapPanel");
         var addressType = this.getAddressFieldSelect().getValue();
+        var gmap = mapPanel.down("map");
+        var address = this.getAddresstextareafield().getValue();
         if(addressType == 'Current') {
             this.getMynavigationview().push(mapPanel);
+            gmap.setUseCurrentLocation(true);
+            if(address === ''){
+                this.getGeoLocation2( function(position) {             
+                    //task.set('address', position.coords.latitude + ',' + position.coords.longitude);
+                    new google.maps.Marker({
+                        position: new google.maps.LatLng(position.coords.latitude,position.coords.longitude),
+                        map: gmap.getMap()
+                    });
+                });
+            }
+
         }else if(addressType == 'Custom' || addressType == 'Task Location'){
-            var address = this.getAddresstextareafield().getValue();
+
             if(address !== ''){
                 mapPanel.address = address;
-                this.getMynavigationview().push(mapPanel);
-            }
+                geocoder = new google.maps.Geocoder();
+                geocoder.geocode( {'address': address}, function(results, status) {
+                if(status == google.maps.GeocoderStatus.OK) {
+                    gmap.setMapCenter(results[0].geometry.location);
+                    new google.maps.Marker({
+                        position: results[0].geometry.location,
+                        map: gmap.getMap()
+                    });
+                } else {
+                    alert('Could not find :'+this.address +" on map");
+                }
+            }); 
+            this.getMynavigationview().push(mapPanel);
         }
+    }
 
 
 

@@ -24,7 +24,7 @@
             "userConfig": {
                 "designer|userClassName": "MyAjaxProxy1",
                 "enablePagingParams": false,
-                "url": "http://dnoram8.cloudfoundry.com/getbesttask"
+                "url": "/getbesttask"
             },
             "designerId": "4d62f475-21a4-43b4-8ec8-e93eb43788c1",
             "cn": [

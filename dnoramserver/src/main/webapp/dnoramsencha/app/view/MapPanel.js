@@ -29,8 +29,7 @@ Ext.define('MyApp.view.MapPanel', {
                 itemId: 'googlemap',
                 mapOptions: {
                     zoom: 16
-                },
-                useCurrentLocation: true
+                }
             }
         ],
         listeners: [
@@ -43,37 +42,37 @@ Ext.define('MyApp.view.MapPanel', {
     },
 
     onMymapMaprender: function(map, gmap, options) {
-        console.log("called onMymaprender");
+        /*console.log("called onMymaprender");
         geocoder = new google.maps.Geocoder();
         console.log("address:"+this.address);
         if(this.address === undefined) {
-            var mainController = MyApp.app.getController('MainController');
+        var mainController = MyApp.app.getController('MainController');
 
-            mainController.getGeoLocation2( function(position) {
-                var pos = new google.maps.LatLng(position.coords.latitude,
-                    position.coords.longitude);
-                gmap.setCenter(pos);
-                new google.maps.Marker({
-                    position: pos,
-                    map: gmap
-                });         
-            });
+        mainController.getGeoLocation2( function(position) {
+        var pos = new google.maps.LatLng(position.coords.latitude,
+        position.coords.longitude);
+        gmap.setCenter(pos);
+        new google.maps.Marker({
+        position: pos,
+        map: gmap
+        });         
+        });
 
 
         } else {
-            geocoder.geocode( {'address': this.address}, function(results, status) {
-            if(status == google.maps.GeocoderStatus.OK) {
-                gmap.setCenter(results[0].geometry.location);
-                new google.maps.Marker({
-                    position: results[0].geometry.location,
-                    map: gmap
-                });
-            } else {
-                alert('Could not find :'+this.address +" on map");
-            }
+        geocoder.geocode( {'address': this.address}, function(results, status) {
+        if(status == google.maps.GeocoderStatus.OK) {
+        gmap.setCenter(results[0].geometry.location);
+        new google.maps.Marker({
+        position: results[0].geometry.location,
+        map: gmap
+        });
+        } else {
+        alert('Could not find :'+this.address +" on map");
+        }
 
         });    
-    }
+        }*/
     }
 
 });

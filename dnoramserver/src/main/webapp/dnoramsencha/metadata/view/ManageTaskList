@@ -39,6 +39,18 @@
                 "designer|displayName": "itemTpl"
             },
             "designerId": "45adf806-726c-4fc4-b7aa-2cfcdfb1060f"
+        },
+        {
+            "type": "pullrefresh",
+            "reference": {
+                "name": "plugins",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyPullRefreshPlugin1"
+            },
+            "designerId": "4b3423f3-a60d-427a-b3e0-d9a38cc0b0b5"
         }
     ]
 }

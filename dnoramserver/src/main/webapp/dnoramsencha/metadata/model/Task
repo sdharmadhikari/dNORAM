@@ -48,8 +48,8 @@
             "codeClass": null,
             "userConfig": {
                 "designer|userClassName": "MyField1",
-                "allowNull": false,
                 "name": "duration",
+                "allowNull": false,
                 "type": "int"
             },
             "designerId": "d57dfabc-9452-4d4b-bf7a-ab2a87076a8a"
@@ -63,10 +63,10 @@
             "codeClass": null,
             "userConfig": {
                 "designer|userClassName": "MyField2",
+                "name": "category",
                 "defaultValue": [
                     "SmartPick"
-                ],
-                "name": "category"
+                ]
             },
             "designerId": "0ed24d17-32e4-45da-8d50-2a8dbe638aed"
         },
@@ -79,8 +79,8 @@
             "codeClass": null,
             "userConfig": {
                 "designer|userClassName": "MyField12",
-                "allowNull": false,
                 "name": "addressType",
+                "allowNull": false,
                 "type": "string"
             },
             "designerId": "c571ee36-05b3-41a9-950f-71118b002495"
@@ -107,10 +107,10 @@
             "codeClass": null,
             "userConfig": {
                 "designer|userClassName": "MyField4",
+                "name": "isCompleted",
                 "defaultValue": [
                     "0"
                 ],
-                "name": "isCompleted",
                 "type": "boolean"
             },
             "designerId": "28a57f64-71c6-4611-8321-f6d36c553138"

@@ -261,6 +261,17 @@ Ext.define('MyApp.controller.MainController', {
     },
 
     onManageTasksListIItemTap: function(dataview, index, target, record, e, options) {
+        var me = this,
+            now = Date.now();
+
+
+        // Keep the user from multiple clicks
+        if (now < me.lastTapTimestamp + 600) {
+            me.lastTapTimestamp = now;
+            console.log("ignoring click");
+            return;
+        }
+        me.lastTapTimestamp = now;
         console.log('8');
 
         var addTaskForm = Ext.create('MyApp.view.AddTaskForm', { 
@@ -282,6 +293,17 @@ Ext.define('MyApp.controller.MainController', {
     },
 
     onResultListItemTap: function(dataview, index, target, record, e, options) {
+        var me = this,
+            now = Date.now();
+
+
+        // Keep the user from multiple clicks
+        if (now < me.lastTapTimestamp + 600) {
+            me.lastTapTimestamp = now;
+            console.log("ignoring click");
+            return;
+        }
+        me.lastTapTimestamp = now;
         console.log('9');
         var addTaskForm = Ext.create('MyApp.view.AddTaskForm', { 
             title : 'Edit Task'

@@ -49,6 +49,11 @@ Ext.define('MyApp.view.AddTaskForm', {
                         required: true,
                         minValue: 0,
                         increment: 5
+                    },
+                    {
+                        xtype: 'label',
+                        html: 'in minutes',
+                        style: 'padding-left:40%;font-size:12px;color:#aaa;'
                     }
                 ]
             },
@@ -70,7 +75,7 @@ Ext.define('MyApp.view.AddTaskForm', {
                         height: 80,
                         hidden: true,
                         labelWidth: 0,
-                        name: 'address',
+                        name: 'formattedAddress',
                         placeHolder: 'Type address... ',
                         maxRows: 1
                     }

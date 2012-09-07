@@ -7,7 +7,7 @@
     "codeClass": null,
     "userConfig": {
         "designer|userClassName": "AddressTypeStore",
-        "data": "[\n                    {\n                        text: 'Current',\n                        value: 'Current'\n                    },\n                    {\n                        text: 'Anywhere',\n                        value: 'Anywhere'\n                    },\n                    {\n                        text: 'Enter Address',\n                        value: 'Custom'\n                    }\n                ]\n\n",
+        "data": "[\n                    {\n                        text: 'Current Location',\n                        value: 'Current'\n                    },\n                    {\n                        text: 'Enter Address',\n                        value: 'Custom'\n                    },                     \n                    {\n                        text: 'N/A',\n                        value: 'Anywhere'\n                    },\n                    \n                ]\n\n",
         "storeId": "addressTypeStore"
     },
     "id": "ExtBox1-ext-gen13910",

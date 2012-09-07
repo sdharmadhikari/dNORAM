@@ -203,9 +203,24 @@
                         "designer|userClassName": "MyLabel1",
                         "docked": "bottom",
                         "html": "&copy; 2012 SUSANKU Inc.",
-                        "style": "font-size:12px;text-align:center;"
+                        "style": "font-size:10px;text-align:center; padding:5px;"
                     },
                     "designerId": "cab9c71e-502d-41ac-891c-5616c0382ba7"
+                },
+                {
+                    "type": "label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyLabel",
+                        "docked": "bottom",
+                        "html": "<a href=\"http://www.susanku.com\">www.susanku.com</a>",
+                        "style": "font-size:14px;text-align:center; padding-bottom:10px;font-style:italic"
+                    },
+                    "designerId": "44954412-4d05-4d25-b84b-8ed6d4838a05"
                 }
             ]
         },

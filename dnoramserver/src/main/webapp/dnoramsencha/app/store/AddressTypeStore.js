@@ -19,17 +19,18 @@ Ext.define('MyApp.store.AddressTypeStore', {
     config: {
         data: [
             {
-                text: 'Current',
+                text: 'Current Location',
                 value: 'Current'
-            },
-            {
-                text: 'Anywhere',
-                value: 'Anywhere'
             },
             {
                 text: 'Enter Address',
                 value: 'Custom'
-            }
+            },
+            {
+                text: 'N/A',
+                value: 'Anywhere'
+            },
+            
         ],
         storeId: 'addressTypeStore',
         fields: [

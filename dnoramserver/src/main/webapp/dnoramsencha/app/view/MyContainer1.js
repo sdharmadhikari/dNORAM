@@ -106,7 +106,7 @@ Ext.define('MyApp.view.MyContainer1', {
                             }
                         ],
                         name: 'HoursPickerSlot',
-                        title: 'hours'
+                        title: 'Hour(s)'
                     },
                     {
                         xtype: 'pickerslot',
@@ -164,7 +164,8 @@ Ext.define('MyApp.view.MyContainer1', {
                             }
                         ],
                         name: 'MinPickerSlot',
-                        title: 'min.'
+                        title: 'Min(s)',
+                        value: 15
                     }
                 ],
                 toolbar: {

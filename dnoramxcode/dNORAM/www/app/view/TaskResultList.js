@@ -33,11 +33,11 @@ Ext.define('MyApp.view.TaskResultList', {
             '            {title}',
             '        </div>',
             '            <div style="font-size:80%;font-style:italic;clear:both;">',
-            '            <tpl if="drivingTime &gt;= 0.1">',
+            '            <tpl if="drivingTime &gt;= 1">',
             '                <img src="resources/images/speedometer1.png" width="12px" height="12px" /> {drivingDistanceText} &nbsp;&nbsp;&nbsp;',
             '                <img src="resources/images/time.png" width="12px" height="12px" /> {drivingTimeText}',
             '            <tpl else>',
-            '                Current location',
+            '                Nearby',
             '            </tpl>',
             '         </div>',
             '    </div>',
@@ -48,12 +48,6 @@ Ext.define('MyApp.view.TaskResultList', {
             '    </div> ',
             '        <div style="clear:both;" > </div>',
             '</div>'
-        ],
-        plugins: [
-            {
-                xtype: 'component',
-                type: 'pullrefresh'
-            }
         ]
     }
 

@@ -27,7 +27,7 @@ Ext.define('MyApp.store.ResultStore', {
         proxy: {
             type: 'ajax',
             enablePagingParams: false,
-            url: '/getbesttask',
+            url: 'http://dnoram8.cloudfoundry.com/getbesttask',
             reader: {
                 type: 'json',
                 rootProperty: 'tasks'

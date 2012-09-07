@@ -38,7 +38,7 @@ Ext.define('MyApp.controller.MainController', {
                 selector: '.fieldset[name="addressFieldFieldSet"]',
                 xtype: 'fieldset'
             },
-            addresstextareafield: 'textareafield[name="address"]',
+            addresstextareafield: 'textareafield[name="formattedAddress"]',
             addressFieldSelect: 'selectfield[name="addressType"]',
             refreshbutton: 'button[iconCls="refresh"]',
             deletetaskbutton: 'button[name="delete"]',
@@ -148,15 +148,13 @@ Ext.define('MyApp.controller.MainController', {
         console.log('got addTaskForm xtype using controller ref:', this.getAddtaskform().xtype);
         var newValues =  this.getAddtaskform().getValues();
 
-        //alert(newValues.address);
-        //alert(newValues.streetaddress);
-
         var task = this.getAddtaskform().getRecord();
         task.set('title', newValues.title);
         task.set('duration', newValues.duration);
         task.set('category', 'SmartPick');
         task.set('addressType', newValues.addressType);
-        task.set('address', newValues.address);
+        //task.set('address', newValues.address);
+        task.set('formattedAddress', newValues.formattedAddress);
 
         if(newValues.isCompleted === 0){
             task.set('isCompleted', false);
@@ -175,22 +173,25 @@ Ext.define('MyApp.controller.MainController', {
             });
 
         }else if(newValues.addressType == 'Custom'){
-            if(newValues.address === ''){
+            if(newValues.formattedAddress === ''){
                 Ext.Msg.alert('Need address with this address option', '', Ext.emptyFn);
                 task.reject();
                 return;
             }
-            //task.set('address', newValues.streetaddress);
+            // Following is added to retain user-entered free form string
+            task.set('address', newValues.formattedAddress);
             mainController.addOrUpdateTask(task);
 
         }else if(newValues.addressType == 'Anywhere') {
             task.set('address', '');
+            task.set('formattedAddress', '');
             mainController.addOrUpdateTask(task);
         } else if(newValues.addressType == 'Task Location') {
             mainController.addOrUpdateTask(task);
         }else {
             mainController.addOrUpdateTask(task);
         }
+
     },
 
     onWhatCanIDoNowButtonTap: function(img, e, options) {
@@ -260,6 +261,17 @@ Ext.define('MyApp.controller.MainController', {
     },
 
     onManageTasksListIItemTap: function(dataview, index, target, record, e, options) {
+        var me = this,
+            now = Date.now();
+
+
+        // Keep the user from multiple clicks
+        if (now < me.lastTapTimestamp + 600) {
+            me.lastTapTimestamp = now;
+            console.log("ignoring click");
+            return;
+        }
+        me.lastTapTimestamp = now;
         console.log('8');
 
         var addTaskForm = Ext.create('MyApp.view.AddTaskForm', { 
@@ -281,6 +293,17 @@ Ext.define('MyApp.controller.MainController', {
     },
 
     onResultListItemTap: function(dataview, index, target, record, e, options) {
+        var me = this,
+            now = Date.now();
+
+
+        // Keep the user from multiple clicks
+        if (now < me.lastTapTimestamp + 600) {
+            me.lastTapTimestamp = now;
+            console.log("ignoring click");
+            return;
+        }
+        me.lastTapTimestamp = now;
         console.log('9');
         var addTaskForm = Ext.create('MyApp.view.AddTaskForm', { 
             title : 'Edit Task'
@@ -396,6 +419,7 @@ Ext.define('MyApp.controller.MainController', {
         } else {
             this.getMapItButton().show();
         }
+
     },
 
     onRefreshButtonTap: function(button, e, options) {
@@ -666,13 +690,17 @@ Ext.define('MyApp.controller.MainController', {
             taskFromTaskStore.set('duration',task.get('duration'));
             taskFromTaskStore.set('category',task.get('category'));
             taskFromTaskStore.set('address',task.get('address'));
+            taskFromTaskStore.set('formattedAddress', task.get('formattedAddress'));
             taskFromTaskStore.set('isCompleted',task.get('isCompleted'));
+            // Sudhir comments: Following needs to be tested carefully
+            taskFromTaskStore.set('addressType',task.get('addressType'));
             taskFromTaskStore.dirty = true;
             tasksStore.sync();
         }
 
 
         this.getMynavigationview().pop();
+
     }
 
 });

@@ -27,7 +27,7 @@ Ext.define('MyApp.view.MainApplicationView', {
             animation: 'slide',
             type: 'card'
         },
-        scrollable: 'false',
+        scrollable: false,
         items: [
             {
                 xtype: 'panel',
@@ -38,7 +38,7 @@ Ext.define('MyApp.view.MainApplicationView', {
                     pack: 'center',
                     type: 'vbox'
                 },
-                scrollable: 'false',
+                scrollable: false,
                 items: [
                     {
                         xtype: 'image',
@@ -93,7 +93,13 @@ Ext.define('MyApp.view.MainApplicationView', {
                         xtype: 'label',
                         docked: 'bottom',
                         html: '&copy; 2012 SUSANKU Inc.',
-                        style: 'font-size:12px;text-align:center;'
+                        style: 'font-size:10px;text-align:center; padding:5px;'
+                    },
+                    {
+                        xtype: 'label',
+                        docked: 'bottom',
+                        html: '<a href="http://www.susanku.com">www.susanku.com</a>',
+                        style: 'font-size:14px;text-align:center; padding-bottom:10px;font-style:italic'
                     }
                 ]
             }

@@ -63,6 +63,9 @@ Ext.define('MyApp.model.Task', {
             },
             {
                 name: 'drivingTimeText'
+            },
+            {
+                name: 'formattedAddress'
             }
         ],
         validations: [

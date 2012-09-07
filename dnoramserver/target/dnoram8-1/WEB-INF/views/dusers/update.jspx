@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
-    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
-    <jsp:output omit-xml-declaration="yes"/>
-    <form:update id="fu_com_susanku_dnoram8_domain_Duser" modelAttribute="duser" path="/dusers" versionField="Version" z="qF7BoM14OBVT7K8JsQAUvue5ec8=">
-        <field:input field="userid" id="c_com_susanku_dnoram8_domain_Duser_userid" z="NXW9YbSqsnW5nC17tqNdmDklpq8="/>
-        <field:simple field="tasks" id="c_com_susanku_dnoram8_domain_Duser_tasks" messageCode="entity_reference_not_managed" messageCodeAttribute="Task" z="ngNj1AXRY0gLb52faEs5wmBdg+8="/>
-    </form:update>
-</div>

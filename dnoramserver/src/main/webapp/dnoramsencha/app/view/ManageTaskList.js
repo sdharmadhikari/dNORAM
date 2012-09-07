@@ -32,12 +32,6 @@ Ext.define('MyApp.view.ManageTaskList', {
             ' <div style="font-size:80%;font-style:italic;">Duration: {duration} min</div>',
             '    <span class="deleteplaceholder"></span>',
             ''
-        ],
-        plugins: [
-            {
-                xtype: 'component',
-                type: 'pullrefresh'
-            }
         ]
     }
 

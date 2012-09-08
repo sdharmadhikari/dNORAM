@@ -14,7 +14,7 @@
  */
 
 Ext.define('MyApp.view.MainApplicationView', {
-    extend: 'Ext.Panel',
+    extend: 'Ext.Container',
     alias: 'widget.mainApplicationView',
 
     requires: [
@@ -24,7 +24,6 @@ Ext.define('MyApp.view.MainApplicationView', {
 
     config: {
         layout: {
-            animation: 'slide',
             type: 'card'
         },
         scrollable: false,

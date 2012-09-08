@@ -47,7 +47,8 @@ Ext.define('MyApp.controller.MainController', {
                 autoCreate: true,
                 selector: 'mapPanel',
                 xtype: 'mapPanel'
-            }
+            },
+            welcomePage: 'welcomePage'
         },
 
         control: {
@@ -201,6 +202,8 @@ Ext.define('MyApp.controller.MainController', {
     },
 
     onAvailableTimePickerChange: function(picker, value, options) {
+        var welcomePage = this.getWelcomePage();
+        welcomePage.mask({xtype:'loadmask', message:'Getting current location'});
         console.log('5');
         var min = parseInt(value.MinPickerSlot);
         var hours = parseInt(value.HoursPickerSlot);
@@ -334,6 +337,7 @@ Ext.define('MyApp.controller.MainController', {
 
         // Nav showHide logic
         if(value.xtype=='welcomePage') {
+            this.getWelcomePage().unmask();
             this.getAddtaskbutton().hide();
             this.getRefreshbutton().hide();
             this.getSavetasknavbutton().hide();

@@ -1,12 +1,13 @@
 {
-    "type": "panel",
+    "type": "container",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "container|animation": "slide",
+        "container|animation": null,
+        "container|animation.duration": null,
         "designer|userClassName": "MainApplicationView",
         "designer|userAlias": "mainApplicationView",
         "requires": [

@@ -250,6 +250,8 @@
                 "designer|userClassName": "onAvailableTimePickerChange",
                 "fn": "onAvailableTimePickerChange",
                 "implHandler": [
+                    "var welcomePage = this.getWelcomePage();",
+                    "welcomePage.mask({xtype:'loadmask', message:'Getting current location'});",
                     "console.log('5');",
                     "var min = parseInt(value.MinPickerSlot);",
                     "var hours = parseInt(value.HoursPickerSlot);",
@@ -458,6 +460,7 @@
                     "",
                     "// Nav showHide logic",
                     "if(value.xtype=='welcomePage') {",
+                    "    this.getWelcomePage().unmask();",
                     "    this.getAddtaskbutton().hide();",
                     "    this.getRefreshbutton().hide();",
                     "    this.getSavetasknavbutton().hide();",
@@ -1107,6 +1110,20 @@
                 "xtype": "mapPanel"
             },
             "designerId": "6183a028-4446-461b-a979-fdbfe2b74819"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "welcomePage",
+                "ref": "welcomePage",
+                "selector": "welcomePage"
+            },
+            "designerId": "c3e2036e-fcb8-44d3-8380-56022996b221"
         }
     ]
 }

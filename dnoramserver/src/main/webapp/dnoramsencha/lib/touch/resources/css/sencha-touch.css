@@ -6885,7 +6885,7 @@ input[type="search"]::-webkit-search-cancel-button {
   border-top-right-radius: 0.8em;
   border-left: none;
   border-right: none;
-  margin-top: 1em;
+ /* margin-top: 1em;*/
   background-color: #ddd;
 }
 

@@ -1,10 +1,10 @@
 {
     "expandedState": {
-        "data": true,
-        "model": true,
+        "data": false,
+        "model": false,
         "component": true,
-        "controller": true,
-        "resource": false,
+        "controller": false,
+        "resource": true,
         "0ae7e19d-5ce6-4b97-bea4-529ad63a2754": {
             "id": "0ae7e19d-5ce6-4b97-bea4-529ad63a2754",
             "cn": [
@@ -145,7 +145,6 @@
             "cn": [
                 {
                     "id": "c015c16f-5c7d-4dac-b1d7-82c00a3ea33d",
-                    "expanded": false,
                     "cn": [
                         {
                             "id": "59e5baba-da82-499e-9186-68977c5a6d20"

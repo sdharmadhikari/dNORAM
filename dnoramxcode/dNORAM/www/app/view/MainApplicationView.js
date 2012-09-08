@@ -14,7 +14,7 @@
  */
 
 Ext.define('MyApp.view.MainApplicationView', {
-    extend: 'Ext.Container',
+    extend: 'Ext.Panel',
     alias: 'widget.mainApplicationView',
 
     requires: [
@@ -118,11 +118,11 @@ Ext.define('MyApp.view.MainApplicationView', {
         //create the delayed task instance with our callback
         var task = Ext.create('Ext.util.DelayedTask', function() {
             console.log('callback!');
-            component.animateActiveItem(1,{duration:800,type: 'fade', direction: 'left'});
+            component.animateActiveItem(1,{duration:2000,type: 'slide', direction: 'left'});
             task.cancel(); 
         });
 
-        task.delay(3000);
+        task.delay(8000);
     }
 
 });

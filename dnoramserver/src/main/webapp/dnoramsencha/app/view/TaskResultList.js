@@ -19,7 +19,7 @@ Ext.define('MyApp.view.TaskResultList', {
 
     config: {
         emptyText: '<div style="widht:100%;text-align:center;margin-top:20px;"><div style="margin: 0 auto; width: 50%;"><table cellspacing="1"><tr><td style="vertical-align:middle"><img src="resources/images/dNORAM-LOGO-26.png" /></td><td style="vertical-align:middle"> None of your tasks can be done in available time.</td></tr></table></div></div>',
-        loadingText: 'Finding the best tasks for you ..',
+        loadingText: 'Getting current location and finding best tasks...',
         store: 'resultStore',
         grouped: true,
         onItemDisclosure: true,

@@ -3,6 +3,7 @@ package com.susanku.dnoram8.domain;
 import javax.persistence.ManyToOne;
 import javax.persistence.Transient;
 import javax.validation.constraints.NotNull;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.roo.addon.javabean.RooJavaBean;
 import org.springframework.roo.addon.jpa.activerecord.RooJpaActiveRecord;
 import org.springframework.roo.addon.json.RooJson;
@@ -25,10 +26,10 @@ public class Task {
     private String address;
 
     private Boolean isCompleted;
-    
+
     @NotNull
     private String addressType;
-    
+
     private String formattedAddress;
 
     @ManyToOne
@@ -43,11 +44,17 @@ public class Task {
     @Transient
     private double drivingDistance;
 
-
-
     @Transient
     private String drivingDistanceText;
 
     @Transient
     private String drivingTimeText;
+
+    @Transient
+    private Boolean updated;
+    
+    public Boolean getUpdated() {
+        return Boolean.TRUE;
+    }
+
 }

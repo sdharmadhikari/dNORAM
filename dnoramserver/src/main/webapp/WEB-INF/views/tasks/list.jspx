@@ -9,7 +9,7 @@
             <table:column id="c_com_susanku_dnoram8_domain_Task_duration" property="duration" z="/0wU77NWOTwHqURwXt5gZj8/DGA="/>
             <table:column id="c_com_susanku_dnoram8_domain_Task_category" property="category" z="4E/7fhwGtMRia9hsROZkZ3N5tLc="/>
             <table:column id="c_com_susanku_dnoram8_domain_Task_address" property="address" z="ZwlHhyzKGVQoXdrV/i5hBcCWz+U="/>
-            <table:column id="c_com_susanku_dnoram8_domain_Task_isCompleted" property="isCompleted" z="UhMFkyFuPHTSY+EaFQ0Kq/vOTG0="/>
+            <table:column id="c_com_susanku_dnoram8_domain_Task_updated" property="updated" z="+UBp4tRWeNmPmachtqSsLFDwrE8="/>
         </table:table>
     </page:list>
 </div>

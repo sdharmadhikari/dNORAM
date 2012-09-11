@@ -120,4 +120,8 @@ privileged aspect Task_Roo_JavaBean {
         this.drivingTimeText = drivingTimeText;
     }
     
+    public void Task.setUpdated(Boolean updated) {
+        this.updated = updated;
+    }
+    
 }

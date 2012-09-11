@@ -1,12 +1,13 @@
 {
     "expandedState": {
         "data": false,
-        "model": false,
-        "component": false,
+        "model": true,
+        "component": true,
         "controller": true,
         "resource": true,
         "0ae7e19d-5ce6-4b97-bea4-529ad63a2754": {
             "id": "0ae7e19d-5ce6-4b97-bea4-529ad63a2754",
+            "expanded": false,
             "cn": [
                 {
                     "id": "2a08d9c1-a8ab-4850-936c-0284347b305a",
@@ -58,6 +59,7 @@
         },
         "b439c4ad-9f0d-4dbd-a792-4de95916851a": {
             "id": "b439c4ad-9f0d-4dbd-a792-4de95916851a",
+            "expanded": false,
             "cn": [
                 {
                     "id": "cc726ff4-beee-4b3e-8b96-b237ad92ac9c"
@@ -142,6 +144,7 @@
         },
         "994dcb18-3db4-4a18-9621-fbebb6ec6eae": {
             "id": "994dcb18-3db4-4a18-9621-fbebb6ec6eae",
+            "expanded": false,
             "cn": [
                 {
                     "id": "c015c16f-5c7d-4dac-b1d7-82c00a3ea33d",
@@ -279,6 +282,7 @@
         },
         "89a48766-34db-4f49-ba2a-1cab73985e18": {
             "id": "89a48766-34db-4f49-ba2a-1cab73985e18",
+            "expanded": false,
             "cn": [
                 {
                     "id": "26ecd7b7-b763-4833-8929-0925c6ca3a6f"
@@ -327,11 +331,18 @@
                 },
                 {
                     "id": "b93519a1-2981-4adf-a9a9-5f56fdfe069e"
+                },
+                {
+                    "id": "c29a436e-66be-4167-80a8-564cdd9ee711"
+                },
+                {
+                    "id": "faf775e2-ab9f-44d0-b930-31ec937df96b"
                 }
             ]
         },
         "35a9c6a7-f661-4325-bd67-6329e9bf31b0": {
             "id": "35a9c6a7-f661-4325-bd67-6329e9bf31b0",
+            "expanded": false,
             "cn": [
                 {
                     "id": "888ff4db-8a8a-43b5-b90a-e3b1cab5d747"
@@ -358,6 +369,7 @@
         },
         "22903d55-b344-4cc8-9d7b-5fff5bb0ff87": {
             "id": "22903d55-b344-4cc8-9d7b-5fff5bb0ff87",
+            "expanded": false,
             "cn": [
                 {
                     "id": "7b53c65c-0799-490b-aff8-737de57cec50"

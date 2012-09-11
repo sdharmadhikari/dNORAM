@@ -236,6 +236,36 @@
                 "name": "formattedAddress"
             },
             "designerId": "b93519a1-2981-4adf-a9a9-5f56fdfe069e"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field18",
+                "name": "updated",
+                "defaultValue": [
+                    "true"
+                ],
+                "type": "boolean"
+            },
+            "designerId": "c29a436e-66be-4167-80a8-564cdd9ee711"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field19",
+                "name": "notes"
+            },
+            "designerId": "faf775e2-ab9f-44d0-b930-31ec937df96b"
         }
     ]
 }

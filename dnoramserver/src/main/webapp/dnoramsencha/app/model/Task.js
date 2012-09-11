@@ -66,6 +66,14 @@ Ext.define('MyApp.model.Task', {
             },
             {
                 name: 'formattedAddress'
+            },
+            {
+                name: 'updated',
+                defaultValue: true,
+                type: 'boolean'
+            },
+            {
+                name: 'notes'
             }
         ],
         validations: [

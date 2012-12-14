@@ -19,7 +19,7 @@ Ext.define('MyApp.view.TaskResultList', {
 
     config: {
         emptyText: '<div style="widht:100%;text-align:center;margin-top:20px;"><div style="margin: 0 auto; width: 50%;"><table cellspacing="1"><tr><td style="vertical-align:middle"><img src="resources/images/dNORAM-LOGO-26.png" /></td><td style="vertical-align:middle"> None of your tasks can be done in available time.</td></tr></table></div></div>',
-        loadingText: 'Getting current location and finding best tasks...',
+        loadingText: 'Looking best tasks around you...',
         store: 'resultStore',
         grouped: true,
         onItemDisclosure: true,
@@ -30,7 +30,7 @@ Ext.define('MyApp.view.TaskResultList', {
             '    </div>',
             '        <div style="width:68%;float:left;">',
             '        <div style="font-weight:bold;clear:both;">',
-            '            {title}',
+            '            {title:ellipsis(18, true)}',
             '        </div>',
             '            <div style="font-size:80%;font-style:italic;clear:both;">',
             '            <tpl if="addressType == \'Anywhere\'">',
@@ -48,9 +48,24 @@ Ext.define('MyApp.view.TaskResultList', {
             '        <div style="font-size:80%; color:blue;margin-top:15px; text-align:right;padding-right:31px;">',
             '            {totalTaskTime}m',
             '            </div>',
-            '    </div> ',
+            '    </div>',
+            '    <span class="deleteplaceholder"></span>',
             '        <div style="clear:both;" > </div>',
             '</div>'
+        ],
+        items: [
+            {
+                xtype: 'toolbar',
+                docked: 'bottom',
+                items: [
+                    {
+                        xtype: 'button',
+                        ui: 'plain',
+                        iconCls: 'refresh',
+                        iconMask: true
+                    }
+                ]
+            }
         ]
     }
 

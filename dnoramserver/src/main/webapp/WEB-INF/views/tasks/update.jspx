@@ -18,5 +18,8 @@
         <field:input field="drivingTimeText" id="c_com_susanku_dnoram8_domain_Task_drivingTimeText" z="vLKE7O5Coh0a52/J1jH6cCZ771o="/>
         <field:input field="formattedAddress" id="c_com_susanku_dnoram8_domain_Task_formattedAddress" z="bfIBCLYEfADiTGFFbxnWpQHXfq0="/>
         <field:checkbox field="updated" id="c_com_susanku_dnoram8_domain_Task_updated" z="EhDFubVGzOr1llmQNAuwS2SZUtI="/>
+        <field:input field="notes" id="c_com_susanku_dnoram8_domain_Task_notes" z="+PFccJTcIV5EhTWg3BmG7Mz8Ss0="/>
+        <field:datetime dateTimePattern="${task_createdon_date_format}" field="createdOn" id="c_com_susanku_dnoram8_domain_Task_createdOn" z="5M37Bs9cw7K/74tcZM69gaBg7Qg="/>
+        <field:datetime dateTimePattern="${task_updatedon_date_format}" field="updatedOn" id="c_com_susanku_dnoram8_domain_Task_updatedOn" z="siZPW0WJsKqEYteGFnzX5VP8G64="/>
     </form:update>
 </div>

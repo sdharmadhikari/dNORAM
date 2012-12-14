@@ -18,5 +18,8 @@
         <field:display field="drivingTimeText" id="s_com_susanku_dnoram8_domain_Task_drivingTimeText" object="${task}" z="EKl68BoiJcXT32+luy5JEIbCWXw="/>
         <field:display field="formattedAddress" id="s_com_susanku_dnoram8_domain_Task_formattedAddress" object="${task}" z="q67//i25Fwzvrg1GZ8i3QSoVwqY="/>
         <field:display field="updated" id="s_com_susanku_dnoram8_domain_Task_updated" object="${task}" z="Bz68o2Z4DhGtUQ+LcQ18+pBl7aQ="/>
+        <field:display field="notes" id="s_com_susanku_dnoram8_domain_Task_notes" object="${task}" z="GdLJ/mZKabph1MNtT95Pze4i5N4="/>
+        <field:display date="true" dateTimePattern="${task_createdon_date_format}" field="createdOn" id="s_com_susanku_dnoram8_domain_Task_createdOn" object="${task}" z="mQ/0CXOPIjnKxiQM8RcUHGNRsZQ="/>
+        <field:display date="true" dateTimePattern="${task_updatedon_date_format}" field="updatedOn" id="s_com_susanku_dnoram8_domain_Task_updatedOn" object="${task}" z="5GDv6ibGJlTBqewFvoPt+6phPd4="/>
     </page:show>
 </div>

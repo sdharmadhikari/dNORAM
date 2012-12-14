@@ -52,8 +52,8 @@
                         "designer|userClassName": "MyTextField",
                         "label": null,
                         "name": "title",
-                        "maxLength": 13,
-                        "placeHolder": "Task Title "
+                        "maxLength": null,
+                        "placeHolder": "Task Title*"
                     },
                     "designerId": "ec8a63ee-a715-4b6b-a423-87fa37c02342"
                 },
@@ -152,10 +152,44 @@
                         "label": null,
                         "labelWidth": 0,
                         "name": "formattedAddress",
-                        "placeHolder": "Type address... ",
+                        "placeHolder": "Type address or street intersection... ",
                         "maxRows": 1
                     },
                     "designerId": "93de3c97-9838-4e1e-82da-09bb95cb631c"
+                }
+            ]
+        },
+        {
+            "type": "fieldset",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyFieldSet",
+                "border": null,
+                "scrollable": null,
+                "title": null
+            },
+            "designerId": "30b5651e-f6e4-4bbe-90d9-1e0b22c1db2a",
+            "cn": [
+                {
+                    "type": "textareafield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyTextArea1",
+                        "label": "",
+                        "labelWidth": 0,
+                        "name": "notes",
+                        "placeHolder": "Notes..",
+                        "maxRows": null
+                    },
+                    "designerId": "551f2e68-2156-4704-a2d5-21f825ae2c9c"
                 }
             ]
         },

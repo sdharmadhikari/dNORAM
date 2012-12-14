@@ -9,6 +9,8 @@ import com.susanku.dnoram8.web.TaskController;
 import java.io.UnsupportedEncodingException;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
+import org.joda.time.format.DateTimeFormat;
+import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -39,6 +41,7 @@ privileged aspect TaskController_Roo_Controller {
     
     @RequestMapping(value = "/{id_}", produces = "text/html")
     public String TaskController.show(@PathVariable("id_") Long id_, Model uiModel) {
+        addDateTimeFormatPatterns(uiModel);
         uiModel.addAttribute("task", Task.findTask(id_));
         uiModel.addAttribute("itemId", id_);
         return "tasks/show";
@@ -55,6 +58,7 @@ privileged aspect TaskController_Roo_Controller {
         } else {
             uiModel.addAttribute("tasks", Task.findAllTasks());
         }
+        addDateTimeFormatPatterns(uiModel);
         return "tasks/list";
     }
     
@@ -85,8 +89,14 @@ privileged aspect TaskController_Roo_Controller {
         return "redirect:/tasks";
     }
     
+    void TaskController.addDateTimeFormatPatterns(Model uiModel) {
+        uiModel.addAttribute("task_createdon_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
+        uiModel.addAttribute("task_updatedon_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
+    }
+    
     void TaskController.populateEditForm(Model uiModel, Task task) {
         uiModel.addAttribute("task", task);
+        addDateTimeFormatPatterns(uiModel);
         uiModel.addAttribute("dusers", Duser.findAllDusers());
     }
     

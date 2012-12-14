@@ -38,8 +38,7 @@ Ext.define('MyApp.view.AddTaskForm', {
                     {
                         xtype: 'textfield',
                         name: 'title',
-                        maxLength: 13,
-                        placeHolder: 'Task Title '
+                        placeHolder: 'Task Title*'
                     },
                     {
                         xtype: 'spinnerfield',
@@ -76,8 +75,20 @@ Ext.define('MyApp.view.AddTaskForm', {
                         hidden: true,
                         labelWidth: 0,
                         name: 'formattedAddress',
-                        placeHolder: 'Type address... ',
+                        placeHolder: 'Type address or street intersection... ',
                         maxRows: 1
+                    }
+                ]
+            },
+            {
+                xtype: 'fieldset',
+                items: [
+                    {
+                        xtype: 'textareafield',
+                        label: '',
+                        labelWidth: 0,
+                        name: 'notes',
+                        placeHolder: 'Notes..'
                     }
                 ]
             },

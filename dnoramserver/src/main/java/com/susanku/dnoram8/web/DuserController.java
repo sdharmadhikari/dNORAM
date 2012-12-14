@@ -76,6 +76,8 @@ public class DuserController {
         List<Task> list = Task.findTasksByIdEquals(task.getId()).getResultList();
         if (list.size() == 0) {
         	System.out.println("creating task for user id : " + userid);
+        	task.setCreatedOn(new Date());
+        	task.setUpdatedOn(new Date());
 			Duser duser_id = Duser.findDusersByUseridEquals(userid).getSingleResult();
 			// Getting formattedAddress in case of Current or Enter Address
 			if("Anywhere".equals(task.getAddressType())){
@@ -112,7 +114,8 @@ public class DuserController {
 	        oldTask.setDuration(task.getDuration());
 	        oldTask.setCategory(task.getCategory());
 	        oldTask.setAddressType(task.getAddressType());
-	        
+	        oldTask.setUpdatedOn(new Date());
+	        oldTask.setNotes(task.getNotes());
 	        if ("Anywhere".equals(task.getAddressType())){
 	        	System.out.println("Updating task to Anywhere task.. setting address to blank, retaining old formatted value if any");
 	        	oldTask.setAddress("");

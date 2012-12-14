@@ -5,6 +5,7 @@ package com.susanku.dnoram8.domain;
 
 import com.susanku.dnoram8.domain.Duser;
 import com.susanku.dnoram8.domain.Task;
+import java.util.Date;
 
 privileged aspect Task_Roo_JavaBean {
     
@@ -122,6 +123,30 @@ privileged aspect Task_Roo_JavaBean {
     
     public void Task.setUpdated(Boolean updated) {
         this.updated = updated;
+    }
+    
+    public String Task.getNotes() {
+        return this.notes;
+    }
+    
+    public void Task.setNotes(String notes) {
+        this.notes = notes;
+    }
+    
+    public Date Task.getCreatedOn() {
+        return this.createdOn;
+    }
+    
+    public void Task.setCreatedOn(Date createdOn) {
+        this.createdOn = createdOn;
+    }
+    
+    public Date Task.getUpdatedOn() {
+        return this.updatedOn;
+    }
+    
+    public void Task.setUpdatedOn(Date updatedOn) {
+        this.updatedOn = updatedOn;
     }
     
 }

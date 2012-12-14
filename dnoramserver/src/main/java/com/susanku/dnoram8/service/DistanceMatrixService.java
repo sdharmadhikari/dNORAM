@@ -103,7 +103,7 @@ public class DistanceMatrixService {
 						task.setDrivingTime(Math.round(Integer.parseInt(dur)/60)); // Convert from seconds to minutes
 						task.setDrivingDistanceText(distText);
 						String formattedDurText = durText.replaceAll("min[s]*", "h");
-						if(formattedDurText.contains(" hours")) {
+						if(formattedDurText.contains(" hours") || formattedDurText.contains(" hour")) {
 							formattedDurText = formattedDurText.replaceAll(" hour[s]* ", ":");
 						} else {
 							formattedDurText = "0:"+formattedDurText;

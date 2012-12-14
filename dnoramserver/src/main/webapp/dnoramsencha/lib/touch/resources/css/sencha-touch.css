@@ -6845,7 +6845,7 @@ input[type="search"]::-webkit-search-cancel-button {
 /* line 50, ../sass/sencha-touch.scss */
 .x-list .x-list-disclosure {
   overflow: visible;
-  -webkit-mask: 0 0 url("../themes/images/default/pictos/code3.png") no-repeat;
+  -webkit-mask: 0 0 url("../images/code3.png") no-repeat;
   right: 0;
 }
 

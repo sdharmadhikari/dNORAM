@@ -28,9 +28,9 @@
                 "designer|userClassName": "itemTpl",
                 "implHandler": [
                     "<tpl if=\"isCompleted == false\"> ",
-                    "    <div style=\"font-weight:bold;\">{title}</div>",
+                    "    <div style=\"font-weight:bold;\">{title:ellipsis(21, true)}</div>",
                     " <tpl else>",
-                    "     <div style=\"font-weight:bold;text-decoration: line-through\">{title}</div>",
+                    "     <div style=\"font-weight:bold;text-decoration: line-through\">{title:ellipsis(21, true)}</div>",
                     " </tpl>",
                     " <div style=\"font-size:80%;font-style:italic;\">Duration: {duration} min</div>",
                     "    <span class=\"deleteplaceholder\"></span>",

@@ -38,13 +38,6 @@ Ext.define('MyApp.view.MyNavigationView', {
                     xtype: 'button',
                     align: 'right',
                     hidden: true,
-                    iconCls: 'refresh',
-                    iconMask: true
-                },
-                {
-                    xtype: 'button',
-                    align: 'right',
-                    hidden: true,
                     id: 'addTaskButton',
                     ui: 'plain',
                     iconCls: 'add',

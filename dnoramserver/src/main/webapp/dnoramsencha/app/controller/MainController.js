@@ -156,6 +156,7 @@ Ext.define('MyApp.controller.MainController', {
         task.set('addressType', newValues.addressType);
         //task.set('address', newValues.address);
         task.set('formattedAddress', newValues.formattedAddress);
+        task.set('notes', newValues.notes);
 
         if(newValues.isCompleted === 0){
             task.set('isCompleted', false);
@@ -203,7 +204,7 @@ Ext.define('MyApp.controller.MainController', {
 
     onAvailableTimePickerChange: function(picker, value, options) {
         var welcomePage = this.getWelcomePage();
-        welcomePage.mask({xtype:'loadmask', message:'Getting current location and finding best tasks'});
+        welcomePage.mask({xtype:'loadmask', message:'Looking best tasks around you...'});
         console.log('5');
         var min = parseInt(value.MinPickerSlot);
         var hours = parseInt(value.HoursPickerSlot);
@@ -265,7 +266,7 @@ Ext.define('MyApp.controller.MainController', {
 
     onManageTasksListIItemTap: function(dataview, index, target, record, e, options) {
         if(!record.get('updated')){
-            Ext.Msg.alert('Please wait for a sec until server saves your changes', '', Ext.emptyFn);
+            Ext.Msg.alert('','Please wait..', Ext.emptyFn);
             return;
         }
 
@@ -302,7 +303,7 @@ Ext.define('MyApp.controller.MainController', {
 
     onResultListItemTap: function(dataview, index, target, record, e, options) {
         if(!record.get('updated')){
-            Ext.Msg.alert('Please wait for a sec and try again', '', Ext.emptyFn);
+            Ext.Msg.alert('', 'Please wait ..', Ext.emptyFn);
             return;
         }
 
@@ -349,7 +350,7 @@ Ext.define('MyApp.controller.MainController', {
         if(value.xtype=='welcomePage') {
             this.getWelcomePage().unmask();
             this.getAddtaskbutton().hide();
-            this.getRefreshbutton().hide();
+            //this.getRefreshbutton().hide();
             this.getSavetasknavbutton().hide();
         }
 
@@ -361,7 +362,7 @@ Ext.define('MyApp.controller.MainController', {
 
         if(value.xtype=='manageTaskListAlias') {
             this.getAddtaskbutton().show();
-            this.getRefreshbutton().hide();
+            //this.getRefreshbutton().hide();
             this.getSavetasknavbutton().hide();    
         }
 
@@ -369,7 +370,7 @@ Ext.define('MyApp.controller.MainController', {
         if(value.xtype=='addTaskFormAlias' ) {
             this.getAddtaskbutton().hide();
             this.getSavetasknavbutton().show();
-            this.getRefreshbutton().hide();
+            //this.getRefreshbutton().hide();
             if(value.config.title == 'Edit Task') {
                 this.getDeletetaskbutton().show();
             } else {
@@ -379,7 +380,7 @@ Ext.define('MyApp.controller.MainController', {
 
         if(value.xtype=='mapPanel') {
             this.getAddtaskbutton().hide();
-            this.getRefreshbutton().hide();
+            //this.getRefreshbutton().hide();
             this.getSavetasknavbutton().hide();
         }
 
@@ -593,7 +594,7 @@ Ext.define('MyApp.controller.MainController', {
 
     launch: function() {
 
-        if(window.location.host === 'localhost:8081'){
+        if(window.location.host === 'localhost:8081' || window.location.host === '172.26.0.119:8081'){
             //Taskstore
             var tasksStore = Ext.getStore('tasksStore');
             var localProxy = tasksStore.getProxy();
@@ -725,6 +726,7 @@ Ext.define('MyApp.controller.MainController', {
             taskFromTaskStore.set('isCompleted',task.get('isCompleted'));
             // Sudhir comments: Following needs to be tested carefully
             taskFromTaskStore.set('addressType',task.get('addressType'));
+            taskFromTaskStore.set('notes',task.get('notes'));
             taskFromTaskStore.set('updated', false);
             taskFromTaskStore.dirty = true;
             tasksStore.sync();

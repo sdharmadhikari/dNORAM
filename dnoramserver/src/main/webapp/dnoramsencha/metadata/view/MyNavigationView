@@ -55,23 +55,6 @@
                     "codeClass": null,
                     "userConfig": {
                         "align": "right",
-                        "designer|userClassName": "MyButton5",
-                        "hidden": true,
-                        "iconCls": "refresh",
-                        "iconMask": true,
-                        "text": null
-                    },
-                    "designerId": "c4fdcea4-0e88-4ecd-a486-415d8fe95a54"
-                },
-                {
-                    "type": "button",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "align": "right",
                         "designer|userClassName": "MyButton3",
                         "cls": null,
                         "hidden": true,

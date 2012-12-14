@@ -73,11 +73,13 @@ public class DuserController {
         System.out.println("task operation at :" + new Date() + "-----------------------------");
         Task task = Task.fromJsonToTask(json);
 
+        System.out.println("task id from sencha:" + task.getId());
         List<Task> list = Task.findTasksByIdEquals(task.getId()).getResultList();
         if (list.size() == 0) {
         	System.out.println("creating task for user id : " + userid);
         	task.setCreatedOn(new Date());
         	task.setUpdatedOn(new Date());
+        	task.setUpdated(true);
 			Duser duser_id = Duser.findDusersByUseridEquals(userid).getSingleResult();
 			// Getting formattedAddress in case of Current or Enter Address
 			if("Anywhere".equals(task.getAddressType())){
@@ -85,14 +87,14 @@ public class DuserController {
 				task.setFormattedAddress("With this option, you need to type address here !");
 			}else if ("Task Location".equals(task.getAddressType())){
 				System.out.println("Creating Current Location task");
-				String formattedAddress = formattedAddressService.getFormattedAddress(task.getAddress());
+				String formattedAddress = task.getAddress(); // formattedAddressService.getFormattedAddress(task.getAddress());
 				task.setFormattedAddress(formattedAddress);
 			}else{
 				
 				System.out.println("Creating Custom Address task.. raw address received from client : " + task.getFormattedAddress());
 				System.out.println("Saving raw data into address field..");
 				task.setAddress(task.getFormattedAddress());
-				String formattedAddress = formattedAddressService.getFormattedAddress(task.getFormattedAddress());
+				String formattedAddress = task.getFormattedAddress(); //formattedAddressService.getFormattedAddress(task.getFormattedAddress());
 				if(formattedAddress == null){
 					task.setAddress("."); // Setting raw address to blank(dot) if address not found by Google api
 					task.setFormattedAddress("Address could not be found..Please enter valid address");
@@ -116,6 +118,7 @@ public class DuserController {
 	        oldTask.setAddressType(task.getAddressType());
 	        oldTask.setUpdatedOn(new Date());
 	        oldTask.setNotes(task.getNotes());
+	        oldTask.setUpdated(true);
 	        if ("Anywhere".equals(task.getAddressType())){
 	        	System.out.println("Updating task to Anywhere task.. setting address to blank, retaining old formatted value if any");
 	        	oldTask.setAddress("");
@@ -128,7 +131,7 @@ public class DuserController {
 	        		
 	        	}else {
 	        		System.out.println("Current location IS different..so getting new formattedAddress");
-	        		String formattedAddress = formattedAddressService.getFormattedAddress(task.getAddress());
+	        		String formattedAddress = task.getAddress(); //formattedAddressService.getFormattedAddress(task.getAddress());
 		        	oldTask.setFormattedAddress(formattedAddress);
 		        	oldTask.setAddress(task.getAddress()); // Important, raw data should be saved in "address"
 	        	}
@@ -136,7 +139,7 @@ public class DuserController {
 	        	System.out.println("Updating task to Custom address task");
 		        if(! oldTask.getFormattedAddress().equals(task.getFormattedAddress())){
 		        	System.out.println("New custom address is different than old formatted address.. getting new formatted address");
-		        	String formattedAddress = formattedAddressService.getFormattedAddress(task.getFormattedAddress());
+		        	String formattedAddress = task.getFormattedAddress(); //formattedAddressService.getFormattedAddress(task.getFormattedAddress());
 		        	oldTask.setFormattedAddress(formattedAddress);
 		        	oldTask.setAddress(task.getFormattedAddress()); // This is important. raw data needs to be saved in "address"
 		        }		        	

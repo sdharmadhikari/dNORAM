@@ -109,7 +109,7 @@ public class DistanceMatrixService {
 							formattedDurText = "0:"+formattedDurText;
 						}
 						task.setDrivingTimeText(formattedDurText);
-						task.setTotalTaskTime(task.getDuration() + task.getDrivingTime());
+						task.setTotalTaskTime(task.getDuration() + task.getDrivingTime()*2);
 						if(task.getTotalTaskTime()<=availableTime) {
 							resultList.add(task);
 						}

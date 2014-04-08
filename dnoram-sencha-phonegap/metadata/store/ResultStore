@@ -1,0 +1,88 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "resultStore",
+        "designer|userClassName": "ResultStore",
+        "model": "Task",
+        "storeId": "resultStore"
+    },
+    "designerId": "e5421a3d-90e3-48c0-82d7-d5bd470085a9",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "enablePagingParams": false,
+                "url": "http://ec2-54-200-65-103.us-west-2.compute.amazonaws.com/dnoram8-1/getbesttask"
+            },
+            "designerId": "4d62f475-21a4-43b4-8ec8-e93eb43788c1",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "tasks"
+                    },
+                    "designerId": "8a86218f-439f-4f24-94f0-30777aca4517"
+                }
+            ]
+        },
+        {
+            "type": "Ext.util.Grouper",
+            "reference": {
+                "name": "grouper",
+                "type": "object"
+            },
+            "codeClass": null,
+            "designerId": "fb2ff6cd-5bd7-44be-86c1-77256ad10c8e",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|params": [
+                            "record"
+                        ],
+                        "fn": "groupFn",
+                        "implHandler": [
+                            "var mainController = MyApp.app.getController('MainController');",
+                            "console.log('main controller : ' + mainController);",
+                            "var picker = mainController.getAvailableTimePicker();",
+                            "",
+                            "var min = parseInt(picker.getValue()['MinPickerSlot']);",
+                            "var hours = parseInt(picker.getValue()['HoursPickerSlot']);",
+                            "var availableTime = hours*60+min;",
+                            "",
+                            "if(record.get('totalTaskTime') <= availableTime) {",
+                            "    //record.set('group',1);",
+                            "    return \"Best Tasks around this location\";",
+                            "} else {",
+                            "    //record.set('group',2);",
+                            "    return \"Your other tasks\";",
+                            "}",
+                            ""
+                        ]
+                    },
+                    "designerId": "b32bcf31-8600-4d89-82fe-763bd4336cb1"
+                }
+            ]
+        }
+    ]
+}

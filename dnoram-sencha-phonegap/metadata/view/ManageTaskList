@@ -1,0 +1,42 @@
+{
+    "type": "Ext.dataview.List",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "manageTaskListAlias",
+        "designer|userClassName": "ManageTaskList",
+        "emptyText": "Please create task",
+        "id": "manageTaskList",
+        "loadingText": "Retrieving your tasks ...",
+        "onItemDisclosure": true,
+        "store": "tasksStore"
+    },
+    "designerId": "cfa55fd0-0527-4a47-b7a3-34e7aeae8051",
+    "cn": [
+        {
+            "type": "Ext.XTemplate",
+            "reference": {
+                "name": "itemTpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "itemTpl",
+                "implHandler": [
+                    "<tpl if=\"isCompleted == false\"> ",
+                    "    <div style=\"font-weight:bold;\">{title:ellipsis(21, true)}</div>",
+                    " <tpl else>",
+                    "     <div style=\"font-weight:bold;text-decoration: line-through\">{title:ellipsis(21, true)}</div>",
+                    " </tpl>",
+                    " <div style=\"font-size:80%;font-style:italic;\">Duration: {duration} min</div>",
+                    "    <span class=\"deleteplaceholder\"></span>",
+                    ""
+                ]
+            },
+            "designerId": "45adf806-726c-4fc4-b7aa-2cfcdfb1060f"
+        }
+    ]
+}

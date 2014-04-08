@@ -304,3 +304,7 @@ field string --fieldName notes
 field date --fieldName createdOn --type java.util.Date
 field date --fieldName updatedOn --type java.util.Date
 // Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-10-05 18:00:14
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-12-23 16:16:50
+perform package
+exit
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-12-23 16:18:08

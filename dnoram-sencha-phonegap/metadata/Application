@@ -1,0 +1,48 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "baseURL": "http://dnoram8.cloudfoundry.com/",
+        "controllers": [
+            "MainController"
+        ],
+        "icon": [
+            "{\"57\":\"images/dNORAM5.png\",\"72\":\"images/dNORAM5.png\",\"114\":\"images/dNORAM5.png\",\"144\":\"images/dNORAM5.png\"}"
+        ],
+        "isIconPrecomposed": false,
+        "models": [
+            "Task",
+            "Duser",
+            "LocalUser"
+        ],
+        "name": "MyApp",
+        "startupImage": null,
+        "stores": [
+            "TasksStore",
+            "ResultStore",
+            "AddressTypeStore"
+        ],
+        "views": [
+            "MyNavigationView",
+            "ManageTaskList",
+            "AddTaskForm",
+            "TaskResultList",
+            "MapPanel",
+            "MyContainer1",
+            "MyContainer",
+            "MainApplicationView"
+        ]
+    },
+    "designerId": "application",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "baseURL",
+            "type": "string"
+        }
+    ]
+}

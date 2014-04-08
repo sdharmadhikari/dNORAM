@@ -1,0 +1,81 @@
+{
+    "type": "Ext.navigation.View",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "mynavigationview",
+        "designer|userClassName": "MyNavigationView",
+        "id": "viewId",
+        "style": null
+    },
+    "designerId": "668170fd-0abd-4e45-8960-4b85903fdd4d",
+    "cn": [
+        {
+            "type": "Ext.navigation.Bar",
+            "reference": {
+                "name": "navigationBar",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "navigationBar",
+                "style": null
+            },
+            "designerId": "774b906f-326b-471e-a51e-dbab49aecb6d",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "align": "right",
+                        "hidden": true,
+                        "iconCls": null,
+                        "iconMask": true,
+                        "id": "saveTaskNavButton",
+                        "text": "Done"
+                    },
+                    "designerId": "9bb7e83d-66d2-4b1e-8d9b-63c66fa48e37"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "align": "right",
+                        "hidden": true,
+                        "icon": null,
+                        "iconCls": "add",
+                        "iconMask": true,
+                        "id": "addTaskButton",
+                        "text": null,
+                        "ui": "plain"
+                    },
+                    "designerId": "43ac20a2-af3d-4439-8146-b0928669a5ec"
+                }
+            ]
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "dNORAM"
+            },
+            "designerId": "4876ae4a-9aee-4582-942a-96b37255859b",
+            "masterInstanceId": "b439c4ad-9f0d-4dbd-a792-4de95916851a"
+        }
+    ]
+}

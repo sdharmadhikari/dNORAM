@@ -1,0 +1,39 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "localuser",
+        "designer|userClassName": "LocalUser"
+    },
+    "designerId": "10a037c7-db38-4d38-a8cb-b7285ffb80e2",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "userid"
+            },
+            "designerId": "aee57e8c-11f1-47dc-9e3b-efc241195553"
+        },
+        {
+            "type": "Ext.data.proxy.LocalStorage",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "localUserProxy"
+            },
+            "designerId": "6cc20dde-64c4-4cfb-8d90-258a73bf9565"
+        }
+    ]
+}

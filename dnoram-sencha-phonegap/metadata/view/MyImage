@@ -1,0 +1,17 @@
+{
+    "type": "Ext.Img",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "myimage",
+        "designer|userClassName": "MyImage",
+        "height": 201,
+        "id": "manageTasksButtonImage",
+        "src": "resources/images/manageTasksButton.jpg",
+        "width": 201
+    },
+    "designerId": "274f4f61-7fad-4d75-8d6f-1720d4c9410f"
+}

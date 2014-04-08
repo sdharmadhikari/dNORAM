@@ -1,0 +1,54 @@
+{
+   "name": "MyApp",
+   "indexHtmlPath": "index.html",
+   "url": null,
+   "js": [
+      {
+         "path": "phonegap.js",
+         "remote": true
+      },
+      {
+         "path": "touch/sencha-touch.js",
+         "x-bootstrap": true
+      },
+      {
+         "path": "bootstrap.js",
+         "x-bootstrap": true
+      },
+      {
+         "path": "app.js",
+         "bundle": true,
+         "update": "delta"
+      }
+   ],
+   "css": [
+      {
+         "path": "resources/css/app.css",
+         "update": "delta"
+      },
+      {
+         "path": "resources/custom-css/sencha-touch.css"
+      }
+   ],
+   "appCache": {
+      "cache": [
+         "index.html"
+      ],
+      "network": [
+         "*"
+      ],
+      "fallback": []
+   },
+   "resources": [
+      "config.xml",
+      "resources/images",
+      "resources/icons",
+      "resources/startup"
+   ],
+   "ignore": [
+      ".svn$"
+   ],
+   "archivePath": "archive",
+   "requires": [],
+   "id": "eb1a4953-1ea0-45d0-9a70-a6971a98e3d2"
+}

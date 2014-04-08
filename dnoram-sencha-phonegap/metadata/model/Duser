@@ -1,0 +1,53 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "duser",
+        "designer|userClassName": "Duser"
+    },
+    "designerId": "35a9c6a7-f661-4325-bd67-6329e9bf31b0",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "userid",
+                "type": "string"
+            },
+            "designerId": "888ff4db-8a8a-43b5-b90a-e3b1cab5d747"
+        },
+        {
+            "type": "Ext.data.proxy.Rest",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "http://ec2-54-200-65-103.us-west-2.compute.amazonaws.com/dnoram8-1/dusers"
+            },
+            "designerId": "07403f4e-0b66-4d04-8ed4-891979d4c2c3"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "username",
+                "type": "string"
+            },
+            "designerId": "0309dc61-7a6d-471a-b696-414b32bd2c9b"
+        }
+    ]
+}

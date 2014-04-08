@@ -1,0 +1,13 @@
+{
+    "type": "cssresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "css",
+        "url": "resources/custom-css/sencha-touch.css"
+    },
+    "designerId": "eec96e86-ede8-4d65-adf1-44c5b76aee16"
+}

@@ -1,0 +1,74 @@
+{
+    "name": "dnoramsencha",
+    "settings": {
+        "cmd": {
+            "license": "commercial"
+        },
+        "urlPrefix": "http://localhost:8080/dnoram7",
+        "spacesToIndent": 4,
+        "exportPath": "",
+        "lineEnding": "LF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "codeGenFormat": "Class",
+        "senchaIoKey": "",
+        "senchaIoPath": "http://extjs.cachefly.net/designer/IO/",
+        "instantiateStore": true,
+        "saveOnDeploy": false,
+        "appName": "MyApp",
+        "canvasControls": {
+            "viewportSize": {
+                "name": "iPhone",
+                "builtIn": true,
+                "height": 480,
+                "width": 320
+            },
+            "viewportOrientation": "portrait"
+        },
+        "buildShouldOverwriteIndex": false,
+        "generateArchitectVersion": true,
+        "displayfield-ExtBox1-1068-inputEl": "Not Installed",
+        "displayfield-ExtBox1-2614-inputEl": "Not Installed",
+        "displayfield-ExtBox1-1072-inputEl": "Not Installed",
+        "displayfield-ExtBox1-1223-inputEl": "Not Installed"
+    },
+    "xdsVersion": "3.0.3",
+    "xdsBuild": 1382,
+    "schemaVersion": 1,
+    "upgradeVersion": 300000000004,
+    "framework": "touch20",
+    "viewOrderMap": {
+        "view": [
+            "0ae7e19d-5ce6-4b97-bea4-529ad63a2754",
+            "b439c4ad-9f0d-4dbd-a792-4de95916851a",
+            "668170fd-0abd-4e45-8960-4b85903fdd4d",
+            "994dcb18-3db4-4a18-9621-fbebb6ec6eae",
+            "cfa55fd0-0527-4a47-b7a3-34e7aeae8051",
+            "fecfc644-19b0-4285-82e6-18de1b89a6eb",
+            "40908c39-78d3-4d93-8224-01f9731917a8",
+            "274f4f61-7fad-4d75-8d6f-1720d4c9410f",
+            "d7834af9-6a0f-4d21-af55-6f4a6235b9bf"
+        ],
+        "store": [
+            "6c96b262-a846-4783-8e57-ceb119c22529",
+            "e5421a3d-90e3-48c0-82d7-d5bd470085a9",
+            "8b89f9d4-7d3a-4f3e-9381-0ec94907ec6e"
+        ],
+        "controller": [
+            "22903d55-b344-4cc8-9d7b-5fff5bb0ff87"
+        ],
+        "model": [
+            "89a48766-34db-4f49-ba2a-1cab73985e18",
+            "35a9c6a7-f661-4325-bd67-6329e9bf31b0",
+            "10a037c7-db38-4d38-a8cb-b7285ffb80e2"
+        ],
+        "resource": [
+            "1e09592a-8579-4df9-841a-29b7a68f465a",
+            "9fa8ab96-e148-4fdb-ab66-0c938363906b",
+            "eec96e86-ede8-4d65-adf1-44c5b76aee16"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

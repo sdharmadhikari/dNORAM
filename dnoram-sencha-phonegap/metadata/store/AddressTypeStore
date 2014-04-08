@@ -1,0 +1,58 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "data": [
+            "[",
+            "                    {",
+            "                        text: 'Current Location',",
+            "                        value: 'Current'",
+            "                    },",
+            "                    {",
+            "                        text: 'Enter Address',",
+            "                        value: 'Custom'",
+            "                    },                     ",
+            "                    {",
+            "                        text: 'N/A',",
+            "                        value: 'Anywhere'",
+            "                    },",
+            "                    ",
+            "                ]",
+            "",
+            ""
+        ],
+        "designer|userClassName": "AddressTypeStore",
+        "storeId": "addressTypeStore"
+    },
+    "designerId": "8b89f9d4-7d3a-4f3e-9381-0ec94907ec6e",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "text"
+            },
+            "designerId": "72127613-3967-4a1d-9485-996db1f1c0ae"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "value"
+            },
+            "designerId": "6b2630d1-05fb-433d-afad-30713b7733c8"
+        }
+    ]
+}

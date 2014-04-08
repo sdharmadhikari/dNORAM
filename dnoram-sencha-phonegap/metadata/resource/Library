@@ -1,0 +1,13 @@
+{
+    "type": "libraryresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "basePath": "http://cdn.sencha.com/touch/sencha-touch-2.3.1a/",
+        "designer|userClassName": "Library"
+    },
+    "designerId": "9fa8ab96-e148-4fdb-ab66-0c938363906b"
+}

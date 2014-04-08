@@ -1,0 +1,285 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "addTaskFormAlias",
+        "designer|userClassName": "AddTaskForm",
+        "id": null,
+        "itemId": null,
+        "requires": [
+            "Ext.form.FieldSet",
+            "Ext.field.Text",
+            "Ext.field.Spinner",
+            "Ext.field.Select",
+            "Ext.field.TextArea",
+            "Ext.field.Toggle",
+            "Ext.MessageBox",
+            "Ext.data.Store",
+            "Ext.Toolbar",
+            "Ext.Button"
+        ],
+        "url": null
+    },
+    "designerId": "0ae7e19d-5ce6-4b97-bea4-529ad63a2754",
+    "cn": [
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "border": null,
+                "title": null
+            },
+            "designerId": "2a08d9c1-a8ab-4850-936c-0284347b305a",
+            "cn": [
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": null,
+                        "maxLength": null,
+                        "name": "title",
+                        "placeHolder": "Task Title*"
+                    },
+                    "designerId": "ec8a63ee-a715-4b6b-a423-87fa37c02342"
+                },
+                {
+                    "type": "Ext.field.Spinner",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "increment": 5,
+                        "label": "Duration",
+                        "labelWidth": "37%",
+                        "minValue": 0,
+                        "name": "duration",
+                        "required": true
+                    },
+                    "designerId": "6f88f37d-8c37-43b9-80c0-064f3bb36574"
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": "in minutes",
+                        "style": "padding-left:40%;font-size:12px;color:#aaa;"
+                    },
+                    "designerId": "41028c4e-a0b7-4317-8e10-91a2e1ffab09"
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "border": null,
+                "id": null,
+                "itemId": null,
+                "name": "addressFieldFieldSet",
+                "title": null
+            },
+            "designerId": "7377a753-81d2-494d-b6df-e9747b6ce42c",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "name",
+                    "type": "string"
+                }
+            ],
+            "cn": [
+                {
+                    "type": "Ext.field.Select",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": null,
+                        "label": "Address",
+                        "labelWidth": "37%",
+                        "name": "addressType",
+                        "required": true,
+                        "store": "addressTypeStore",
+                        "value": [
+                            "'Current'"
+                        ],
+                        "width": null
+                    },
+                    "designerId": "0a3a872c-3bd5-4bfd-849d-4c4101777854"
+                },
+                {
+                    "type": "Ext.field.TextArea",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 80,
+                        "hidden": true,
+                        "label": null,
+                        "labelWidth": 0,
+                        "maxRows": 1,
+                        "name": "formattedAddress",
+                        "placeHolder": "Type address or street intersection... "
+                    },
+                    "designerId": "93de3c97-9838-4e1e-82da-09bb95cb631c"
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "border": null,
+                "scrollable": null,
+                "title": null
+            },
+            "designerId": "30b5651e-f6e4-4bbe-90d9-1e0b22c1db2a",
+            "cn": [
+                {
+                    "type": "Ext.field.TextArea",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "",
+                        "labelWidth": 0,
+                        "maxRows": null,
+                        "name": "notes",
+                        "placeHolder": "Notes.."
+                    },
+                    "designerId": "551f2e68-2156-4704-a2d5-21f825ae2c9c"
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "border": null,
+                "title": null
+            },
+            "designerId": "a3794aeb-4b8f-44e2-bc68-b583376284b2",
+            "cn": [
+                {
+                    "type": "Ext.field.Toggle",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "Completed",
+                        "labelWidth": "37%",
+                        "name": "isCompleted"
+                    },
+                    "designerId": "6fe3b454-5246-4c59-8582-d0cb2fa44ee9"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "bottom"
+            },
+            "designerId": "f8e2ad2f-4a2f-4613-8b36-6bdde1d2c173",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "docked": "right",
+                        "hidden": true,
+                        "iconCls": "trash",
+                        "iconMask": true,
+                        "name": "delete",
+                        "text": null,
+                        "ui": "plain"
+                    },
+                    "designerId": "58db9218-1a5c-41ca-a4c1-5f741a400455",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "name",
+                            "type": "string"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "baseCls": null,
+                        "disabled": false,
+                        "docked": "left",
+                        "height": null,
+                        "hidden": true,
+                        "html": null,
+                        "iconAlign": null,
+                        "iconCls": "locate",
+                        "iconMask": true,
+                        "name": "mapIt",
+                        "text": null,
+                        "ui": "plain",
+                        "width": null
+                    },
+                    "designerId": "b62b54b2-476c-46f7-aae5-4efe2f8e1afb",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "name",
+                            "type": "string"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

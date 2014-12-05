@@ -1,2 +1,2 @@
-/Users/sudhir/Projects/trials/dnoram-trials/dnoram-edited/phonegap/platforms/android/bin/AndroidManifest.xml : \
-/Users/sudhir/Projects/trials/dnoram-trials/dnoram-edited/phonegap/platforms/android/AndroidManifest.xml \
+/Users/sudhir/Projects/trials/dnoram/dnoram-sencha-phonegap/phonegap/platforms/android/bin/AndroidManifest.xml : \
+/Users/sudhir/Projects/trials/dnoram/dnoram-sencha-phonegap/phonegap/platforms/android/AndroidManifest.xml \

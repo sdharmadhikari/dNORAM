@@ -94,7 +94,7 @@ public class DuserController {
 				System.out.println("Creating Custom Address task.. raw address received from client : " + task.getFormattedAddress());
 				System.out.println("Saving raw data into address field..");
 				task.setAddress(task.getFormattedAddress());
-				String formattedAddress = task.getFormattedAddress(); //formattedAddressService.getFormattedAddress(task.getFormattedAddress());
+				String formattedAddress = formattedAddressService.getFormattedAddress(task.getFormattedAddress());
 				if(formattedAddress == null){
 					task.setAddress("."); // Setting raw address to blank(dot) if address not found by Google api
 					task.setFormattedAddress("Address could not be found..Please enter valid address");
